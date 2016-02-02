@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+ 
+  <!--
+    redirect users to the https version of the website.
+    but: only check when on the production domain, as set in _config.yml.
+   -->
+  <script type="text/javascript">
+    var enforce = "dgeibi.github.io";
+    if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+      window.location = window.location.toString().replace(/^http:/, "https:");
+  </script>
+ 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>OpenWrt + 校园网</title>
+  <meta name="description" content="参考资料">
+
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://dgeibi.github.io/2015/11/20/openwrt-h3c.html" />
+  <link rel="alternate" type="application/rss+xml" title="dgeibi's blog" href="https://dgeibi.github.io/feed.xml">
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">dgeibi's blog</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">OpenWrt + 校园网</h1>
+    <p class="post-meta"><time datetime="2015-11-20T07:59:55+08:00" itemprop="datePublished">Nov 20, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="section">参考资料</h1>
+
+<p><a href="https://wiki.openwrt.org/doc/howto/buildroot.exigence">OpenWrt build system – Installation</a></p>
+
+<p><a href="http://young523.com/?p=102">自己编译集成了shadowsocks的openwrt固件</a></p>
+
+<p><a href="http://www.7forz.com/1973/">【详细教程】编译openwrt + njit-client 1.3，通过iNode认证</a></p>
+
+<h1 id="section-1">选购路由器</h1>
+
+<p>配置挺高，实惠的 Newifi Mini 受 OpenWrt 官方支持，可参照 <a href="https://linuxtoy.org/archives/install-openwrt-on-newifi-mini.html">Newifi Mini 安装 OpenWrt</a> 刷入固件</p>
+
+<p>注：刷 OpenWrt 的最低配置是 4MB Flash、32MB RAM</p>
+
+<p>没钱就买某宝上已经刷好 OpenWrt 的 TP-Link wr740N、 wr841n，价格一般在 30-40 RMB 之间，它们的cpu都是 ar71xx 系列</p>
+
+<h1 id="ipk">编译固件(可选)和 ipk</h1>
+
+<p>准备编译</p>
+
+<p>以 Ubuntu 为例</p>
+
+<p>操作过程中可能遇到网络问题，可参考以下解决方案</p>
+
+<p><a href="/2015/11/25/terminal-proxy.html">设置终端下的代理</a></p>
+
+<p><a href="/2015/12/02/fix-apt-hash.html">解决恶劣环境下 Ubuntu 更新源 Hash Sum mismatch 错误</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get install build-essential subversion libncurses5-dev zlib1g-dev gawk gcc-multilib flex git-core gettext libssl-dev
+</code></pre>
+</div>
+
+<p>获取 OpenWrt 代码树</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c">#开发版</span>
+git clone git://git.openwrt.org/openwrt.git
+<span class="c">#或稳定版（如 Chaos Calmer 15.05）</span>
+git clone git://git.openwrt.org/15.05/openwrt.git
+<span class="nb">cd </span>openwrt
+./scripts/feeds update -a
+./scripts/feeds install -a
+</code></pre>
+</div>
+
+<p>获取 <a href="https://github.com/hazytint/gduth3c">gduth3c</a> 源码</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/hazytint/gduth3c.git package/gduth3c
+</code></pre>
+</div>
+
+<p>设置准备编译的</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>make defconfig
+make prereq
+make menuconfig
+</code></pre>
+</div>
+
+<p>进入定制界面（里面可以选择芯片的型号，集成的组件等等，根据实际情况选择）</p>
+
+<p>/ 搜索</p>
+
+<p>方向键 移动光标</p>
+
+<p>回车键 确认</p>
+
+<p>空格键 切换 M  *</p>
+
+<p><code class="highlighter-rouge">&lt;M&gt;</code>表示编译成ipk，不集成在固件里，可以用OPKG软件包管理器进行安装</p>
+
+<p><code class="highlighter-rouge">&lt;*&gt;</code>表示集成在固件中。</p>
+
+<p>例如：</p>
+
+<blockquote>
+  <p>Target System –&gt; AR71xx/AR9xxx CPU型号
+Target Profile –&gt; GL-iNet
+LuCI –&gt; Collections –&gt; &lt;*&gt; luci \\添加LuCI，这样才自带网页设置
+LuCI –&gt; (Moudles) –&gt; Translations –&gt; &lt;*&gt; Chinese \\添加中文
+Kernel modules –&gt; Native Language Support –&gt; &lt;*&gt; kmod-nls-utf8 \\添加UTF8编码
+Utilities –&gt; &lt;*&gt;gduth3c
+Exit –&gt; Yes 退出并保存</p>
+</blockquote>
+
+<p>编译</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>make <span class="nv">V</span><span class="o">=</span>s  //编译所选的<span class="o">(</span>包括固件<span class="o">)</span>
+<span class="c">#或</span>
+make package/gduth3c/compile <span class="nv">V</span><span class="o">=</span>s //编译单个ipk，注意 Utilities--&lt;M&gt;gduth3c
+</code></pre>
+</div>
+
+<p>路由器固件在 <code class="highlighter-rouge">openwrt/bin/ar71xx/</code></p>
+
+<p>ipk 文件在 <code class="highlighter-rouge">openwrt/bin/ar71xx/packages/base/</code></p>
+
+<h1 id="ipk-1">设置、安装 ipk</h1>
+
+<p>利用编译好的bin刷机(可选)</p>
+
+<p>接通电源，用网线连通路由器 LAN 端口和电脑。</p>
+
+<p>打开 192.168.1.1</p>
+
+<ol>
+  <li>
+    <p>系统 –&gt; 管理权 –&gt; 填入主机密码。</p>
+  </li>
+  <li>
+    <p>网络 –&gt; 接口 –&gt; WAN –&gt; 修改 –&gt; 高级设置 –&gt; 克隆MAC地址（填入电脑网卡的 MAC 地址）</p>
+  </li>
+</ol>
+
+<p>之前选择<code class="highlighter-rouge">Utilities -&gt; &lt;*&gt;gduth3c</code> 的，只需执行第 2/4 条</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>scp gduth3c_1.0-1_ar71xx.ipk root@192.168.5.1:/tmp  //将文件传到路由器的/tmp目录
+ssh root@192.168.1.1       //登录ssh
+opkg install /tmp/gduth3c_1.0-1_ar71xx.ipk
+gduth3c -u <span class="o">[</span>username] -p <span class="o">[</span>password] -i <span class="o">[</span>interface] //测试能否通过校园网认证
+</code></pre>
+</div>
+
+<p>[interface]是接口，一般是 eth0，要对应你的 WAN 口，在<code class="highlighter-rouge">网络 -&gt; 接口</code>里就可以查看。</p>
+
+<p>Windows 下推荐使用 <a href="https://git-scm.com/">Git for Windows</a></p>
+
+<h1 id="gduth3c-">安装支持开机启动的 gduth3c 登录页面(可选)</h1>
+
+<p>下载 预编译的全平台 ipk : <a href="/files/luci-app-gduth3c_1.0-1_all.ipk">luci-app-gduth3c_1.0-1_all.ipk</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>scp luci-app-gduth3c_1.0-1_all.ipk root@192.168.1.1:/tmp
+ssh root@192.168.1.1
+opkg install /tmp/luci-app-gduth3c_1.0-1_all.ipk
+</code></pre>
+</div>
+<p>登录页面在「网络 –&gt; gduth3c」</p>
+
+<p>也可以自己编译</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/dgeibi/luci-app-gduth3c.git package/luci-app-gduth3c
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">make menuconfig</code> 后在 <code class="highlighter-rouge">LuCI -&gt; Applications</code> 里选择</p>
+
+<h1 id="section-2">直接创建开机启动脚本(可选)</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh root@192.168.1.1
+vi /etc/init.d/gduth3c
+-----
+<span class="c">#!/bin/sh /etc/rc.common</span>
+
+<span class="nv">START</span><span class="o">=</span>99
+
+start<span class="o">()</span> <span class="o">{</span>
+   sleep 8
+   gduth3c -u <span class="o">[</span>username] -p <span class="o">[</span>password] -i <span class="o">[</span>interface] &amp;
+<span class="o">}</span>
+
+stop<span class="o">()</span> <span class="o">{</span>
+    killall gduth3c
+    killall udhcpc
+<span class="o">}</span>
+
+</code></pre>
+</div>
+
+<p>启用开机启动项</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>chmod +x /etc/init.d/gduth3c  //加上可执行属性
+/etc/init.d/gduth3c <span class="nb">enable</span>    //开启开机自动运行
+</code></pre>
+</div>
+
+<h1 id="gdut-">另一个 GDUT 专用的认证软件</h1>
+
+<p><a href="https://github.com/hazytint/gdut8021xclient">gdut8021xclient</a></p>
+
+<p>编译 <code class="highlighter-rouge">gdut8021xclient</code> 时需先把 clone 得到的文件夹改名为 <code class="highlighter-rouge">njit8021xclient</code></p>
+
+<p>还要将根目录里的 <code class="highlighter-rouge">Makefile _OpenWrt</code> 改为 <code class="highlighter-rouge">Makefile</code>，<code class="highlighter-rouge">make menuconfig</code> 后在 <code class="highlighter-rouge">Network</code> 里选择。</p>
+
+<h1 id="section-3">编译成果</h1>
+
+<p>Built for Chaos Calmer 15.05</p>
+
+<p><a href="/files/gduth3c_1.0-1_ar71xx.ipk">gduth3c_1.0-1_ar71xx.ipk</a></p>
+
+<p><a href="/files/luci-app-gduth3c_1.0-1_all.ipk">luci-app-gduth3c_1.0-1_all.ipk</a></p>
+
+<p><a href="/files/libpcap_1.5.3-1_ar71xx.ipk">libpcap_1.5.3-1_ar71xx.ipk</a></p>
+
+<p><a href="/files/njit8021xclient_1.3-testing_ar71xx.ipk">njit8021xclient_1.3-testing_ar71xx.ipk</a></p>
+
+<p><a href="/files/luci-app-njitclient_1.0-1_all.ipk">luci-app-njitclient_1.0-1_all.ipk</a></p>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">dgeibi's blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>dgeibi's blog</li>
+          <li><a href="mailto:png.inside@gmail.com">png.inside@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/dgeibi"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">dgeibi</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/dgeibi"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">dgeibi</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>just another Jekyll blog</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
