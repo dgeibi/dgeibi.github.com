@@ -100,7 +100,7 @@ hr {
   margin: 0 auto;
   padding: 30px 0;
   width: 90%;
-  max-width: 600px;
+  max-width: 900px;
 }
 body,
 button,
@@ -109,7 +109,7 @@ select,
 textarea {
   color: #444;
   line-height: 1.5;
-  font-size: 12px;
+  font-size: 15px;
 }
 a {
   color: #0e83cd;
@@ -125,11 +125,11 @@ h2 {
   font-size: 22px;
 }
 h3 {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 700;
 }
 h4 {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
 }
 .site-main {
@@ -141,7 +141,7 @@ time {
   display: block;
   margin-bottom: 5px;
   padding-bottom: 5px;
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -163,7 +163,7 @@ time {
   margin: 30px 0 5px;
 }
 .site-header p {
-  font-size: 14px;
+  font-size: 17px;
   letter-spacing: 1px;
   color: #888;
 }
@@ -171,7 +171,7 @@ time {
   display: inline-block;
   margin-top: 30px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 17px;
   text-transform: uppercase;
 }
 .site-header li {
@@ -188,7 +188,7 @@ time {
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 10px;
+  font-size: 13px;
 }
 .archive li {
   margin-bottom: 40px;
@@ -217,11 +217,11 @@ time {
 }
 .archive-desc {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 15px;
 }
 .archive-nav {
   padding: 20px 0 0;
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
   text-align: center;
   position: relative;
@@ -270,7 +270,7 @@ time {
   padding-bottom: 5px;
 }
 .content {
-  font-size: 14px;
+  font-size: 17px;
 }
 .article-title {
   font-size: 28px;
@@ -285,7 +285,7 @@ blockquote footer {
   padding-top: 20px;
   position: relative;
   top: -20px;
-  font-size: 12px;
+  font-size: 15px;
 }
 blockquote cite:before {
   content: "—";
@@ -327,7 +327,7 @@ tbody td {
 }
 .content-nav {
   padding: 40px 0 0;
-  font-size: 10px;
+  font-size: 13px;
   text-transform: uppercase;
   position: relative;
   letter-spacing: 1px;
