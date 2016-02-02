@@ -1,0 +1,827 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Windows," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="dgeibi's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="备份C盘的重要文件下载1）系统镜像
+需要免费升级win10的用户请下载对应版本的镜像">
+<meta property="og:type" content="article">
+<meta property="og:title" content="重装或升级 Windows">
+<meta property="og:url" content="https://dgeibi.github.io/2015/08/05/install-windows/index.html">
+<meta property="og:site_name" content="dgeibi's blog">
+<meta property="og:description" content="备份C盘的重要文件下载1）系统镜像
+需要免费升级win10的用户请下载对应版本的镜像">
+<meta property="og:image" content="https://dgeibi.github.io/image/install-windows/05.jpg">
+<meta property="og:image" content="https://dgeibi.github.io/image/install-windows/06.jpg">
+<meta property="og:image" content="https://dgeibi.github.io/image/install-windows/07.jpg">
+<meta property="og:image" content="https://dgeibi.github.io/image/install-windows/08.jpg">
+<meta property="og:image" content="https://dgeibi.github.io/image/install-windows/09.jpg">
+<meta property="og:image" content="https://dgeibi.github.io/image/install-windows/10.jpg">
+<meta property="og:image" content="https://dgeibi.github.io/image/install-windows/11.jpg">
+<meta property="og:image" content="https://dgeibi.github.io/image/install-windows/12.jpg">
+<meta property="og:updated_time" content="2016-02-02T09:14:30.599Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="重装或升级 Windows">
+<meta name="twitter:description" content="备份C盘的重要文件下载1）系统镜像
+需要免费升级win10的用户请下载对应版本的镜像">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 重装或升级 Windows | dgeibi's blog </title>
+<script type="text/javascript">
+    var host = "dgeibi.github.io";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+</script>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">dgeibi's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                重装或升级 Windows
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-08-05T16:38:38+08:00" content="2015-08-05">
+              2015-08-05
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/08/05/install-windows/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/08/05/install-windows/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="u5907_u4EFDC_u76D8_u7684_u91CD_u8981_u6587_u4EF6"><a href="#u5907_u4EFDC_u76D8_u7684_u91CD_u8981_u6587_u4EF6" class="headerlink" title="备份C盘的重要文件"></a>备份C盘的重要文件</h3><h3 id="u4E0B_u8F7D"><a href="#u4E0B_u8F7D" class="headerlink" title="下载"></a>下载</h3><p>1）系统镜像</p>
+<p>需要免费升级win10的用户请下载对应版本的<a href="https://www.microsoft.com/zh-cn/software-download/windows10ISO" target="_blank" rel="external">镜像</a></p>
+<a id="more"></a>
+<ul>
+<li>Windows7简易版、家庭普通版、家庭高级版 –&gt; Windows10家庭版</li>
+<li>Win7专业版和旗舰版 –&gt; Win10专业版</li>
+<li>Win8/Win8.1 –&gt; Win10家庭版</li>
+<li>Win8/Win8.1专业版 –&gt; Win10专业版</li>
+<li>Win8.1/Win8中文版 –&gt; Win10家庭中文版</li>
+<li>Win8.1 含Bing（必应）版 –&gt; Win10家庭版</li>
+<li>Win8.1/Win8单语言版 –&gt; Win10家庭单语言版</li>
+</ul>
+<p>注意：下载列表中 N 是欧洲版和 KN 是韩版；Win10专业版/家庭版包含在列表的“Windows 10”里，其实也可以下下面的镜像</p>
+<p>Windows 10 (Multiple Editions), Version 1511 (x64) - DVD (Chinese-Simplified)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ed2k://|file|cn_windows_10_multiple_editions_version_1511_x64_dvd_7223622.iso|4187224064|FE3F221D193FEF02627F7F8CF0041BB3|/</span><br></pre></td></tr></table></figure>
+<p>更多镜像见 <a href="http://msdn.itellyou.cn/" target="_blank" rel="external">MSDN，我告诉你</a></p>
+<p>2）搜索、下载、安装 EasyBCD</p>
+<h3 id="u91CD_u88C5_u6216_u5347_u7EA7_u7CFB_u7EDF"><a href="#u91CD_u88C5_u6216_u5347_u7EA7_u7CFB_u7EDF" class="headerlink" title="重装或升级系统"></a>重装或升级系统</h3><h4 id="u91CD_u88C5_28_u683C_u5F0F_u5316_29"><a href="#u91CD_u88C5_28_u683C_u5F0F_u5316_29" class="headerlink" title="重装(格式化)"></a>重装(格式化)</h4><p>将准备好的系统镜像解压至一非系统分区 (非C盘) 的任意目录（目录最好不要包含非英文字符）</p>
+<blockquote>
+<p>关于 WIN10 免费升级的提示：在 Win10 镜像里的 Sources 文件夹下找到名为<code>gatherosstate.exe</code>的程序，将其复制到桌面。双击运行 <code>gatherosstate.exe</code>，稍等片刻，它将会在桌面上生成一个名为<code>GenuineTicket.xml</code>的文件。从文件命名就能看出，<code>GenuineTicket.xml</code> 就是「正版通行证」的意思，它里面保存了当前电脑的系统激活信息，你可以用U盘将它保存好，后面我们将会需要这个文件。</p>
+</blockquote>
+<p>打开 EasyBCD</p>
+<p>添加新条目 –&gt;　WinPE</p>
+<ul>
+<li>类型：WIM映像</li>
+<li>名称：随意</li>
+<li>路径： 选择之前解压得到的目录的 <code>sources\boot.win</code></li>
+</ul>
+<p>–&gt; 添加条目 –&gt; 重启电脑 –&gt; 选择刚刚随意填的条目</p>
+<p>开始安装</p>
+<p><img src="/image/install-windows/05.jpg" alt=""></p>
+<p><img src="/image/install-windows/06.jpg" alt=""></p>
+<p>▲语言、区域和输入法设置，中国用户使用默认即可，点击“下一步”继续</p>
+<p><img src="/image/install-windows/07.jpg" alt=""></p>
+<p>▲点击“现在安装”</p>
+<p><img src="/image/install-windows/08.jpg" alt=""></p>
+<p>▲安装密钥：</p>
+<p>WIN10：“没有安装密钥”；选择与原系统对应版本以免费升级</p>
+<p>WIN8.1：XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB</p>
+<p><img src="/image/install-windows/09.jpg" alt=""></p>
+<p>▲勾选“我接受许可条款”后，点击“下一步”继续</p>
+<p><img src="/image/install-windows/10.jpg" alt=""></p>
+<p>▲由于我们目前执行纯净安装，因此要选择第二项“自定义”安装方式</p>
+<p><img src="/image/install-windows/11.jpg" alt=""></p>
+<p>▲先将当前系统盘（根据分区大小判断）格式化，并选择这个分区，然后“下一步”即可</p>
+<p><img src="/image/install-windows/12.jpg" alt=""></p>
+<p>▲此后，Windows 安装程序要至少重启两次，耐心等待30分钟左右将进入后续设置。后续设置很简单，这里就跳过了。</p>
+<blockquote>
+<p>关于 WIN10 免费升级的提示：待 Win10 安装完成并进入桌面后，按键盘 Win+R 快捷键，打开“运行”，输入 <code>%ProgramData%\Microsoft\Windows\ClipSVC\GenuineTicket</code> 并点确定<br>这时系统会打开一个文件夹，将之前生成的 <code>GenuineTicket.xml</code> 文件复制到这个文件夹中。<br>确保电脑正常联网然后重启电脑。待电脑重启后，稍等片刻 Win10 将会自动进行激活。如果没有，手工进入“设置”，点击窗口底部的 “Windows没有激活。请立即激活Windows” 链接，然后点击 “在线激活Windows” 下的 “激活” 按钮即可手工激活。</p>
+</blockquote>
+<h4 id="u5347_u7EA7_u7CFB_u7EDF_uFF08_u4E0D_u683C_u5F0F_u5316_uFF09"><a href="#u5347_u7EA7_u7CFB_u7EDF_uFF08_u4E0D_u683C_u5F0F_u5316_uFF09" class="headerlink" title="升级系统（不格式化）"></a>升级系统（不格式化）</h4><p>将下载好的 iso 文件解压到非系统盘的任意位置</p>
+<p>打开该位置根目录的 setup.exe</p>
+<p>按照提示升级便可。</p>
+<p>升级完后如果不想回到以前的系统可以删掉系统盘的 Windows.old 文件夹</p>
+<h3 id="u6FC0_u6D3B"><a href="#u6FC0_u6D3B" class="headerlink" title="激活"></a>激活</h3><p>注：激活过程保持联网</p>
+<p>按键盘 Win+X 快捷键，选择“命令提示符（管理员）”</p>
+<p>输入如下命令</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr /upk&#10;slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</span><br></pre></td></tr></table></figure>
+<p>注：XXXXX-XXXXX-XXXXX-XXXXX-XXXXX 是你购买的正版密钥。</p>
+<p>稍等片刻，你可以在“系统”(按键盘 Win+X 快捷键，选择“系统”）中发现“Windows 已激活”。</p>
+<h3 id="u66F4_u65B0_u9A71_u52A8"><a href="#u66F4_u65B0_u9A71_u52A8" class="headerlink" title="更新驱动"></a>更新驱动</h3><p>刚装完系统，Windows 一般会自动更新驱动等。</p>
+<p>系统更新完并重启之后，按键盘 Win+X 快捷键，选择“设备管理器”，如果没有感叹号，说明驱动都正常工作了，若有就右键有黄色感叹号的项目，进行联网更新。</p>
+<p>感叹号没消失，一般可以去找设备的官网按型号、系统下驱动。</p>
+<p>再不行就装“驱动精灵”，“鲁大师”等，有开机黑屏的风险哦！</p>
+<h3 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="http://www.ithome.com/html/win10/163188.htm" target="_blank" rel="external">免费用正版Win10完全攻略</a></li>
+<li><a href="http://www.ithome.com/html/win10/166773.htm" target="_blank" rel="external">Win7/Win8.1升级Win10正式版后如何全新安装系统？</a></li>
+<li><a href="http://www.iplaysoft.com/clean-install-windows10-activate.html" target="_blank" rel="external">跳过从Win7/8升级，直接格式化全新安装 Windows 10 并自动永久激活系统的方法教程</a></li>
+<li><a href="http://www.ithome.com/html/win10/152882.htm" target="_blank" rel="external">对应版本的信息来源</a></li>
+</ul>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Windows/" rel="tag">#Windows</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/19/openwrt-h3c/" rel="prev" title="OpenWrt + 校园网">
+                OpenWrt + 校园网 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/image/avatar.png"
+               alt="dgeibi" />
+          <p class="site-author-name" itemprop="name">dgeibi</p>
+          <p class="site-description motion-element" itemprop="description">just another blog</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+          
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/dgeibi" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/dgeibi" target="_blank">
+                  
+                    <i class="fa fa-twitter"></i> Twitter
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5907_u4EFDC_u76D8_u7684_u91CD_u8981_u6587_u4EF6"><span class="nav-number">1.</span> <span class="nav-text">备份C盘的重要文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E0B_u8F7D"><span class="nav-number">2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u91CD_u88C5_u6216_u5347_u7EA7_u7CFB_u7EDF"><span class="nav-number">3.</span> <span class="nav-text">重装或升级系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#u91CD_u88C5_28_u683C_u5F0F_u5316_29"><span class="nav-number">3.1.</span> <span class="nav-text">重装(格式化)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u5347_u7EA7_u7CFB_u7EDF_uFF08_u4E0D_u683C_u5F0F_u5316_uFF09"><span class="nav-number">3.2.</span> <span class="nav-text">升级系统（不格式化）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u6FC0_u6D3B"><span class="nav-number">4.</span> <span class="nav-text">激活</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u66F4_u65B0_u9A71_u52A8"><span class="nav-number">5.</span> <span class="nav-text">更新驱动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u53C2_u8003"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dgeibi</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  
+
+
+  
+
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'dgeibi';
+      var disqus_identifier = '2015/08/05/install-windows/';
+      var disqus_title = '重装或升级 Windows';
+      var disqus_url = 'https://dgeibi.github.io/2015/08/05/install-windows/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+  
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+
+  
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
+    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+  
+
+
+  
+  
+
+
+</body>
+</html>
