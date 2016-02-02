@@ -9,7 +9,7 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .clear,
 header,
@@ -342,7 +342,6 @@ tbody td {
 .video-container iframe,
 .video-container object,
 .video-container embed {
-  overflow-x: hidden;
   position: absolute;
   top: 0;
   left: 0;
