@@ -5,8 +5,8 @@
     <description>just another Jekyll blog</description>
     <link>https://dgeibi.github.io/</link>
     <atom:link href="https://dgeibi.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 03 Feb 2016 00:01:27 +0800</pubDate>
-    <lastBuildDate>Wed, 03 Feb 2016 00:01:27 +0800</lastBuildDate>
+    <pubDate>Wed, 03 Feb 2016 00:07:16 +0800</pubDate>
+    <lastBuildDate>Wed, 03 Feb 2016 00:07:16 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -394,8 +394,12 @@ stop&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;
 &lt;p&gt;▲此后，Windows 安装程序要至少重启两次，耐心等待30分钟左右将进入后续设置。后续设置很简单，这里就跳过了。&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;关于 WIN10 免费升级的提示：待 Win10 安装完成并进入桌面后，按键盘 Win+R 快捷键，打开“运行”，
-输入 &lt;code class=&quot;highlighter-rouge&quot;&gt;%ProgramData%\Microsoft\Windows\ClipSVC\GenuineTicket&lt;/code&gt; 并点确定，
+  &lt;p&gt;关于 WIN10 免费升级的提示：待 Win10 安装完成并进入桌面后，按键盘 Win+R 快捷键，打开“运行”，输入&lt;/p&gt;
+
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%ProgramData%\Microsoft\Windows\ClipSVC\GenuineTicket
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+  &lt;p&gt;并点确定
 这时系统会打开一个文件夹，将之前生成的 &lt;code class=&quot;highlighter-rouge&quot;&gt;GenuineTicket.xml&lt;/code&gt; 文件复制到这个文件夹中。
 确保电脑正常联网然后重启电脑。待电脑重启后，稍等片刻 Win10 将会自动进行激活。如果没有，手工进入“设置”，点击窗口底部的 “Windows没有激活。请立即激活Windows” 链接，然后点击 “在线激活Windows” 下的 “激活” 按钮即可手工激活。&lt;/p&gt;
 &lt;/blockquote&gt;
