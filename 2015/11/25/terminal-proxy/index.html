@@ -1,9 +1,183 @@
-<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>设置终端下的代理 | dgeibi's blog</title><meta name="author" content="dgeibi"><link rel="stylesheet" href="/css/style.css"><link rel="icon" href="/img/favicon.png"><link rel="canonical" href="/2015/11/25/terminal-proxy/index.html"><script type="text/javascript">var host = "dgeibi.github.io";
-if ((host == window.location.host) && (window.location.protocol != "https:"))
-window.location.protocol = "https";</script></head><body><div class="container"><header class="site-header"><img src="/img/logo.png" alt=""><h1><a href="/">dgeibi's blog</a></h1><nav><ul> <li><a href="/">Home</a></li><li><a href="/archives">Sitemap</a></li><li><a href="/atom.xml">RSS</a></li></ul></nav></header><main role="main" class="site-main"><article class="article"><time datetime="2015-11-25T05:33:40.000Z">2015-11-25</time><h2 class="article-title"><a href="/2015/11/25/terminal-proxy/">设置终端下的代理</a></h2><div class="content"><h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><p><a href="http://segmentfault.com/q/1010000000118837/a-1020000000132541" target="_blank" rel="external">如何为 Git 设置代理？</a></p>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>设置终端下的代理 | dgeibi&#39;s blog</title>
+  <meta name="author" content="dgeibi">
+  
+  <meta name="description" content="just another blog">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="设置终端下的代理"/>
+  <meta property="og:site_name" content="dgeibi&#39;s blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="dgeibi&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="/js/jquery.min.js"></script>
+  
+
+  <script type="text/javascript">
+    var host = "yoursite.com";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+        window.location.protocol = "https";
+  </script>
+</head>
+
+
+<body>
+  <!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0027_Simplified Chinese.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">dgeibi&#39;s blog</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <time datetime="2015-11-25T05:33:40.000Z"><a href="/2015/11/25/terminal-proxy/">2015-11-25</a></time>
+      
+      
+  
+    <h1 class="title">设置终端下的代理</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="u53C2_u8003"><a href="#u53C2_u8003" class="headerlink" title="参考"></a>参考</h2><p><a href="http://segmentfault.com/q/1010000000118837/a-1020000000132541" target="_blank" rel="external">如何为 Git 设置代理？</a></p>
 <p><a href="https://wiki.archlinux.org/index.php/Proxy_settings" target="_blank" rel="external">Proxy settings - ArchWiki</a></p>
 <h2 id="u5B89_u88C5_Connect"><a href="#u5B89_u88C5_Connect" class="headerlink" title="安装 Connect"></a>安装 <a href="https://bitbucket.org/gotoh/connect/wiki/Home" target="_blank" rel="external">Connect</a></h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install connect-proxy</span><br></pre></td></tr></table></figure>
 <h2 id="git__u534F_u8BAE_u7684_u914D_u7F6E"><a href="#git__u534F_u8BAE_u7684_u914D_u7F6E" class="headerlink" title="git 协议的配置"></a>git 协议的配置</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /usr/bin/gitproxy</span><br><span class="line">-----</span><br><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line">connect -H <span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">7070</span> <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line">-----</span><br><span class="line">sudo chmod +x /usr/bin/gitproxy</span><br><span class="line">git config --global core.gitproxy gitproxy</span><br></pre></td></tr></table></figure>
 <p><code>-H</code> 表示 HTTP 协议，将 <code>-H</code> 改成 <code>-S</code> 可以用 SOCKS5 协议。</p>
 <h2 id="HTTP__u534F_u8BAE_u7684_u914D_u7F6E"><a href="#HTTP__u534F_u8BAE_u7684_u914D_u7F6E" class="headerlink" title="HTTP 协议的配置"></a>HTTP 协议的配置</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.bashrc</span><br><span class="line"><span class="comment">#在最后添加以下内容</span></span><br><span class="line"><span class="built_in">export</span> http_proxy=http://<span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">7070</span>/</span><br><span class="line"><span class="built_in">export</span> https_proxy=<span class="variable">$http_proxy</span></span><br><span class="line"><span class="built_in">export</span> ftp_proxy=<span class="variable">$http_proxy</span></span><br></pre></td></tr></table></figure>
-</div><div class="meta"><p class="meta-tags"><a class="tag-link" href="/tags/Network/">Network</a></p></div></article><div class="content-nav"><a href="/2015/12/02/fix-apt-hash/" class="prev">&larr; Prev</a><a href="/2015/11/19/openwrt-h3c/" class="next">Next &rarr;</a></div></main><footer class="site-footer"><p>&copy; 2015 - 2016&nbsp;dgeibi</p></footer></div></body></html>
+
+      
+    </div>
+    <footer>
+      
+
+        
+          <div class="alignleft post-nav">
+            <em>上一篇: </em><a href="/2015/12/02/fix-apt-hash/">解决恶劣环境下 Ubuntu 更新源 Hash Sum mismatch 错误</a>
+          </div>
+        
+        
+          <div class="alignright post-nav">
+            <em>下一篇: </em><a href="/2015/11/19/openwrt-h3c/">OpenWrt + 校园网</a>
+          </div>
+          <div class="clearfix"></div>
+        
+
+        
+          <div class="copyright">
+            
+              <span class="claim">版权声明：自由转载-非商用-无演绎-保持署名 @ Creative Commons BY-NC-ND 3.0</span>
+            
+            
+              <span class="from-link">
+                <em>本文链接地址:</em>
+                <a href="/2015/11/25/terminal-proxy/">
+                  https://dgeibi.github.io/2015/11/25/terminal-proxy/
+                </a>
+              </span>
+            
+          </div>
+        
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/Network/">Network</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="text" name="q" results="0" placeholder="搜尋">
+    <i class="icon-search"></i>
+    <input type="hidden" name="q" value="site:dgeibi.github.io">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">標籤</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Network/">Network</a><small>3</small></li>
+  
+    <li><a href="/tags/OpenWrt/">OpenWrt</a><small>1</small></li>
+  
+    <li><a href="/tags/Ubuntu/">Ubuntu</a><small>1</small></li>
+  
+    <li><a href="/tags/Windows/">Windows</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <div id="go-pg-top"><i class="icon-arrow-up"></i></div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2016 dgeibi
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/page.js"></script>
+
+</body>
+
+</html>
