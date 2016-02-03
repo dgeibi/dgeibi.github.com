@@ -11,7 +11,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 Noto Sans, "Helvetica Neue", Helvetica, Arial, PingFang SC, Hiragino Sans GB, Noto Sans CJK SC Demlight, Noto Sans CJK SC, Microsoft Yahei, sans-serif;
+  font: 400 16px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, "Noto Sans CJK SC Demlight", "Inziu Roboto SC", "Noto Sans CJK SC", "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
