@@ -5,8 +5,8 @@
     <description>just another Jekyll blog</description>
     <link>https://dgeibi.github.io/</link>
     <atom:link href="https://dgeibi.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Feb 2016 13:36:07 +0800</pubDate>
-    <lastBuildDate>Thu, 04 Feb 2016 13:36:07 +0800</lastBuildDate>
+    <pubDate>Thu, 04 Feb 2016 13:45:49 +0800</pubDate>
+    <lastBuildDate>Thu, 04 Feb 2016 13:45:49 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -339,7 +339,7 @@ stop&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;
 
 &lt;h4 id=&quot;section-2&quot;&gt;3.1. 重装(格式化)&lt;/h4&gt;
 
-&lt;p&gt;将准备好的系统镜像解压至一非系统分区 (非C盘) 的 ~~任意目录~~ 根目录&lt;/p&gt;
+&lt;p&gt;将准备好的系统镜像解压至一非系统分区 (非C盘) 的 &lt;del&gt;任意目录&lt;/del&gt; 根目录&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;关于 WIN10 免费升级的提示：在 Win10 镜像里的 Sources 文件夹下找到名为&lt;code class=&quot;highlighter-rouge&quot;&gt;gatherosstate.exe&lt;/code&gt;的程序，将其复制到桌面。双击运行 &lt;code class=&quot;highlighter-rouge&quot;&gt;gatherosstate.exe&lt;/code&gt;，稍等片刻，它将会在桌面上生成一个名为&lt;code class=&quot;highlighter-rouge&quot;&gt;GenuineTicket.xml&lt;/code&gt;的文件。从文件命名就能看出，&lt;code class=&quot;highlighter-rouge&quot;&gt;GenuineTicket.xml&lt;/code&gt; 就是「正版通行证」的意思，它里面保存了当前电脑的系统激活信息，你可以用U盘将它保存好，后面我们将会需要这个文件。&lt;/p&gt;
