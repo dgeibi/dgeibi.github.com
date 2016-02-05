@@ -75,39 +75,64 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h1 id="section">参考</h1>
+    <h4 id="section">参考</h4>
 
 <p><a href="http://segmentfault.com/q/1010000000118837/a-1020000000132541">如何为 Git 设置代理？</a></p>
 
 <p><a href="https://wiki.archlinux.org/index.php/Proxy_settings">Proxy settings - ArchWiki</a></p>
 
-<h1 id="connecthttpsbitbucketorggotohconnectwikihome">安装 <a href="https://bitbucket.org/gotoh/connect/wiki/Home">Connect</a></h1>
+<p><a href="http://manpages.ubuntu.com/manpages/natty/man1/connect-proxy.1.html">connect-proxy manpages</a></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install connect-proxy
+<h4 id="connecthttpsbitbucketorggotohconnectwikihome">安装 <a href="https://bitbucket.org/gotoh/connect/wiki/Home">Connect</a></h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c">#ubuntu</span>
+sudo apt-get install connect-proxy
+<span class="c">#archlinux</span>
+yaourt -S connect
 </code></pre>
 </div>
 
-<h1 id="git-">git 协议的配置</h1>
+<h4 id="git-">git 协议的配置</h4>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo vi /usr/bin/gitproxy
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo vi /usr/bin/gitproxy.sh
 -----
-<span class="c">#!/bin/sh</span>
+<span class="c">#!/bin/bash</span>
 connect -H 127.0.0.1:7070 <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
------
-sudo chmod +x /usr/bin/gitproxy
-git config --global core.gitproxy gitproxy
 </code></pre>
 </div>
 
-<p><code class="highlighter-rouge">-H</code> 表示 HTTP 协议，将 <code class="highlighter-rouge">-H</code> 改成 <code class="highlighter-rouge">-S</code> 可以用 SOCKS5 协议。</p>
+<p><code class="highlighter-rouge">-H</code> 表示 HTTP，将 <code class="highlighter-rouge">-H</code> 改成 <code class="highlighter-rouge">-S</code> 可以用 SOCKS5 协议</p>
 
-<h1 id="http-">HTTP 协议的配置</h1>
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo chmod +x /usr/bin/gitproxy.sh
+vi ~/.gitconfig
+-----
+[core]
+    gitproxy=gitproxy.sh for kernel.org
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">for kernel.org</code> 表示只有那个域名需要代理，当然可以不加 <code class="highlighter-rouge">for *</code></p>
+
+<h4 id="http-">HTTP 的配置</h4>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>vi ~/.bashrc
-<span class="c">#在最后添加以下内容</span>
+<span class="c">#添加以下内容</span>
 <span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:7070/
 <span class="nb">export </span><span class="nv">https_proxy</span><span class="o">=</span><span class="nv">$http_proxy</span>
 <span class="nb">export </span><span class="nv">ftp_proxy</span><span class="o">=</span><span class="nv">$http_proxy</span>
+</code></pre>
+</div>
+
+<h4 id="ssh-">SSH 的配置</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>vi ~/.ssh/config
+-----
+<span class="c">##not using proxy on lan</span>
+<span class="c">#Host 192.*</span>
+<span class="c">#    ProxyCommand connect-proxy %h %p</span>
+Host github.com
+    User git
+    ProxyCommand connect -H 127.0.0.1:7070 %h %p
 </code></pre>
 </div>
 

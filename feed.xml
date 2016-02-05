@@ -5,8 +5,8 @@
     <description>just another Jekyll blog</description>
     <link>https://dgeibi.github.io/</link>
     <atom:link href="https://dgeibi.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Feb 2016 23:21:40 +0800</pubDate>
-    <lastBuildDate>Thu, 04 Feb 2016 23:21:40 +0800</lastBuildDate>
+    <pubDate>Fri, 05 Feb 2016 19:12:29 +0800</pubDate>
+    <lastBuildDate>Fri, 05 Feb 2016 19:12:29 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -48,39 +48,64 @@ sudo apt-get update
     
       <item>
         <title>设置终端下的代理</title>
-        <description>&lt;h1 id=&quot;section&quot;&gt;参考&lt;/h1&gt;
+        <description>&lt;h4 id=&quot;section&quot;&gt;参考&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://segmentfault.com/q/1010000000118837/a-1020000000132541&quot;&gt;如何为 Git 设置代理？&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://wiki.archlinux.org/index.php/Proxy_settings&quot;&gt;Proxy settings - ArchWiki&lt;/a&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;connecthttpsbitbucketorggotohconnectwikihome&quot;&gt;安装 &lt;a href=&quot;https://bitbucket.org/gotoh/connect/wiki/Home&quot;&gt;Connect&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;http://manpages.ubuntu.com/manpages/natty/man1/connect-proxy.1.html&quot;&gt;connect-proxy manpages&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install connect-proxy
+&lt;h4 id=&quot;connecthttpsbitbucketorggotohconnectwikihome&quot;&gt;安装 &lt;a href=&quot;https://bitbucket.org/gotoh/connect/wiki/Home&quot;&gt;Connect&lt;/a&gt;&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#ubuntu&lt;/span&gt;
+sudo apt-get install connect-proxy
+&lt;span class=&quot;c&quot;&gt;#archlinux&lt;/span&gt;
+yaourt -S connect
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&quot;git-&quot;&gt;git 协议的配置&lt;/h1&gt;
+&lt;h4 id=&quot;git-&quot;&gt;git 协议的配置&lt;/h4&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vi /usr/bin/gitproxy
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo vi /usr/bin/gitproxy.sh
 -----
-&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
 connect -H 127.0.0.1:7070 &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
------
-sudo chmod +x /usr/bin/gitproxy
-git config --global core.gitproxy gitproxy
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-H&lt;/code&gt; 表示 HTTP 协议，将 &lt;code class=&quot;highlighter-rouge&quot;&gt;-H&lt;/code&gt; 改成 &lt;code class=&quot;highlighter-rouge&quot;&gt;-S&lt;/code&gt; 可以用 SOCKS5 协议。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-H&lt;/code&gt; 表示 HTTP，将 &lt;code class=&quot;highlighter-rouge&quot;&gt;-H&lt;/code&gt; 改成 &lt;code class=&quot;highlighter-rouge&quot;&gt;-S&lt;/code&gt; 可以用 SOCKS5 协议&lt;/p&gt;
 
-&lt;h1 id=&quot;http-&quot;&gt;HTTP 协议的配置&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo chmod +x /usr/bin/gitproxy.sh
+vi ~/.gitconfig
+-----
+[core]
+    gitproxy=gitproxy.sh for kernel.org
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;for kernel.org&lt;/code&gt; 表示只有那个域名需要代理，当然可以不加 &lt;code class=&quot;highlighter-rouge&quot;&gt;for *&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;http-&quot;&gt;HTTP 的配置&lt;/h4&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi ~/.bashrc
-&lt;span class=&quot;c&quot;&gt;#在最后添加以下内容&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#添加以下内容&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;http_proxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;http://127.0.0.1:7070/
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;https_proxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$http_proxy&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ftp_proxy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$http_proxy&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;ssh-&quot;&gt;SSH 的配置&lt;/h4&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi ~/.ssh/config
+-----
+&lt;span class=&quot;c&quot;&gt;##not using proxy on lan&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#Host 192.*&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#    ProxyCommand connect-proxy %h %p&lt;/span&gt;
+Host github.com
+    User git
+    ProxyCommand connect -H 127.0.0.1:7070 %h %p
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
