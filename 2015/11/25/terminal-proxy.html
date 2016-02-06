@@ -109,7 +109,7 @@ yaourt -S connect
 <div class="highlighter-rouge"><pre class="highlight"><code>sudo vi /usr/bin/gitproxy.sh
 -----
 <span class="c">#!/bin/bash</span>
-connect -H 127.0.0.1:7070 <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+connect -H 127.0.0.1:7070 <span class="nv">$*</span>
 </code></pre>
 </div>
 
