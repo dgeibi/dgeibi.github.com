@@ -83,12 +83,24 @@
 
 <p><a href="http://manpages.ubuntu.com/manpages/natty/man1/connect-proxy.1.html">connect-proxy manpages</a></p>
 
+<p><a href="https://wiki.archlinux.org/index.php/HTTP_tunneling">HTTP tunneling - ArchWiki</a></p>
+
 <h4 id="connecthttpsbitbucketorggotohconnectwikihome">安装 <a href="https://bitbucket.org/gotoh/connect/wiki/Home">Connect</a></h4>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="c">#ubuntu</span>
 sudo apt-get install connect-proxy
 <span class="c">#archlinux</span>
 yaourt -S connect
+</code></pre>
+</div>
+
+<h4 id="http-">HTTP 的配置</h4>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>vi ~/.bashrc
+<span class="c">#添加以下内容</span>
+<span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:7070/
+<span class="nb">export </span><span class="nv">https_proxy</span><span class="o">=</span><span class="nv">$http_proxy</span>
+<span class="nb">export </span><span class="nv">ftp_proxy</span><span class="o">=</span><span class="nv">$http_proxy</span>
 </code></pre>
 </div>
 
@@ -104,24 +116,11 @@ connect -H 127.0.0.1:7070 <span class="s2">"</span><span class="nv">$@</span><sp
 <p><code class="highlighter-rouge">-H</code> 表示 HTTP，将 <code class="highlighter-rouge">-H</code> 改成 <code class="highlighter-rouge">-S</code> 可以用 SOCKS5 协议</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>sudo chmod +x /usr/bin/gitproxy.sh
-vi ~/.gitconfig
------
-[core]
-    gitproxy=gitproxy.sh for kernel.org
+git config --global core.gitproxy 'gitproxy.sh for kernel.org'
 </code></pre>
 </div>
 
 <p><code class="highlighter-rouge">for kernel.org</code> 表示只有那个域名需要代理，当然可以不加 <code class="highlighter-rouge">for *</code></p>
-
-<h4 id="http-">HTTP 的配置</h4>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>vi ~/.bashrc
-<span class="c">#添加以下内容</span>
-<span class="nb">export </span><span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:7070/
-<span class="nb">export </span><span class="nv">https_proxy</span><span class="o">=</span><span class="nv">$http_proxy</span>
-<span class="nb">export </span><span class="nv">ftp_proxy</span><span class="o">=</span><span class="nv">$http_proxy</span>
-</code></pre>
-</div>
 
 <h4 id="ssh-">SSH 的配置</h4>
 
@@ -133,6 +132,17 @@ vi ~/.gitconfig
 Host github.com
     User git
     ProxyCommand connect -H 127.0.0.1:7070 %h %p
+</code></pre>
+</div>
+
+<p>除了 Connect 还有很多其他的选择，如 corscrew (仅支持 HTTP 代理)</p>
+
+<p>将下列命令替换到上述相应位置即可</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c">#git</span>
+corkscrew 127.0.0.1 7070 <span class="nv">$*</span>
+<span class="c">#SSH</span>
+ProxyCommand corkscrew 127.0.0.1 7070 %h %p
 </code></pre>
 </div>
 
