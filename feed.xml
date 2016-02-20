@@ -5,9 +5,9 @@
     <description>just another Jekyll blog</description>
     <link>https://dgeibi.github.io/</link>
     <atom:link href="https://dgeibi.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 12 Feb 2016 11:03:38 +0800</pubDate>
-    <lastBuildDate>Fri, 12 Feb 2016 11:03:38 +0800</lastBuildDate>
-    <generator>Jekyll v3.1.1</generator>
+    <pubDate>Sat, 20 Feb 2016 10:37:24 +0800</pubDate>
+    <lastBuildDate>Sat, 20 Feb 2016 10:37:24 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>解决恶劣环境下 Ubuntu 更新源 Hash Sum mismatch 错误</title>
@@ -16,8 +16,6 @@
 &lt;p&gt;使用 HTTPS 的软件源：修改 &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/apt/sources.list&lt;/code&gt; 中的网址成&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;https://mirrors.ustc.edu.cn/ubuntu&lt;/code&gt;，执行 &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt-get update&lt;/code&gt;&lt;/p&gt;
-
-&lt;!-- more --&gt;
 
 &lt;p&gt;也可以使用代理&lt;/p&gt;
 
@@ -311,7 +309,7 @@ stop&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;
 
 &lt;p&gt;编译 &lt;code class=&quot;highlighter-rouge&quot;&gt;gdut8021xclient&lt;/code&gt; 时需先把 clone 得到的文件夹改名为 &lt;code class=&quot;highlighter-rouge&quot;&gt;njit8021xclient&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;还要将根目录里的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Makefile _OpenWrt&lt;/code&gt; 改为 &lt;code class=&quot;highlighter-rouge&quot;&gt;Makefile&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;make menuconfig&lt;/code&gt; 后在 &lt;code class=&quot;highlighter-rouge&quot;&gt;Network&lt;/code&gt; 里选择。&lt;/p&gt;
+&lt;p&gt;还要将根目录里的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Makefile_OpenWrt&lt;/code&gt; 改为 &lt;code class=&quot;highlighter-rouge&quot;&gt;Makefile&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;make menuconfig&lt;/code&gt; 后在 &lt;code class=&quot;highlighter-rouge&quot;&gt;Network&lt;/code&gt; 里选择。&lt;/p&gt;
 
 &lt;h1 id=&quot;section-3&quot;&gt;编译成果&lt;/h1&gt;
 
@@ -386,7 +384,7 @@ stop&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;
 &lt;p&gt;将准备好的系统镜像解压至一非系统分区 (非C盘) 的 &lt;del&gt;任意目录&lt;/del&gt; 根目录&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;关于 WIN10 免费升级的提示：在 Win10 镜像里的 Sources 文件夹下找到名为&lt;code class=&quot;highlighter-rouge&quot;&gt;gatherosstate.exe&lt;/code&gt;的程序，将其复制到桌面。双击运行 &lt;code class=&quot;highlighter-rouge&quot;&gt;gatherosstate.exe&lt;/code&gt;，稍等片刻，它将会在桌面上生成一个名为&lt;code class=&quot;highlighter-rouge&quot;&gt;GenuineTicket.xml&lt;/code&gt;的文件。从文件命名就能看出，&lt;code class=&quot;highlighter-rouge&quot;&gt;GenuineTicket.xml&lt;/code&gt; 就是「正版通行证」的意思，它里面保存了当前电脑的系统激活信息，你可以用U盘将它保存好，后面我们将会需要这个文件。&lt;/p&gt;
+  &lt;p&gt;关于 WIN10 免费升级的提示：在 Win10 镜像里的 Sources 文件夹下找到名为 &lt;code class=&quot;highlighter-rouge&quot;&gt;gatherosstate.exe&lt;/code&gt; 的程序，将其复制到桌面。双击运行 &lt;code class=&quot;highlighter-rouge&quot;&gt;gatherosstate.exe&lt;/code&gt;，稍等片刻，它将会在桌面上生成一个名为&lt;code class=&quot;highlighter-rouge&quot;&gt;GenuineTicket.xml&lt;/code&gt;的文件。从文件命名就能看出，&lt;code class=&quot;highlighter-rouge&quot;&gt;GenuineTicket.xml&lt;/code&gt; 就是「正版通行证」的意思，它里面保存了当前电脑的系统激活信息，你可以用U盘将它保存好，后面我们将会需要这个文件。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;打开 EasyBCD&lt;/p&gt;
@@ -419,7 +417,7 @@ stop&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;
 
 &lt;p&gt;WIN10：“没有安装密钥”；选择与原系统对应版本以免费升级&lt;/p&gt;
 
-&lt;p&gt;WIN8.1：XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB&lt;/p&gt;
+&lt;p&gt;WIN8.1：XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB (专业版)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/image/install-windows/09.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
