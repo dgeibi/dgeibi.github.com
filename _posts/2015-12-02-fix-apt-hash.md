@@ -2,7 +2,7 @@
 layout: post
 title: 解决恶劣环境下 Ubuntu 更新源 Hash Sum mismatch 错误
 tags: [Ubuntu,Network]
-date: 2015-12-02 14:00:40
+date: 2015-12-02 14:00:40 +0800
 ---
 
 清除缓存 `sudo apt-get clean`
