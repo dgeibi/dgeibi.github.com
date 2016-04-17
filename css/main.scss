@@ -56,18 +56,20 @@ $on-laptop:        800px;
 table{
     border-collapse: collapse;
     //border-spacing: 0;
-    border:1px solid grey;
+    border:1px solid #DDDDDD;
 }
 
 th{
     vertical-align: middle;
     text-align: center;
     border:1px solid #DDDDDD;
+    padding: 6px 13px 6px 13px;
 }
 
 td{
     text-align: center;
     vertical-align: middle;
     border:1px solid #DDDDDD;
+    padding: 6px 13px 6px 13px;
 }
 
