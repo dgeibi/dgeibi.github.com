@@ -19,5 +19,5 @@ highlighter: rouge
 markdown: kramdown
 kramdown:
  input: GFM
-
+ parse_block_html: false
 enforce_ssl: dgeibi.github.io
