@@ -1,6 +1,6 @@
 ---
 layout: post
-title: vscode keybindings
+title: VSCode Keybindings
 date: 2016-04-17 11:20 +0800
 ---
 
