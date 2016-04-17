@@ -53,21 +53,24 @@ $on-laptop:        800px;
 ;
 
 
-table{
-    overflow: scroll;
+.table-wrapper {
+    overflow: auto;
+}
+
+table {
     border-collapse: collapse;
     border-spacing: 0;
     border:1px solid #DDDDDD;
 }
 
-th{
+th {
     vertical-align: middle;
     text-align: center;
     border:1px solid #DDDDDD;
     padding: 6px 13px 6px 13px;
 }
 
-td{
+td {
     vertical-align: middle;
     border:1px solid #DDDDDD;
     padding: 6px 13px 6px 13px;

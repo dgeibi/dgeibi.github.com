@@ -3,7 +3,6 @@ layout: post
 title: VSCode Keybindings
 date: 2016-04-17 11:20 +0800
 ---
-
 copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/customization/keybindings)
 
 ## Index
@@ -20,6 +19,9 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 * [Preferences](#preferences)
 
 ## Basic Editing
+
+
+<div class="table-wrapper" markdown="block">
 
 | Key                      | Command                                     | Command id                                       |
 |--------------------------|---------------------------------------------|--------------------------------------------------|
@@ -69,7 +71,11 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 | Ctrl+M                   | Toggle Use of Tab Key for Setting Focus     | editor.action.toggleTabFocusMode                 |
 | unassigned               | Toggle Render Whitespace                    | toggleRenderWhitespace                           |
 
+</div>
+
 ## Rich Languages Editing
+
+<div class="table-wrapper" markdown="block">
 
 | Key                      | Command                                     | Command id                                       |
 |--------------------------|---------------------------------------------|--------------------------------------------------|
@@ -89,7 +95,11 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 | Ctrl+Shift+X             | Trim Trailing Whitespace                    | editor.action.trimTrailingWhitespace             |
 | Ctrl+K M                 | Change Language Mode                        | workbench.action.editor.changeLanguageMode       |
 
+</div>
+
 # Navigation
+
+<div class="table-wrapper" markdown="block">
 
 | Key                      | Command                                     | Command id                                       |
 |--------------------------|---------------------------------------------|--------------------------------------------------|
@@ -105,7 +115,11 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 | Ctrl+Alt+-               | Go Back                                     | workbench.action.navigateBack                    |
 | Ctrl+Shift+-             | Go Forward                                  | workbench.action.navigateForward                 |
 
+</div>
+
 <h2 id="editorwindow-management">Editor/Window Management</h2>
+
+<div class="table-wrapper" markdown="block">
 
 | Key                      | Command                                     | Command id                                       |
 |--------------------------|---------------------------------------------|--------------------------------------------------|
@@ -123,8 +137,11 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 | Ctrl+K Left              | Move Active Editor Left                     | workbench.action.moveActiveEditorLeft            |
 | Ctrl+K Right             | Move Active Editor Right                    | workbench.action.moveActiveEditorRight           |
 
+</div>
 
 ## File Management
+
+<div class="table-wrapper" markdown="block">
 
 | Key                      | Command                                     | Command id                                       |
 |--------------------------|---------------------------------------------|--------------------------------------------------|
@@ -144,8 +161,11 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 | Ctrl+K O                 | Show Opened File in New Window              | workbench.action.files.showOpenedFileInNewWindow |
 | unassigned               | Compare Opened File With                    | workbench.files.action.compareFileWith           |
 
+</div>
 
 ## Display
+
+<div class="table-wrapper" markdown="block">
 
 | Key                      | Command                                     | Command id                                       |
 |--------------------------|---------------------------------------------|--------------------------------------------------|
@@ -163,8 +183,11 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 | Ctrl+Shift+V             | Toggle Markdown Preview                     | workbench.action.markdown.togglePreview          |
 | Ctrl+K V                 | Open Preview to the Side                    | workbench.action.markdown.openPreviewSideBySide  |
 
+</div>
 
 ## Debug
+
+<div class="table-wrapper" markdown="block">
 
 | Key           | Command                        | Command id                                          |
 |---------------|--------------------------------|-----------------------------------------------------|
@@ -177,14 +200,22 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 | Shift+F5      | Stop                           | workbench.action.debug.stop                         |
 | Ctrl+K Ctrl+I | Show Hover                     | editor.action.showHover                             |
 
+</div>
+
 ## Tasks
+
+<div class="table-wrapper" markdown="block">
 
 | Key           | Command                        | Command id                                          |
 |---------------|--------------------------------|-----------------------------------------------------|
 | Ctrl+Shift+B  | Run Build Task                 | workbench.action.tasks.build                        |
 | Ctrl+Shift+T  | Run Test Task                  | workbench.action.tasks.test                         |
 
+</div>
+
 ## Extensions
+
+<div class="table-wrapper" markdown="block">
 
 | Key           | Command                        | Command id                                          |
 |---------------|--------------------------------|-----------------------------------------------------|
@@ -193,7 +224,11 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 | unassigned    | Show Outdated Extensions       | workbench.extensions.action.listOutdatedExtensions  |
 | unassigned    | Show Extension Recommendations | workbench.extensions.action.listSuggestedExtensions |
 
+</div>
+
 ## Preferences
+
+<div class="table-wrapper" markdown="block">
 
 | Key           | Command                        | Command id                                          |
 |---------------|--------------------------------|-----------------------------------------------------|
@@ -204,3 +239,4 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 | unassigned    | Select Color Theme             | workbench.action.selectTheme                        |
 | unassigned    | Configure Display Language     | workbench.action.configureLocale                    |
 
+</div>
