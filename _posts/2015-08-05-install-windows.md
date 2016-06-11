@@ -28,7 +28,7 @@ tags: Windows
 * Win8.1 含Bing（必应）版 --> Win10家庭版
 * Win8.1/Win8单语言版 --> Win10家庭单语言版
 
-注意：32/64位不能升级位64/32位系统；下载列表中 N 是欧洲版和 KN 是韩版；Win10专业版/家庭版包含在列表的“Windows 10”里，其实也可以下下面的镜像
+注意：32/64位不能升级 64/32位系统；下载列表中 N 是欧洲版和 KN 是韩版；Win10专业版/家庭版包含在列表的“Windows 10”里，其实也可以下下面的镜像
 
 Windows 10 (Multiple Editions), Version 1511 (x64) - DVD (Chinese-Simplified)
 
@@ -42,11 +42,13 @@ ed2k://|file|cn_windows_10_multiple_editions_version_1511_x64_dvd_7223622.iso|41
 
 ### 3. 重装或升级系统
 
-#### 3.1. 重装(格式化)
+#### 3.1. 重装(格式化 C 盘)
 
-将准备好的系统镜像解压至一非系统分区 (非C盘) 的 <del>任意目录</del> 根目录
+将准备好的系统镜像解压至一非系统分区 (非C盘) 的 **根目录**
 
->关于 WIN10 免费升级的提示：在 Win10 镜像里的 Sources 文件夹下找到名为 `gatherosstate.exe` 的程序，将其复制到桌面。双击运行 `gatherosstate.exe`，稍等片刻，它将会在桌面上生成一个名为`GenuineTicket.xml`的文件。从文件命名就能看出，`GenuineTicket.xml` 就是「正版通行证」的意思，它里面保存了当前电脑的系统激活信息，你可以用U盘将它保存好，后面我们将会需要这个文件。
+*已通过微软官方渠道升级到 WIN 10 并确保激活的用户，可以重装相同版本的 WIN 10 且不需要密钥，自动激活*
+
+>从 WIN7/8.1 免费升级技巧：在 Win10 镜像里的 Sources 文件夹下找到名为 `gatherosstate.exe` 的程序，将其复制到桌面。双击运行 `gatherosstate.exe`，稍等片刻，它将会在桌面上生成一个名为`GenuineTicket.xml`的文件。从文件命名就能看出，`GenuineTicket.xml` 就是「正版通行证」的意思，它里面保存了当前电脑的系统激活信息，你可以用U盘将它保存好，后面我们将会需要这个文件。
 
 打开 EasyBCD
 
@@ -95,7 +97,7 @@ WIN8.1：XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB (专业版)
 
 ▲此后，Windows 安装程序要至少重启两次，耐心等待30分钟左右将进入后续设置。后续设置很简单，这里就跳过了。
 
->关于 WIN10 免费升级的提示：待 Win10 安装完成并进入桌面后，按键盘 Win+R 快捷键，打开“运行”，输入
+>从 WIN7/8.1 免费升级技巧：待 Win10 安装完成并进入桌面后，按键盘 Win+R 快捷键，打开“运行”，输入
 >
 >```
 %ProgramData%\Microsoft\Windows\ClipSVC\GenuineTicket
