@@ -1,5 +1,4 @@
 ---
-layout: post
 title: The First Post via GitHub Web Editor
 date: 2016-04-01 19:45:00 +0800
 ---

@@ -14,8 +14,18 @@ url: "https://dgeibi.github.io"
 twitter_username: dgeibi
 github_username:  dgeibi
 
+defaults:
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            layout: "post"
+
 # Build settings
 highlighter: rouge
 markdown: kramdown
 kramdown:
- input: GFM
+    input: GFM
+
+exclude: ["Gemfile", "Gemfile.lock", "Rakefile"]
