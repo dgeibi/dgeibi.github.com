@@ -34,7 +34,7 @@ end
 desc "Push to github"
 task :push do
   puts   "Pushing to `master' branch:"
-  system "git push origin master"
+  system "git push"
   puts   "`master' branch updated."
   puts
 
