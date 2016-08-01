@@ -36,7 +36,7 @@ task :push do
   puts   "Pushing to `master' branch:"
   system "git add -A"
   system "git commit -m 'update at #{Time.now.utc}'"
-  system "git push orgin master"
+  system "git push origin master"
   puts   "`master' branch updated."
   puts
 end
