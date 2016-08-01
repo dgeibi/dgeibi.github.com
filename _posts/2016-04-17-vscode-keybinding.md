@@ -6,11 +6,11 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 
 ## Index
 
-* [Basic Editing](#basic-editing)
-* [Rich Languages Editing](#rich-languages-editing)
+* [Basic Editing](#basicediting)
+* [Rich Languages Editing](#richlanguagesediting)
 * [Navigation](#navigation)
-* [Editor/Window Management](#editorwindow-management)
-* [File Management](#file-management)
+* [Editor/Window Management](#editorwindowmanagement)
+* [File Management](#filemanagement)
 * [Display](#display)
 * [Debug](#debug)
 * [Task](#task)
@@ -96,7 +96,7 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 
 </div>
 
-# Navigation
+## Navigation
 
 <div class="table-wrapper" markdown="block">
 
