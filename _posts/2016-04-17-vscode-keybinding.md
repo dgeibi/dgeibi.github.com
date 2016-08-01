@@ -116,7 +116,7 @@ copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/c
 
 </div>
 
-<h2 id="editorwindow-management">Editor/Window Management</h2>
+## Editor/Window Management
 
 <div class="table-wrapper" markdown="block">
 
