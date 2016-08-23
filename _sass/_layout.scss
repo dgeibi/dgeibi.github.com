@@ -170,9 +170,7 @@
  * Page content
  */
 .page-content {
-    position: relative;
-    padding: 74px 0;
-    //padding: $spacing-unit 0;
+    padding: $spacing-unit*2.5 0 $spacing-unit 0;
 }
 
 .page-heading {
