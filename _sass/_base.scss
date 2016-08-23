@@ -83,6 +83,10 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
+    &:target {
+        margin-top:-12px;
+        padding-top:60px;
+    }
     font-weight: $base-font-weight;
 }
 
