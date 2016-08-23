@@ -13,6 +13,7 @@ baseurl: ""
 url: "https://dgeibi.github.io"
 twitter_username: dgeibi
 github_username:  dgeibi
+permalink: '/:year/:title/'
 
 defaults:
     -

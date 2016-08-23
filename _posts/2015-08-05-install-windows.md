@@ -4,16 +4,16 @@ date: 2015-08-05 16:38:38 +0800
 tags: Windows
 ---
 
-### 0. 参考
+### 参考
 
 *   [免费用正版Win10完全攻略](http://www.ithome.com/html/win10/163188.htm)
 *   [Win7/Win8.1升级Win10正式版后如何全新安装系统？](http://www.ithome.com/html/win10/166773.htm)
 *   [跳过从Win7/8升级，直接格式化全新安装 Windows 10 并自动永久激活系统的方法教程](http://www.iplaysoft.com/clean-install-windows10-activate.html)
 *   [对应版本的信息来源](http://www.ithome.com/html/win10/152882.htm)
 
-### 1. 备份C盘的重要文件
+### 备份C盘的重要文件
 
-### 2. 下载
+### 下载
 
 1）系统镜像
 
@@ -39,9 +39,9 @@ ed2k://|file|cn_windows_10_multiple_editions_version_1511_x64_dvd_7223622.iso|41
 
 2）搜索、下载、安装 EasyBCD
 
-### 3. 重装或升级系统
+### 重装或升级系统
 
-#### 3.1. 重装(格式化 C 盘)
+#### 重装(格式化 C 盘)
 
 将准备好的系统镜像解压至一非系统分区 (非C盘) 的 **根目录**
 
@@ -105,7 +105,7 @@ WIN8.1：XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB (专业版)
 这时系统会打开一个文件夹，将之前生成的 `GenuineTicket.xml` 文件复制到这个文件夹中。
 确保电脑正常联网然后重启电脑。待电脑重启后，稍等片刻 Win10 将会自动进行激活。如果没有，手工进入“设置”，点击窗口底部的 “Windows没有激活。请立即激活Windows” 链接，然后点击 “在线激活Windows” 下的 “激活” 按钮即可手工激活。
 
-#### 3.2. 升级系统（不格式化）
+#### 升级系统（不格式化）
 
 将下载好的 iso 文件解压到非系统盘的任意位置
 
@@ -115,7 +115,7 @@ WIN8.1：XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB (专业版)
 
 升级完后如果不想回到以前的系统可以删掉系统盘的 Windows.old 文件夹
 
-### 4. 激活
+### 激活
 
 注：激活过程保持联网
 
@@ -132,7 +132,7 @@ slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
 
 稍等片刻，你可以在“系统”(按键盘 Win+X 快捷键，选择“系统”）中发现“Windows 已激活”。
 
-### 5. 更新驱动
+### 更新驱动
 
 刚装完系统，Windows 一般会自动更新驱动等。
 

@@ -4,21 +4,7 @@ date: 2016-04-17 11:20 +0800
 ---
 copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/customization/keybindings)
 
-## Index
-
-* [Basic Editing](#basicediting)
-* [Rich Languages Editing](#richlanguagesediting)
-* [Navigation](#navigation)
-* [Editor/Window Management](#editorwindowmanagement)
-* [File Management](#filemanagement)
-* [Display](#display)
-* [Debug](#debug)
-* [Task](#task)
-* [Extensions](#extensions)
-* [Preferences](#preferences)
-
 ## Basic Editing
-
 
 <div class="table-wrapper" markdown="block">
 
