@@ -39,7 +39,7 @@ function createDirectory(article, directory, isDirNum) {
             elem = titleElem.shift();
 
             // 保存标题内容
-            contentArray.push(elem.innerHTML);
+            contentArray.push(elem.innerText);
 
             // 修正
             num = +elem.tagName.match(/\d/)[0] - rootNum + 1;
@@ -60,7 +60,7 @@ function createDirectory(article, directory, isDirNum) {
             lastNum = num;
 
             // 添加标识符
-            elem.id = elem.id || elem.innerHTML.toLowerCase().replace(/[\s*+?^=!:${}()|[\]\/\\]/g, "").replace(/<.*>(.*)<.*>/g, '$1')
+            elem.id = elem.id || elem.innerText.toLowerCase().replace(/[\s*+?^=!:${}()|[\]\/\\]/g, "")
             titleId.push(elem.id);
         }
 
