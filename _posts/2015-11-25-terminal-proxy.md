@@ -5,26 +5,23 @@ tags: Network
 ---
 
 
-#### 参考
+## 参考
 
-[如何为 Git 设置代理？](http://segmentfault.com/q/1010000000118837/a-1020000000132541)
+* [如何为 Git 设置代理？](http://segmentfault.com/q/1010000000118837/a-1020000000132541)
+* [Proxy settings - ArchWiki](https://wiki.archlinux.org/index.php/Proxy_settings)
+* [connect-proxy manpages](http://manpages.ubuntu.com/manpages/natty/man1/connect-proxy.1.html)
+* [HTTP tunneling - ArchWiki](https://wiki.archlinux.org/index.php/HTTP_tunneling)
 
-[Proxy settings - ArchWiki](https://wiki.archlinux.org/index.php/Proxy_settings)
-
-[connect-proxy manpages](http://manpages.ubuntu.com/manpages/natty/man1/connect-proxy.1.html)
-
-[HTTP tunneling - ArchWiki](https://wiki.archlinux.org/index.php/HTTP_tunneling)
-
-#### 安装 [Connect](https://bitbucket.org/gotoh/connect/wiki/Home)
+## 安装 [Connect](https://bitbucket.org/gotoh/connect/wiki/Home)
 
 ```shell
 #ubuntu
 sudo apt-get install connect-proxy
 #archlinux
-yaourt -S connect
+yaourt -S connect # https://aur.archlinux.org/packages/connect
 ```
 
-#### HTTP 的配置
+## HTTP 的配置
 
 ```shell
 vi ~/.bashrc
@@ -34,9 +31,9 @@ export https_proxy=$http_proxy
 export ftp_proxy=$http_proxy
 ```
 
-#### git 协议的配置
+## git 协议的配置
 
-```shell
+```sh
 sudo vi /usr/bin/gitproxy.sh
 -----
 #!/bin/bash
@@ -45,16 +42,16 @@ connect -H 127.0.0.1:7070 $*
 
 `-H` 表示 HTTP，将 `-H` 改成 `-S` 可以用 SOCKS5 协议
 
-```
+```sh
 sudo chmod +x /usr/bin/gitproxy.sh
 git config --global core.gitproxy 'gitproxy.sh for kernel.org'
 ```
 
 `for kernel.org` 表示只有那个域名需要代理，当然可以不加 `for *`
 
-#### SSH 的配置
+## SSH 的配置
 
-```shell
+```sh
 vi ~/.ssh/config
 -----
 ##not using proxy on lan
@@ -69,7 +66,7 @@ Host github.com
 
 将下列命令替换到上述相应位置即可
 
-```shell
+```sh
 #git
 corkscrew 127.0.0.1 7070 $*
 #SSH
