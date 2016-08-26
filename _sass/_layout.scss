@@ -200,6 +200,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+    counter-reset: section;
 
     h2 {
         font-size: 26px;
