@@ -108,5 +108,5 @@ function createDirectory(article, directory, isDirNum) {
 
 try {
     createDirectory(document.getElementsByClassName('post-content')[0],
-        document.getElementById('content'), true);
+        document.getElementById('toc'), true);
 } catch (e) {}
