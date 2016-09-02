@@ -14,7 +14,12 @@ url: "https://dgeibi.github.io"
 author: dgeibi
 twitter_username: dgeibi
 github_username:  dgeibi
-permalink: '/:year/:title/'
+permalink: '/:year/:month/:day/:title/'
+
+collections:
+  my_categories:
+    output: true
+    permalink: /category/:name/
 
 defaults:
     -
@@ -23,6 +28,12 @@ defaults:
             type: "posts"
         values:
             layout: "post"
+    -
+        scope:
+          path: ""
+          type: "my_categories"
+        values:
+          layout: "blog_by_category"
 
 # Build settings
 highlighter: rouge

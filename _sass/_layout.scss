@@ -95,6 +95,15 @@
 }
 
 /**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    padding: $spacing-unit/2 0;
+    text-align: center;
+}
+
+/**
  * Page content
  */
 .page-content {
@@ -123,6 +132,7 @@
     display: block;
     font-size: 24px;
 }
+
 /**
  * Posts
  */
@@ -141,7 +151,6 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
-    counter-reset: section;
 
     h2 {
         font-size: 26px;
@@ -164,57 +173,4 @@
         }
     }
 
-    h2 {
-        counter-reset: subsection;
-    }
-
-    h2::before {
-        counter-increment: section;
-        content: counter(section) ". ";
-    }
-
-    h3::before {
-        counter-increment: subsection;
-        content: counter(section) "." counter(subsection) ". ";
-    }
-}
-
-#toc {
-    h2 {
-        font-size: 26px;
-        @include media-query($on-laptop) {
-            font-size: 24px;
-        }
-    }
-
-    ul {
-        list-style-type: none;
-    }
-}
-
-#back-to-top {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    z-index: 9999;
-    width: 32px;
-    height: 32px;
-    text-align: center;
-    line-height: 30px;
-    background: #f5f5f5;
-    color: #000;
-    cursor: pointer;
-    border: 0;
-    border-radius: 2px;
-    text-decoration: none;
-    transition: opacity 0.2s ease-out;
-    opacity: 0;
-
-    &:hover {
-        background: #e9ebec;
-    }
-
-    &.show {
-        opacity: 1;
-    }
 }

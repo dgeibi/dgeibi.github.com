@@ -1,7 +1,7 @@
 ---
 title: 设置终端下的代理
 date: 2015-11-25 13:33:40 +0800
-tags: Network
+category: tutorial
 ---
 
 

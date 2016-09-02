@@ -1,7 +1,7 @@
 ---
 title: 学习部不散
 date: 2016-06-07 12:42:43 +0800
-tags: summary
+category: summary
 ---
 
 *本文为最后一次例会的发言稿*
