@@ -11,6 +11,7 @@ email: png.inside@gmail.com
 description: just another Jekyll blog
 baseurl: ""
 url: "https://dgeibi.github.io"
+author: dgeibi
 twitter_username: dgeibi
 github_username:  dgeibi
 permalink: '/:year/:title/'
