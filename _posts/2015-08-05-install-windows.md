@@ -2,6 +2,7 @@
 title: 重装或升级 Windows
 date: 2015-08-05 16:38:38 +0800
 category: tutorial
+toc: true
 ---
 
 ## 备份C盘的重要文件
