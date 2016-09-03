@@ -14,12 +14,18 @@ h4,
 h5,
 h6,
 hr,
+html,
 ol,
 p,
 pre,
 ul {
     margin: 0;
     padding: 0;
+}
+
+html {
+    position:relative;
+    min-height: 100%;
 }
 
 /**
@@ -36,7 +42,6 @@ body {
     font-feature-settings: "kern" 1;
     font-kerning: normal;
     overflow-x: hidden;
-    position: relative;
 }
 /**
  * Set `margin-bottom` to maintain vertical rhythm
