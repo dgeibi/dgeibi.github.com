@@ -1,8 +1,7 @@
 ---
 layout: default
 ---
-{% assign post = page %}
-{% assign category = site.my_categories | where: "slug", post.category %}
+{% assign category = site.my_categories | where: "slug", page.category %}
   {% assign category = category[0] %}
   {% if category %}
     {% capture category_content %}
@@ -16,7 +15,11 @@ layout: default
         <p class="post-meta">
             Posted by
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a href="/about" itemprop="name">dgeibi</a>
+                {% if page.author %}
+                <span  itemprop="name">{{ page.author }}</span>
+                {% else %}
+                <a href="{{ site.baseurl }}/about" itemprop="name">{{ site.author }}</a>
+                {% endif %}
             </span>
             on
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
