@@ -56,7 +56,7 @@ $(document).ready(function() {
             $('#back-to-top').on('click', function(e) {
                 e.preventDefault();
                 $('html,body').animate({
-                    scrollTop: 250
+                    scrollTop: $("#top").offset().top
                 }, 400);
             });
         }
