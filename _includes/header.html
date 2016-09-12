@@ -5,12 +5,12 @@
         <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
         <div>
             <a href="https://twitter.com/{{ site.twitter_username }}"><svg role="img" title="Twitter" class="icon"><use xlink:href="{{ site.baseurl }}/image/icon.svg#twitter"/></svg></a>
-            <a href="https://github.com/{{ site.github_username }}"><svg role="img" title="GiHub" class="icon"><use xlink:href="{{ site.baseurl }}/image/icon.svg#github"/></svg></a>
+            <a href="https://github.com/{{ site.github_username }}"><svg role="img" title="GitHub" class="icon"><use xlink:href="{{ site.baseurl }}/image/icon.svg#github"/></svg></a>
             <a href="mailto:{{ site.email }}"><svg role="img" title="Mail" class="icon"><use xlink:href="{{ site.baseurl }}/image/icon.svg#mail"/></svg></a>
             <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><svg role="img" title="RSS" class="icon"><use xlink:href="{{ site.baseurl }}/image/icon.svg#rss"/></svg></a>
         </div>
 
-        <nav class="nav-link-list">
+        <nav class="site-nav">
             <a class="nav-link" href="{{ "/category/" | prepend: site.baseurl }}">分类</a>
             <a class="nav-link" href="{{ "/about/" | prepend: site.baseurl }}">关于</a>
         </nav>

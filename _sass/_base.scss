@@ -1,7 +1,6 @@
 /**
  * Reset some basic elements
  */
-
 blockquote,
 body,
 dd,
@@ -24,7 +23,7 @@ ul {
 }
 
 html {
-    position:relative;
+    position: relative;
     min-height: 100%;
 }
 
@@ -43,6 +42,7 @@ body {
     font-kerning: normal;
     overflow-x: hidden;
 }
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -62,6 +62,7 @@ pre,
 ul {
     margin-bottom: $spacing-unit / 2;
 }
+
 /**
  * Images
  */
@@ -69,6 +70,7 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
+
 /**
  * Figures
  */
@@ -79,6 +81,7 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
+
 /**
  * Lists
  */
@@ -93,6 +96,7 @@ li {
         margin-bottom: 0;
     }
 }
+
 /**
  * Headings
  */
@@ -104,6 +108,7 @@ h5,
 h6 {
     font-weight: $base-font-weight;
 }
+
 /**
  * Links
  */
@@ -120,6 +125,7 @@ a {
         text-decoration: underline;
     }
 }
+
 /**
  * Blockquotes
  */
@@ -135,6 +141,7 @@ blockquote {
         margin-bottom: 0;
     }
 }
+
 /**
  * Code formatting
  */
@@ -160,21 +167,39 @@ pre {
         padding-left: 0;
     }
 }
+
 /**
  * Icons
  */
 .icon {
-    > svg {
+        width: 35px;
+        height: 35px;
         display: inline-block;
-        width: 16px;
-        height: 16px;
         vertical-align: middle;
-
         path {
             fill: $grey-color;
         }
-    }
 }
+
+/**
+ * Logo
+ */
+.logo {
+    border: 1px solid #eee;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin:10px 0;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
 /**
  * Tables
  */
