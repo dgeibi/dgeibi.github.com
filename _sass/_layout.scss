@@ -36,6 +36,7 @@
     width: 100%;
     text-align: center;
     a.nav-link {
+        margin-right: 10px;
         color: $text-color;
     }
     @media (min-width: $on-laptop) {
