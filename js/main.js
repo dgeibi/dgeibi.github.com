@@ -1,9 +1,8 @@
-
 $(document).ready(function() {
     svg4everybody();
-    
+
     // from http://stackoverflow.com/a/4425214
-    (function(){
+    (function() {
         var links = document.links;
         for (var i = 0, linksLength = links.length; i < linksLength; i++) {
             if (links[i].hostname != window.location.hostname) {
@@ -13,7 +12,7 @@ $(document).ready(function() {
     })();
 
     // add table-wrapper
-    (function(){
+    (function() {
         var tables = document.getElementsByTagName("table");
         for (var i = 0, len = tables.length; i < len; i++) {
             var div = document.createElement("div");
@@ -24,8 +23,8 @@ $(document).ready(function() {
         }
     })();
 
-    (function(){
-        $("a").on('click', function(event) {
+    (function() {
+        $("#toc a").on('click', function(event) {
             if (this.hash !== "") {
                 event.preventDefault();
                 var hash = this.hash;
@@ -40,15 +39,16 @@ $(document).ready(function() {
 
     (function() {
         if ($('#back-to-top').length) {
-            var scrollTrigger = 100, // px
-                backToTop = function() {
-                    var scrollTop = $(window).scrollTop();
-                    if (scrollTop > scrollTrigger) {
-                        $('#back-to-top').addClass('show');
-                    } else {
-                        $('#back-to-top').removeClass('show');
-                    }
-                };
+            var topPos = $("#top").offset().top;
+            var scrollTrigger = topPos + 100; // px
+            var backToTop = function() {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > scrollTrigger) {
+                    $('#back-to-top').addClass('show');
+                } else {
+                    $('#back-to-top').removeClass('show');
+                }
+            };
             backToTop();
             $(window).on('scroll', function() {
                 backToTop();
@@ -56,7 +56,7 @@ $(document).ready(function() {
             $('#back-to-top').on('click', function(e) {
                 e.preventDefault();
                 $('html,body').animate({
-                    scrollTop: $("#top").offset().top
+                    scrollTop: topPos
                 }, 400);
             });
         }

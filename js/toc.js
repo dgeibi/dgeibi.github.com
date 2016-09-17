@@ -60,7 +60,7 @@ function createDirectory(article, directory, isDirNum) {
             lastNum = num;
 
             // 添加标识符
-            elem.id = elem.id || elem.innerText.toLowerCase().replace(/[\s*+?^=!:${}()|[\]\/\\]/g, "")
+            elem.id = elem.id || elem.innerText.replace(/[\s&\/\\#,.+=$~%'":*?<>{}\]\[()@]/g, "").toLowerCase();
             titleId.push(elem.id);
         }
 
