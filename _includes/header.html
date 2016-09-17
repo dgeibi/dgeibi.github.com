@@ -1,7 +1,7 @@
 <header class="site-header">
 
         <img class="logo unselectable" alt="logo" src="{{ site.baseurl }}/image/me.png">
-        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
         <div>
             <a href="https://twitter.com/{{ site.twitter_username }}"><svg role="img" title="Twitter" class="icon"><use xlink:href="{{ site.baseurl }}/image/icon.svg#twitter"/></svg></a>
             <a href="https://github.com/{{ site.github_username }}"><svg role="img" title="GitHub" class="icon"><use xlink:href="{{ site.baseurl }}/image/icon.svg#github"/></svg></a>
@@ -10,7 +10,10 @@
         </div>
 
         <nav class="site-nav">
-            <a class="nav-link" href="{{ "/category/" | prepend: site.baseurl }}">分类</a>
+            <a class="nav-link" href="{{ site.baseurl }}/">主页</a>
+            {% for category in site.my_categories %}
+            <a class="nav-link" href="{{ category.url | prepend: site.baseurl }}">{{ category.name }}</a>
+            {% endfor %}
             <a class="nav-link" href="{{ "/about/" | prepend: site.baseurl }}">关于</a>
         </nav>
 

@@ -32,7 +32,7 @@
 
 .site-nav {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     width: 100%;
     text-align: center;
     a.nav-link {
@@ -40,11 +40,16 @@
         color: $text-color;
     }
     @media (min-width: $on-laptop) {
-        font-size: 24px;
+        font-size: 22px;
         margin-top: 20px;
         a.nav-link {
-            display:block;
+            display: block;
             width: 100%;
+            padding: 5px 0;
+            &:hover {
+                background-color: #ddd;
+                text-decoration: none;
+            }
         }
     }
 }

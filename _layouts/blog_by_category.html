@@ -21,7 +21,7 @@ layout: default
     <div>
             {% endif %}
         {% endunless %}
-    <a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+    <a class="post-link" href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
         {% if forloop.last %}
     </div>
         {% endif %}
