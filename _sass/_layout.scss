@@ -4,7 +4,7 @@
 .site-header {
     border-bottom: 1px solid $grey-color-light;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     @media (min-width: $on-laptop) {
@@ -35,6 +35,7 @@
     margin: 10px 0;
     width: 100%;
     text-align: center;
+
     a.nav-link {
         margin-right: 10px;
         color: $text-color;
@@ -42,10 +43,12 @@
     @media (min-width: $on-laptop) {
         font-size: 22px;
         margin-top: 20px;
+
         a.nav-link {
             display: block;
             width: 100%;
             padding: 5px 0;
+
             &:hover {
                 background-color: #ddd;
                 text-decoration: none;
@@ -53,7 +56,6 @@
         }
     }
 }
-
 /**
  * Site footer
  */
@@ -70,13 +72,12 @@
         width: $slide-width;
     }
 }
-
 /**
  * Page content
  */
 .page-content {
     padding: $spacing-unit 18px;
-    margin: 0 auto $spacing-unit*2 auto;
+    margin: 0 auto $spacing-unit*2;
     max-width: $on-laptop;
     @media (min-width: $on-laptop) {
         margin-bottom: $spacing-unit/2;
@@ -106,7 +107,6 @@
     display: block;
     font-size: 24px;
 }
-
 /**
  * Posts
  */
@@ -135,7 +135,9 @@
         font-size: 20px;
     }
 }
-
+/**
+ * Comment
+ */
 .comment-link {
     text-align: center;
     display: block;
@@ -146,8 +148,31 @@
     width: 250px;
     color: $grey-color-dark;
     border-radius: 5px;
+    overflow: hidden;
+
     &:hover {
         text-decoration: none;
         background-color: #eee;
     }
+}
+
+/**
+ * Page Navigation
+ */
+.page-navigation {
+    font-size: 16px;
+    display: block;
+    width: auto;
+    overflow: hidden;
+}
+
+.page-navigation a {
+    display: block;
+    width: 50%;
+    float: left;
+    margin: 1em 0;
+}
+
+.page-navigation .next {
+    text-align: right;
 }

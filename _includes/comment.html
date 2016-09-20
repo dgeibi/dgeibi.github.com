@@ -1,44 +1,46 @@
-<a href="javascript:void(0);" id="enDisqus" class="comment-link">Post a comment with Disqus</a>
-<a href="javascript:void(0);" id="enDuoshuo" class="comment-link">使用多说留言</a>
+<div class="comment">
+    <a href="javascript:void(0);" id="enDisqus" class="comment-link">Post a comment with Disqus</a>
+    <a href="javascript:void(0);" id="enDuoshuo" class="comment-link">使用多说留言</a>
 
-<div id="disqus_thread"></div>
-<div id="duoshuo_thread"></div>
+    <div id="disqus_thread"></div>
+    <div id="duoshuo_thread"></div>
 
-<script>
-    var duoshuoQuery = {
-        short_name: "{{ site.duoshuo_id }}"
-    };
-
-    var useDuoshuo = function (container) {
-        var el = document.createElement('div');
-        el.setAttribute('data-thread-key', '{{ page.id }}');
-        el.setAttribute('data-url', '{{ site.url }}{{ page.url }}');
-        el.setAttribute('data-title', '{{ page.title }}');
-        DUOSHUO.EmbedThread(el);
-        document.getElementById('duoshuo_thread').appendChild(el);
-        document.getElementById("enDuoshuo").style.display = "none";
-    }
-
-    var useDisqus = function() {
-        var disqus_config = function() {
-            this.page.url = "{{ site.url }}{{ page.url }}";
-            this.page.identifier = "{{ page.id }}";
-            this.page.title = "{{ page.title }}";
+    <script>
+        var duoshuoQuery = {
+            short_name: "{{ site.duoshuo_id }}"
         };
 
-        (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document,
-                s = d.createElement('script');
+        var useDuoshuo = function (container) {
+            var el = document.createElement('div');
+            el.setAttribute('data-thread-key', '{{ page.id }}');
+            el.setAttribute('data-url', '{{ site.url }}{{ page.url }}');
+            el.setAttribute('data-title', '{{ page.title }}');
+            DUOSHUO.EmbedThread(el);
+            document.getElementById('duoshuo_thread').appendChild(el);
+            document.getElementById("enDuoshuo").style.display = "none";
+        }
 
-            s.src = '//{{ site.disqus_shortname }}.disqus.com/embed.js';
+        var useDisqus = function() {
+            var disqus_config = function() {
+                this.page.url = "{{ site.url }}{{ page.url }}";
+                this.page.identifier = "{{ page.id }}";
+                this.page.title = "{{ page.title }}";
+            };
 
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-        document.getElementById("enDisqus").style.display = "none";
-    };
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
 
-    document.getElementById("enDisqus").onclick = useDisqus;
-    document.getElementById("enDuoshuo").onclick = useDuoshuo;
-</script>
-<script src="//static.duoshuo.com/embed.js"></script>
+                s.src = '//{{ site.disqus_shortname }}.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            document.getElementById("enDisqus").style.display = "none";
+        };
+
+        document.getElementById("enDisqus").onclick = useDisqus;
+        document.getElementById("enDuoshuo").onclick = useDuoshuo;
+    </script>
+    <script src="//static.duoshuo.com/embed.js"></script>
+</div>
