@@ -15,6 +15,7 @@ author: dgeibi
 twitter_username: dgeibi
 github_username:  dgeibi
 disqus_shortname: dgeibi
+duoshuo_id: dgeibilog
 permalink: '/:year/:month/:day/:title/'
 
 collections:
