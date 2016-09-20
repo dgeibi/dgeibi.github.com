@@ -1,22 +1,25 @@
-<div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ site.url }}{{ page.url}}"></div>
-<a href="javascript:void(0)" id="disqusOpt">Use Disqus</a>
+<a href="javascript:void(0);" id="enDisqus" class="comment-link">Post a comment with Disqus</a>
+<a href="javascript:void(0);" id="enDuoshuo" class="comment-link">使用多说留言</a>
+
 <div id="disqus_thread"></div>
+<div id="duoshuo_thread"></div>
+
 <script>
     var duoshuoQuery = {
         short_name: "{{ site.duoshuo_id }}"
     };
 
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';
-        ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] ||
-            document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
+    var useDuoshuo = function (container) {
+        var el = document.createElement('div');
+        el.setAttribute('data-thread-key', '{{ page.id }}');
+        el.setAttribute('data-url', '{{ site.url }}{{ page.url }}');
+        el.setAttribute('data-title', '{{ page.title }}');
+        DUOSHUO.EmbedThread(el);
+        document.getElementById('duoshuo_thread').appendChild(el);
+        document.getElementById("enDuoshuo").style.display = "none";
+    }
 
-    var runDisqus = function() {
+    var useDisqus = function() {
         var disqus_config = function() {
             this.page.url = "{{ site.url }}{{ page.url }}";
             this.page.identifier = "{{ page.id }}";
@@ -32,8 +35,10 @@
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
         })();
-        document.getElementById("disqusOpt").style.display = "none";
+        document.getElementById("enDisqus").style.display = "none";
     };
 
-    document.getElementById("disqusOpt").onclick = runDisqus;
+    document.getElementById("enDisqus").onclick = useDisqus;
+    document.getElementById("enDuoshuo").onclick = useDuoshuo;
 </script>
+<script src="//static.duoshuo.com/embed.js"></script>
