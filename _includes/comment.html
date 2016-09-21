@@ -2,24 +2,30 @@
     <a id="enDisqus" class="comment-link">Post a comment with Disqus</a>
     <a id="enDuoshuo" class="comment-link">使用多说留言</a>
 
-    <div id="disqus_thread"></div>
-
     <script>
+        var comment = document.getElementById("comment");
+        var enDuoshuo = document.getElementById("enDuoshuo");
+        var enDisqus = document.getElementById("enDisqus");
+
         var duoshuoQuery = {
             short_name: "{{ site.duoshuo_id }}"
         };
 
-        var useDuoshuo = function () {
+        var useDuoshuo = function() {
             var el = document.createElement('div');
             el.setAttribute('data-thread-key', '{{ page.id }}');
             el.setAttribute('data-url', '{{ site.url }}{{ page.url }}');
             el.setAttribute('data-title', '{{ page.title }}');
             DUOSHUO.EmbedThread(el);
-            document.getElementById("comment").appendChild(el);
-            document.getElementById("enDuoshuo").style.display = "none";
-        }
+            comment.appendChild(el);
+            enDuoshuo.style.display = "none";
+        };
 
         var useDisqus = function() {
+            var div = document.createElement('div');
+            div.id = "disqus_thread";
+            comment.appendChild(div);
+
             var disqus_config = function() {
                 this.page.url = "{{ site.url }}{{ page.url }}";
                 this.page.identifier = "{{ page.id }}";
@@ -35,11 +41,11 @@
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
             })();
-            document.getElementById("enDisqus").style.display = "none";
+            enDisqus.style.display = "none";
         };
 
-        document.getElementById("enDisqus").onclick = useDisqus;
-        document.getElementById("enDuoshuo").onclick = useDuoshuo;
+        enDisqus.onclick = useDisqus;
+        enDuoshuo.onclick = useDuoshuo;
     </script>
     <script src="//static.duoshuo.com/embed.js"></script>
 </div>

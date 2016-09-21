@@ -54,7 +54,6 @@ $(document).ready(function() {
                 backToTop();
             });
             $('#back-to-top').on('click', function(e) {
-                e.preventDefault();
                 $('html,body').animate({
                     scrollTop: topPos
                 }, 400);
