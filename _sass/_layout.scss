@@ -74,11 +74,8 @@
 
 .page-content {
     padding: $spacing-unit 18px;
-    margin: 0 auto $spacing-unit*2;
+    margin: 0 auto;
     max-width: $on-laptop;
-    @media (min-width: $on-laptop) {
-        margin-bottom: 0;
-    }
 }
 
 .page-heading {
