@@ -48,12 +48,14 @@
  * Site footer
  */
 .site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit/2 0;
     text-align: center;
     @media (min-width: $on-laptop) {
-        bottom: 0;
-        left: 0;
         position: fixed;
         width: $slide-width;
     }
@@ -62,13 +64,13 @@
  * Page content
  */
 .page-body {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 200px;
+    margin-bottom: 2*$spacing-unit;
     @media (min-width: $on-laptop) {
+        position: absolute;
+        right: 0;
         top: 0;
         left: $slide-width;
+        margin-bottom: 0;
     }
 }
 
