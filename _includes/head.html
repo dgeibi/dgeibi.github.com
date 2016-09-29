@@ -1,15 +1,25 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+    <!--[if lte IE 10]>
+    <div style="background:#FF0;top:0;left:0;font-size:16px;color:#000;padding:0 10px;">
+  您正在使用低版本的IE浏览器，为让你更好更快地浏览网页，建议您尽快升级浏览器。
+  直接下载：
+  <a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank">IE浏览器</a> /
+  <a href="http://www.google.com/intl/zh-CN/chrome/browser/">谷歌浏览器</a> /
+  <a href="http://www.firefox.com.cn/download/">火狐浏览器</a> /
+  <a href="http://browser.qq.com/" target="_blank">QQ浏览器</a>
+    </div>
+  <![endif]-->
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="stylesheet" href="{{ " /css/main.css " | prepend: site.baseurl }}">
 
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="shortcut icon" type="image/png" href="/favicon.png">
-  <script type="text/javascript" src="{{"/js/jquery-3.1.0.min.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/svg4everybody.min.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ " /feed.xml " | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <script type="text/javascript" src="{{" /js/jquery-3.1.0.min.js " | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ " /js/svg4everybody.min.js " | prepend: site.baseurl }}"></script>
+    <script type="text/javascript" src="{{ " /js/main.js " | prepend: site.baseurl }}"></script>
 </head>
