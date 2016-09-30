@@ -1,3 +1,4 @@
 <footer class="site-footer">
     <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</small>
+    <a href="{{ "/feed.xml " | prepend: site.baseurl }}"><svg role="img" class="icon"><use xlink:href="{{ site.baseurl }}/image/icon.svg#rss"></use></svg></a>
 </footer>

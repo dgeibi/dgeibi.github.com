@@ -5,6 +5,13 @@ permalink: /about/
 comments: true
 ---
 
-恐惧写作，特别畏惧写湿货，但认为写点湿货，不管对自己还是他人都有一定的价值。
+<div class="contact-me">
+    <small class="post-meta">关注我：</small>
+    <a href="https://twitter.com/{{ site.twitter_username }}"><svg role="img" class="icon"> <use xlink:href="{{ site.baseurl }}/image/icon.svg#twitter"></use></svg></a>
+    <a href="https://github.com/{{ site.github_username }}"><svg role="img" class="icon"><use xlink:href="{{ site.baseurl }}/image/icon.svg#github"></use></svg></a>
+    <br>
+    <small class="post-meta">联系我：</small>
+    <a href="mailto:{{ site.email }}"><svg role="img" class="icon"><use xlink:href="{{ site.baseurl }}/image/icon.svg#mail"></use></svg></a>
+</div>
 
-更新以激励自己。
+一个学生，曾经 [「热爱学习」](/2016/09/15/me/) 。

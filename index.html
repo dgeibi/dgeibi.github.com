@@ -3,19 +3,21 @@ layout: default
 ---
 
 <div class="home">
+        
+    <div class="category-box">
+        <h1 class="page-heading">日志分类</h1>
+        {% for category in site.my_categories %}
+        <a href="{{ category.url | prepend: site.baseurl }}">{{ category.name }} ({{ site.categories[category.slug].size }})</a> /
+        {% endfor %}
+    </div>
 
-  <h1 class="page-heading">日志</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
+    <ul class="post-list">
+        <h1 class="page-heading">所有日志（共 {{ site.posts.size }} 篇）</h1>
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <span class="post-meta">{{ post.date | date: "%Y年%m月%d日" }}</span>
+        </li>
+        {% endfor %}
+    </ul>
 </div>

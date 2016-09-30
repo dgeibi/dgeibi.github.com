@@ -39,7 +39,7 @@ $(document).ready(function() {
 
     (function() {
         if ($('#back-to-top').length) {
-            var topPos = $("#top").offset().top;
+            var topPos = 0;
             var scrollTrigger = topPos + 100; // px
             var backToTop = function() {
                 var scrollTop = $(window).scrollTop();
@@ -61,4 +61,23 @@ $(document).ready(function() {
         }
     })();
 
+    (function() {
+
+        "use strict";
+
+        var toggles = document.querySelectorAll(".cmn-toggle-switch");
+
+        for (var i = toggles.length - 1; i >= 0; i--) {
+            var toggle = toggles[i];
+            toggleHandler(toggle);
+        };
+
+        function toggleHandler(toggle) {
+            toggle.addEventListener("click", function(e) {
+                e.preventDefault();
+                (this.classList.contains("active") === true) ? this.classList.remove("active"): this.classList.add("active");
+            });
+        }
+
+    })();
 })

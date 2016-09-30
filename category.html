@@ -1,8 +1,10 @@
 ---
 layout: page
-title: 分类
+title: 日志分类
 ---
 
-{% for category in site.my_categories %}
-<a class="post-link" href="{{ category.url | prepend: site.baseurl }}">{{ category.name }}</a>
-{% endfor %}
+<ul class="category-list">
+    {% for category in site.my_categories %}
+    <li><a href="{{ category.url | prepend: site.baseurl }}"><h4>{{ category.name }} ({{ site.categories[category.slug].size }})</h4></a></li>
+    {% endfor %}
+</ul>
