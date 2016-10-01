@@ -4,7 +4,7 @@ title: 关于
 permalink: /about/
 comments: true
 ---
-
+<script type="text/javascript" src="{{ " /js/svg4everybody.min.js " | prepend: site.baseurl }}"></script>
 <div class="contact-me">
     <small class="post-meta">关注我：</small>
     <a href="https://twitter.com/{{ site.twitter_username }}"><svg role="img" class="icon"> <use xlink:href="{{ site.baseurl }}/image/icon.svg#twitter"></use></svg></a>
