@@ -17,9 +17,8 @@ layout: default
         <p class="post-meta">
             作者：<span itemprop="author" itemscope itemtype="http://schema.org/Person">{% if page.author %}<span  itemprop="name">{{ page.author }}</span>{% else %}<a class="plain-link" href="{{ site.baseurl }}/about" itemprop="name">{{ site.author }}</a>{% endif %}</span>
             {% if category_content %} | 分类：{{ category_content }}{% endif %}
-            | 日期：<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y年%m月%d日" }}</time>
-
         </p>
+        <p class="post-meta">日期：<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y年%m月%d日" }}</time></p>
         {% if page.toc %}<div id="toc"></div>{% endif %}
     </header>
     <div class="post-content{% if page.toc %} toc-content{% endif %}" itemprop="articleBody">
