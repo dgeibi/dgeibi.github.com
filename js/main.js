@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    svg4everybody();
 
     // from http://stackoverflow.com/a/4425214
     (function() {
