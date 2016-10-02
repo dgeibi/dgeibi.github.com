@@ -2,6 +2,7 @@
 title: VSCode Keybindings
 date: 2016-04-17 11:20 +0800
 toc: true
+lang: en
 ---
 copy from [Visual Studio Code Key Bindings](https://code.visualstudio.com/Docs/customization/keybindings)
 

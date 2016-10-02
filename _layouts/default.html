@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="zh-hans">
+<html lang={% if page.lang %}"{{ page.lang }}"{% else %}"zh-hans"{% endif %}>
 {% include head.html %}
 <body>
     {% include header.html %}
