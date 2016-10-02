@@ -47,7 +47,7 @@
  * Page content
  */
 .page-content {
-    max-width: $on-laptop;
+    max-width: $content-width;
     margin: 0 auto 2*$spacing-unit;
     padding: $spacing-unit 18px;
 }
@@ -153,13 +153,17 @@
     }
 }
 
+.grey-color {
+    color: $grey-color;
+}
+
 .clearfix {
     overflow: auto;
     zoom: 1;
 }
 
 .wrapper {
-    max-width: $on-laptop;
+    max-width: $content-width;
     margin-right: auto;
     margin-left: auto;
 }
@@ -184,12 +188,14 @@
  */
 
 div.left-box {
-    max-width: $on-palm - $spacing-unit - 10px;
+    width: $on-palm - $spacing-unit - 10px;
     display: inline-block;
     float: left;
     margin-right: $spacing-unit;
     margin-bottom: $spacing-unit;
     @include media-query($on-palm + 130px) {
+        width: auto;
+        max-width: $on-palm - $spacing-unit - 10px;
         margin-right: 0;
         float: none;
         display: block;

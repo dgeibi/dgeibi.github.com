@@ -18,6 +18,7 @@ github_username:  dgeibi
 disqus_shortname: dgeibi
 duoshuo_id: dgeibilog
 permalink: '/:year/:month/:day/:title/'
+paginate: 10
 
 collections:
   my_categories:
