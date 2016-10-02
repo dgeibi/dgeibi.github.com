@@ -180,26 +180,7 @@ pre {
         height: 35px;
         display: inline-block;
         vertical-align: middle;
-        fill: #111;
-}
-
-/**
- * Logo
- */
-.logo {
-    border: 1px solid #eee;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    margin:10px 0;
-}
-.unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none
+        fill: $text-color;
 }
 
 /**
@@ -213,19 +194,18 @@ pre {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    border: 1px solid #DDDDDD;
+    border: 1px solid $grey-color-light;
 }
 
 th {
     vertical-align: middle;
     text-align: center;
-    border: 1px solid #DDDDDD;
+    border: 1px solid $grey-color-light;
     padding: 6px 13px;
 }
 
 td {
     vertical-align: middle;
-    border: 1px solid #DDDDDD;
+    border: 1px solid $grey-color-light;
     padding: 6px 13px;
-    white-space: nowrap;
 }
