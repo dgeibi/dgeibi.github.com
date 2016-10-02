@@ -1,7 +1,7 @@
+{% if jekyll.environment == "production" %}
 <div id="comment">
     <a id="enDisqus" class="comment-link">Post a comment with Disqus</a>
     <a id="enDuoshuo" class="comment-link">使用多说留言</a>
-
     <script>
         var comment = document.getElementById("comment");
         var enDuoshuo = document.getElementById("enDuoshuo");
@@ -20,32 +20,27 @@
             comment.appendChild(el);
             enDuoshuo.style.display = "none";
         };
-
         var useDisqus = function() {
             var div = document.createElement('div');
             div.id = "disqus_thread";
             comment.appendChild(div);
-
             var disqus_config = function() {
                 this.page.url = "{{ site.url }}{{ page.url }}";
                 this.page.identifier = "{{ page.id }}";
                 this.page.title = "{{ page.title }}";
             };
-
             (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document,
                     s = d.createElement('script');
-
                 s.src = '//{{ site.disqus_shortname }}.disqus.com/embed.js';
-
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
             })();
             enDisqus.style.display = "none";
         };
-
         enDisqus.onclick = useDisqus;
         enDuoshuo.onclick = useDuoshuo;
     </script>
     <script src="//static.duoshuo.com/embed.js"></script>
 </div>
+{% endif %}

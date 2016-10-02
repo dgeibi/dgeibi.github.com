@@ -164,10 +164,6 @@
     margin-left: auto;
 }
 
-.float-right {
-    float: right;
-}
-
 .category-list {
     list-style: square;
     margin-bottom: 15px;
@@ -182,6 +178,10 @@
     font-size: $small-font-size;
     color: $grey-color;
 }
+
+/**
+ * Home
+ */
 
 div.left-box {
     max-width: $on-palm - $spacing-unit - 10px;

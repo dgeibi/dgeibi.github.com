@@ -94,6 +94,10 @@ ul {
     margin-left: $spacing-unit;
 }
 
+ul {
+    list-style: square;
+}
+
 li {
      > ol,
     > ul {

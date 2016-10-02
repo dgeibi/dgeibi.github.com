@@ -9,7 +9,7 @@ layout: default
     {% endcapture %}
   {% endif %}
 {% if page.toc %}
-<script type="text/javascript" defer="defer" src="{{ site.baseurl }}/js/toc.js"></script>
+<script type="text/javascript" defer="defer" src="{{ site.baseurl }}/assets/toc.js"></script>
 {% endif %}
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
@@ -27,10 +27,10 @@ layout: default
 </article>
 <div class="page-navigation">
   {% if page.previous.url %}
-    <a class="prev" href="{{ page.previous.url | prepend: site.baseurl }}">&laquo; {{ page.previous.title }}</a>
+    <a class="prev plain-link" href="{{ page.previous.url | prepend: site.baseurl }}">&laquo; {{ page.previous.title }}</a>
   {% endif %}
   {% if page.next.url %}
-    <a class="next" href="{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title }} &raquo;</a>
+    <a class="next plain-link" href="{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title }} &raquo;</a>
   {% endif %}
 </div>
 {% include comment.html %}

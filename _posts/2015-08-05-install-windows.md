@@ -42,17 +42,17 @@ ed2k://|file|cn_windows_10_multiple_editions_version_1607_updated_jul_2016_x64_d
 
 开始安装
 
-![](/image/install-windows/05.jpg)
+![](/assets/image/install-windows/05.jpg)
 
-![](/image/install-windows/06.jpg)
+![](/assets/image/install-windows/06.jpg)
 
 ▲语言、区域和输入法设置，中国用户使用默认即可，点击“下一步”继续
 
-![](/image/install-windows/07.jpg)
+![](/assets/image/install-windows/07.jpg)
 
 ▲点击“现在安装”
 
-![](/image/install-windows/08.jpg)
+![](/assets/image/install-windows/08.jpg)
 
 ▲安装密钥：
 
@@ -60,19 +60,19 @@ WIN10：“没有安装密钥”；选择与原系统对应版本以免费升级
 
 WIN8.1：XHQ8N-C3MCJ-RQXB6-WCHYG-C9WKB (专业版)
 
-![](/image/install-windows/09.jpg)
+![](/assets/image/install-windows/09.jpg)
 
 ▲勾选“我接受许可条款”后，点击“下一步”继续
 
-![](/image/install-windows/10.jpg)
+![](/assets/image/install-windows/10.jpg)
 
 ▲由于我们目前执行纯净安装，因此要选择第二项“自定义”安装方式
 
-![](/image/install-windows/11.jpg)
+![](/assets/image/install-windows/11.jpg)
 
 ▲先将当前系统盘（根据分区大小判断）格式化，并选择这个分区，然后“下一步”即可
 
-![](/image/install-windows/12.jpg)
+![](/assets/image/install-windows/12.jpg)
 
 ▲此后，Windows 安装程序要至少重启两次，耐心等待30分钟左右将进入后续设置。后续设置很简单，这里就跳过了。
 
