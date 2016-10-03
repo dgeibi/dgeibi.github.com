@@ -25,7 +25,7 @@ layout: default
         {{ content }}
     </div>
 </article>
-<div class="page-navigation">
+<div class="page-navigation clearfix">
   {% if page.previous.url %}
     <a class="prev plain-link" href="{{ page.previous.url | prepend: site.baseurl }}">&laquo; {{ page.previous.title }}</a>
   {% endif %}

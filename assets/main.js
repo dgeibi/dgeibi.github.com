@@ -60,23 +60,22 @@ $(document).ready(function() {
         }
     })();
 
+    /* nav-btn */
     (function() {
 
         "use strict";
 
-        var toggles = document.querySelectorAll(".cmn-toggle-switch");
-
-        for (var i = toggles.length - 1; i >= 0; i--) {
-            var toggle = toggles[i];
-            toggleHandler(toggle);
-        };
-
-        function toggleHandler(toggle) {
-            toggle.addEventListener("click", function(e) {
-                e.preventDefault();
-                (this.classList.contains("active") === true) ? this.classList.remove("active"): this.classList.add("active");
-            });
-        }
-
+        var toggle = document.getElementById("nav-btn");
+        var nav = document.getElementById("nav");
+        toggle.addEventListener("click", function(e) {
+            e.preventDefault();
+            if (this.classList.contains("active")) {
+                this.classList.remove("active");
+                nav.classList.remove("active");
+            } else {
+                this.classList.add("active");
+                nav.classList.add("active");
+            }
+        });
     })();
 })
