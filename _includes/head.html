@@ -14,6 +14,9 @@
   <![endif]-->
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% if jekyll.environment == "production" %}
+    <base href="{{ site.url }}">
+    {% endif %}
     <link rel="stylesheet" href="{{ "/assets/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
