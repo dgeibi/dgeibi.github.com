@@ -38,6 +38,11 @@ defaults:
           type: "my_categories"
         values:
           layout: "blog_by_category"
+    -
+        scope:
+            path: "docs"
+        values:
+            layout: "note"
 
 # Build settings
 highlighter: rouge

@@ -182,11 +182,9 @@
     font-size: $small-font-size;
     color: $grey-color;
 }
-
 /**
  * Home
  */
-
 div.left-box {
     width: $on-palm - $spacing-unit - 10px;
     display: inline-block;
@@ -205,4 +203,19 @@ div.left-box {
 div.right-box {
     width: 130px;
     display: inline-block;
+}
+
+.docs-list {
+    font-size: 18px;
+    counter-reset: sect;
+    list-style-type: none;
+
+    a {
+        color: $grey-color-dark;
+        display: block;
+        &::before {
+            counter-increment: sect;
+            content: counter(sect) ". ";
+        }
+    }
 }
