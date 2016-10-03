@@ -79,10 +79,10 @@
     float: left;
     position: relative;
     overflow: hidden;
-    margin: 5px 10px;
+    margin: 0 0 0 -10px;
     padding: 0;
-    width: 54px;
-    height: 48px;
+    width: 55px;
+    height: 55px;
     font-size: 0;
     text-indent: -9999px;
     -webkit-appearance: none;
@@ -107,11 +107,11 @@
 .cmn-toggle-switch span {
     display: block;
     position: absolute;
-    top: 22px;
-    left: 13px;
-    right: 13px;
+    top: 28px;
+    left: 15px;
+    right: 15px;
     height: 3px;
-    background: $grey-color-dark;
+    background-color: $grey-color-dark;
 }
 
 .cmn-toggle-switch span::after,
@@ -131,11 +131,6 @@
 
 .cmn-toggle-switch span::after {
     bottom: -7px;
-}
-
-.cmn-toggle-switch__htx span {
-    -webkit-transition: background 0 0.3s;
-    transition: background 0 0.3s;
 }
 
 .cmn-toggle-switch__htx span::after,
