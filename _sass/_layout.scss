@@ -19,25 +19,29 @@
 
 .nav-list.active {
     clear: both;
-    margin: 0 20px;
+    margin: 0;
     display: list-item;
     float: none;
 
     .nav-item {
         display: block;
-        text-align: right;
+        text-align: left;
         line-height: 2;
         margin: 0;
+        a {
+            display: block;
+            padding-left: 10px;
+        }
     }
 }
 
 .nav-item {
     font-size: 20px;
-    text-align: right;
     @include media-query($on-laptop) {
         margin-right: 10px;
     }
     @media screen and (min-width: $on-palm) {
+        text-align: right;
         display: inline-block!important;
         line-height: 56px!important;
         margin-left: 10px !important;
@@ -50,7 +54,10 @@
     font-weight: 300;
     letter-spacing: -1px;
     @include media-query($on-laptop) {
-        margin-left: 10px;
+        margin: 0 10px;
+    }
+    @include media-query($on-palm) {
+        margin: 0 20px;
     }
 }
 /**
