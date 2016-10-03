@@ -108,8 +108,8 @@
     display: block;
     position: absolute;
     top: 22px;
-    left: 9px;
-    right: 9px;
+    left: 13px;
+    right: 13px;
     height: 3px;
     background: $grey-color-dark;
 }
@@ -126,11 +126,11 @@
 }
 
 .cmn-toggle-switch span::before {
-    top: -13px;
+    top: -7px;
 }
 
 .cmn-toggle-switch span::after {
-    bottom: -13px;
+    bottom: -7px;
 }
 
 .cmn-toggle-switch__htx span {
