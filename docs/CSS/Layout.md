@@ -178,4 +178,4 @@ img {
 }
 ```
 
-[CSS媒体查询 - Web开发者指南 \| MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries)
+[CSS媒体查询 - Web开发者指南 \| MDN](https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Media_queries/)

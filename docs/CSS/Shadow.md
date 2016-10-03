@@ -4,7 +4,7 @@ title: CSS Shadow
 
 ## text-shadow
 
-[text-shadow - CSS \| MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+[text-shadow - CSS \| MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow/)
 
 ```css
 /* offset-x | offset-y | blur-radius | color */
@@ -35,7 +35,7 @@ text-shadow: unset;
 
 ## box-shadow
 
-[box-shadow - CSS \| MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+[box-shadow - CSS \| MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow/)
 
 [CSS box-shadow "inset" and blur (tests, examples)](http://elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
 

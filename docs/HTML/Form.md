@@ -4,7 +4,7 @@ title: HTML Form
 
 ## form
 
-[form - HTML（超文本标记语言） \| MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form)
+[form - HTML（超文本标记语言） \| MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form/)
 
 &lt;form&gt; 定义一个表单以收集用户的输入
 
@@ -24,7 +24,7 @@ title: HTML Form
 
 ### fieldset
 
-[\<fieldset\> - HTML \| MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset)
+[\<fieldset\> - HTML \| MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset/)
 
 将控件与label集合在`<fieldset></fieldset>`内
 
@@ -34,7 +34,7 @@ title: HTML Form
 
 ### input
 
-[input - HTML（超文本标记语言） \| MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input)
+[input - HTML（超文本标记语言） \| MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/)
 
 `<input>` 用来创建交互控件(control)
 
@@ -72,7 +72,7 @@ title: HTML Form
 
 ### select
 
-[\<select\> - HTML \| MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
+[\<select\> - HTML \| MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select/)
 
 选择
 
@@ -93,7 +93,7 @@ title: HTML Form
 
 ### datalist
 
-[\<datalist\> - HTML \| MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist)
+[\<datalist\> - HTML \| MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist/)
 
 ```html
 <label>Choose a browser from this list:

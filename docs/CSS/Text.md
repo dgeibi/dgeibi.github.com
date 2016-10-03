@@ -6,7 +6,7 @@ title: CSS Text
 
 | 属性  |说明| 值 |
 | ----- |----| -- |
-| color |字体颜色设定 |[CSS Color]({{ site.baseurl }}/docs/Color) |
+| color |字体颜色设定 |[CSS Color]({{ site.baseurl }}/docs/CSS/Color/) |
 |direction|方向|ltr, rtl|
 |text-align|内容对齐|left, right, center, justify|
 |text-indent|指定内容缩进| em, px, %(width of container), [ hanging \|\| each-line ] |
@@ -37,4 +37,4 @@ title: CSS Text
 
 ie10
 
-[CSS Shadow]({{ site.baseurl }}/docs/CSS/Shadow#text-shadow)
+[CSS Shadow]({{ site.baseurl }}/docs/CSS/Shadow/#text-shadow)
