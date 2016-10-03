@@ -23,7 +23,7 @@ paginate: 10
 collections:
   my_categories:
     output: true
-    permalink: /category/:name/
+    permalink: '/category/:name/'
 
 defaults:
     -

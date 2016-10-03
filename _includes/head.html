@@ -2,6 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <!--[if lt IE 9]>
     <div style="background:#FF0;top:0;left:0;font-size:16px;color:#000;padding:0 10px;">
   您正在使用低版本的IE浏览器，为让你更好更快地浏览网页，建议您尽快升级浏览器。
@@ -14,13 +15,19 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <link rel="stylesheet" href="{{ "/assets/main.css" | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="shortcut icon" type="image/png" href="{{ "/assets/favicon/android-chrome-512x512.png" | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/favicon-48x48.png" sizes="48x48">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/favicon-64x64.png" sizes="64x64">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/android-chrome-512x512.png" sizes="512x512">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicon/apple-touch-icon.png">
     <link rel="manifest" href="{{ site.baseurl }}/assets/favicon/manifest.json">
+    <link rel="me" href="https://github.com/{{ site.github_username }}" type="text/html">
+    <link rel="me" href="mailto:{{ site.email }}">
     <script type="text/javascript" src="{{ "/assets/jquery-3.1.0.min.js " | prepend: site.baseurl }}"></script>
     <script type="text/javascript" src="{{ "/assets/main.js " | prepend: site.baseurl }}"></script>
+    <noscript><!--no JS alternative--></noscript>
 </head>
