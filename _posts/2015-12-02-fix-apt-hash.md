@@ -1,5 +1,5 @@
 ---
-title: 解决恶劣环境下 Ubuntu 更新源 Hash Sum mismatch 错误
+title: 解决 Hash Sum mismatch 错误
 category: tutorial
 date: 2015-12-02 14:00:40 +0800
 ---

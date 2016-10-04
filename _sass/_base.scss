@@ -27,7 +27,6 @@ html {
     min-height: 100%;
     overflow-y: scroll;
 }
-
 /**
  * Basic styling
  */
@@ -43,7 +42,6 @@ body {
     font-kerning: normal;
     overflow-x: hidden;
 }
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -63,6 +61,35 @@ pre,
 ul {
     margin-bottom: $spacing-unit / 2;
 }
+/**
+ * Color
+ */
+.plain-link {
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+}
+
+.grey-color {
+    color: $grey-color;
+}
+/**
+ * Clearfix
+ */
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+/**
+ * Wrapper
+ */
+.wrapper {
+    max-width: $content-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 $spacing-unit/2;
+}
 
 p {
     line-height: 1.8;
@@ -74,7 +101,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
 /**
  * Figures
  */
@@ -85,7 +111,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
 /**
  * Lists
  */
@@ -99,12 +124,11 @@ ul {
 }
 
 li {
-     > ol,
-    > ul {
+     > ul,
+    > ol {
         margin-bottom: 0;
     }
 }
-
 /**
  * Headings
  */
@@ -116,7 +140,6 @@ h5,
 h6 {
     font-weight: $base-font-weight;
 }
-
 /**
  * Links
  */
@@ -129,7 +152,6 @@ a {
         text-decoration: underline;
     }
 }
-
 /**
  * Blockquotes
  */
@@ -145,7 +167,6 @@ blockquote {
         margin-bottom: 0;
     }
 }
-
 /**
  * Code formatting
  */
@@ -171,18 +192,16 @@ pre {
         padding-left: 0;
     }
 }
-
 /**
  * Icons
  */
 .icon {
-        width: 35px;
-        height: 35px;
-        display: inline-block;
-        vertical-align: middle;
-        fill: $text-color;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    vertical-align: middle;
+    fill: $text-color;
 }
-
 /**
  * Tables
  */

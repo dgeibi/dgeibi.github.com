@@ -7,10 +7,7 @@ layout: default
         <h1 class="page-heading">日志</h1>
         <ul class="post-list clearfix">
             {% for post in paginator.posts %}
-            <li>
-                <a class="plain-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
-            </li>
+            <li><span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}：</span><a class="plain-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
             {% endfor %}
         </ul>
         {% if paginator.total_pages > 1 %}

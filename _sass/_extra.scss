@@ -1,5 +1,5 @@
 /**
- * TOC
+ * Toc
  */
 .toc-content {
     counter-reset: section;
@@ -33,13 +33,6 @@
         padding: 0;
         margin: 2px 0;
     }
-
-    a {
-        margin: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
 }
 /**
  * Back to Top
@@ -70,9 +63,8 @@
         opacity: 1;
     }
 }
-
 /**
- * nav-btn http://codepen.io/webduke/pen/LELwRb
+ * Nav-btn http://codepen.io/webduke/pen/LELwRb
  */
 .cmn-toggle-switch {
     display: none;
