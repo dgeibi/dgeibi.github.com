@@ -8,19 +8,17 @@ title: CSS Color
 
 [网页颜色 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E7%BD%91%E9%A1%B5%E9%A2%9C%E8%89%B2)
 
-`#XXYYZZ` -> #XYZ
+`#XXYYZZ` == #XYZ
 
-`#7F7F7F` -> `rgb(127,127,127)`
+`#7F7F7F` == `rgb(127,127,127)`
 
-## CSS 3
-
-### RGBA
+## RGBA
 
 `rgba(red, green, blue, alpha)`
 
  alpha 表示透明度，0.0 完全透明，1.0 不透明。
 
-### HSL
+## HSL
 
  `hsl(hue, saturation, lightness)`
 
@@ -31,6 +29,6 @@ title: CSS Color
  * saturation: % 饱和度
  * lightness:  % 亮度
 
-### HSLA
+## HSLA
 
 `hsla(hue, saturation, lightness, alpha)`
