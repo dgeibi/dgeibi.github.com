@@ -8,7 +8,7 @@ title: CSS Color
 
 [网页颜色 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E7%BD%91%E9%A1%B5%E9%A2%9C%E8%89%B2)
 
-`#XXYYZZ` == #XYZ
+`#XXYYZZ` == `#XYZ`
 
 `#7F7F7F` == `rgb(127,127,127)`
 
