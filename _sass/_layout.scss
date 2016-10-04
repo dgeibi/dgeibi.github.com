@@ -172,11 +172,26 @@
 .category-list {
     list-style: square;
     margin-bottom: $spacing-unit/2;
+
+    a {
+        font-size: 18px;
+    }
 }
 
-p.category-link {
-    font-size: 18px;
-    line-height: $base-line-height;
+.archive-meta {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    color: $grey-color;
+    font-size: 12px;
+}
+
+.archive-item {
+    position: relative;
+}
+
+.archive-link-wrapper {
+    margin-left: $spacing-unit*1.5;
 }
 /**
  * Contact Me
@@ -195,10 +210,10 @@ p.category-link {
         width: 100%;
         margin-bottom: $spacing-unit/2;
     }
+}
 
-    a {
-        font-size: 18px;
-    }
+a.list-link {
+    font-size: 20px;
 }
 
 div.left-box {

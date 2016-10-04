@@ -7,7 +7,10 @@ layout: default
         <h1 class="page-heading">日志</h1>
         <ul class="post-list clearfix">
             {% for post in paginator.posts %}
-            <li><span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}：</span><a class="plain-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+            <li>
+                <div><a class="plain-link list-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
+                <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+            </li>
             {% endfor %}
         </ul>
         {% if paginator.total_pages > 1 %}
@@ -35,11 +38,6 @@ layout: default
         {% endif %}
     </div>
     <div class="right-box">
-        <h1 class="page-heading">日志分类</h1>
-        <ul class="category-list">
-            {% for category in site.my_categories %}
-            <li><a class="plain-link" href="{{ category.url | prepend: site.baseurl }}">{{ category.name }} ({{ site.categories[category.slug].size }})</a></li>
-            {% endfor %}
-        </ul>
+        {% include category-list.html %}
     </div>
 </div>

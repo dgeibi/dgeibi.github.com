@@ -1,10 +1,7 @@
 ---
-layout: page
-title: 日志分类
+layout: default
 ---
 
-<ul class="category-list">
-    {% for category in site.my_categories %}
-    <li><a href="{{ category.url | prepend: site.baseurl }}"><h4>{{ category.name }} ({{ site.categories[category.slug].size }})</h4></a></li>
-    {% endfor %}
-</ul>
+<div class="category">
+    {% include category-list.html %}
+</div>
