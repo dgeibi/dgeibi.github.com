@@ -85,20 +85,6 @@
 .page-heading {
     font-size: 20px;
 }
-
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        width: 100%;
-        margin-bottom: $spacing-unit/2;
-    }
-
-    a {
-        font-size: 18px;
-    }
-}
 /**
  * Posts
  */
@@ -187,6 +173,11 @@
     list-style: square;
     margin-bottom: $spacing-unit/2;
 }
+
+p.category-link {
+    font-size: 18px;
+    line-height: $base-line-height;
+}
 /**
  * Contact Me
  */
@@ -196,6 +187,20 @@
 /**
  * Home
  */
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        width: 100%;
+        margin-bottom: $spacing-unit/2;
+    }
+
+    a {
+        font-size: 18px;
+    }
+}
+
 div.left-box {
     width: 500px;
     display: inline-block;
