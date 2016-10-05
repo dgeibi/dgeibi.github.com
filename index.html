@@ -8,8 +8,8 @@ layout: default
         <ul class="post-list clearfix">
             {% for post in paginator.posts %}
             <li>
-                <div><a class="plain-link list-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
                 <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+                <div><a class="plain-link list-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></div>
             </li>
             {% endfor %}
         </ul>

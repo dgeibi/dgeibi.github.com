@@ -24,7 +24,7 @@
     .nav-item {
         font-size: 20px;
     }
-    @media screen and (min-width: $on-palm) {
+    @media screen and (min-width: $on-palm + 1px) {
         float: right!important;
 
         .nav-item {
