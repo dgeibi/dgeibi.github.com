@@ -1,6 +1,6 @@
 ---
 title: 创建对象
-language: js
+language: javascript
 ---
 
 ## new 操作符的作用

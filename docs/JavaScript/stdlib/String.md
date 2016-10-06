@@ -1,6 +1,6 @@
 ---
 title: String
-language: js
+language: javascript
 ---
 
 ## 字符方法

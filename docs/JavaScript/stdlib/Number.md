@@ -1,6 +1,6 @@
 ---
 title: Number
-language: js
+language: javascript
 ---
 
 ## toFixed()

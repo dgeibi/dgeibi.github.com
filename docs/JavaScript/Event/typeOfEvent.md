@@ -1,6 +1,6 @@
 ---
 title: 事件类型
-language: js
+language: javascript
 ---
 
 [事件类型一览表 \| MDN](https://developer.mozilla.org/zh-CN/docs/Web/Events)

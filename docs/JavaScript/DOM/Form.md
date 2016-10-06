@@ -1,6 +1,6 @@
 ---
 title: Form
-language: js
+language: javascript
 ---
 
 ## HTMLFormElement

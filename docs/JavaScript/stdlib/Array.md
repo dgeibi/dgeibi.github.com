@@ -1,6 +1,6 @@
 ---
 title: Array
-language: js
+language: javascript
 ---
 
 ## 初始化

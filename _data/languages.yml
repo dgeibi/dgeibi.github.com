@@ -1,4 +1,5 @@
 - name: HTML
+  slug: html
   notes:
     - title: Attribute
       subpath: Attribute
@@ -7,6 +8,7 @@
       subpath: Form
 
 - name: CSS
+  slug: css
   notes:
     - title: Selectors
       subpath: Selectors
@@ -36,6 +38,7 @@
       subpath: Transform
 
 - name: JavaScript
+  slug: javascript
   notes:
     - title: Operator
       subpath: syntax/operator

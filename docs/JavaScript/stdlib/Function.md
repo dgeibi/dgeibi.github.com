@@ -1,6 +1,6 @@
 ---
 title: Function
-language: js
+language: javascript
 ---
 
 ## 函数声明提升

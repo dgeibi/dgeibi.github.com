@@ -1,6 +1,6 @@
 ---
 title: Attr
-language: js
+language: javascript
 ---
 
 元素的特性

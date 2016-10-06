@@ -1,6 +1,6 @@
 ---
 title: 继承
-language: js
+language: javascript
 ---
 
 ## 原型链

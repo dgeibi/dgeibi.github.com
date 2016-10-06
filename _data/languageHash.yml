@@ -1,9 +1,0 @@
-css:
-    name: CSS
-    hash: css
-html:
-    name: HTML
-    hash: html
-js:
-    name: JavaScript
-    hash: javascript

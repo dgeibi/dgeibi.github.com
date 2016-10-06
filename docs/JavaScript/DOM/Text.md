@@ -1,6 +1,6 @@
 ---
 title: Text, Comment, CDATASection
-language: js
+language: javascript
 ---
 
 ## Text

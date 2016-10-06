@@ -1,6 +1,6 @@
 ---
 title: Document
-language: js
+language: javascript
 ---
 
 ## document

@@ -1,6 +1,6 @@
 ---
 title: Window 对象
-language: js
+language: javascript
 ---
 
 ## history

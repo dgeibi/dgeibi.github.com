@@ -1,6 +1,6 @@
 ---
 title: Operator
-language: js
+language: javascript
 ---
 
 ## new

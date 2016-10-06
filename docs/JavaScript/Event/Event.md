@@ -1,6 +1,6 @@
 ---
 title: Event
-language: js
+language: javascript
 ---
 
 ## HTML 事件处理程序

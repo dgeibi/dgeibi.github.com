@@ -1,6 +1,6 @@
 ---
 title: DOM Level 2 Style
-language: js
+language: javascript
 ---
 
 * [Document Object Model (DOM) Level 2 Style Specification](https://www.w3.org/TR/DOM-Level-2-Style/)

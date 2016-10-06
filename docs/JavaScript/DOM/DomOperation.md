@@ -1,6 +1,6 @@
 ---
 title: DOM Operation
-language: js
+language: javascript
 ---
 
 ## 动态脚本

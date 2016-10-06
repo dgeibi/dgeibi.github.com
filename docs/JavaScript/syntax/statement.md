@@ -1,6 +1,6 @@
 ---
 title: Statement
-language: js
+language: javascript
 ---
 
 ## if

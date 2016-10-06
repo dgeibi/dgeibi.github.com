@@ -1,6 +1,6 @@
 ---
 title: Global
-language: js
+language: javascript
 ---
 
 Web 浏览器中 Global 对象作为 window 对象的一部分加以实现。

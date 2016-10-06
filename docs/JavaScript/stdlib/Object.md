@@ -1,6 +1,6 @@
 ---
 title: Object
-language: js
+language: javascript
 lang: en
 ---
 

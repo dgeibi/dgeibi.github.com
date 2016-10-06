@@ -1,6 +1,6 @@
 ---
 title: Element
-language: js
+language: javascript
 ---
 
 ## Create Element
