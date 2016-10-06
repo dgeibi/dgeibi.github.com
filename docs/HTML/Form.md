@@ -1,5 +1,5 @@
 ---
-title: HTML Form
+title: Form
 language: html
 ---
 

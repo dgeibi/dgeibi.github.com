@@ -1,5 +1,5 @@
 ---
-title: HTML Attribute
+title: Attribute
 language: html
 ---
 
