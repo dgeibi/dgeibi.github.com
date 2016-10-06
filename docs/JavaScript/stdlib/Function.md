@@ -48,15 +48,15 @@ obj.test(); // red
 
 ## 函数属性和方法
 
-### Function.prototype.apply()
+### apply()
 
 * 语法：`fun.apply(thisArg[, argsArray])`
 
-### Function.prototype.call()
+### call()
 
 * 语法：`fun.call(thisArg[, arg1[, arg2[, ...]]])`
 
-### Function.prototype.bind()
+### bind()
 
 * 语法：`fun.bind(thisArg[, arg1[, arg2[, ...]]])`
 * 功能：创建一个新函数，当这个新函数被调用时，它的this值是传递给bind()的第一个参数，它的参数是bind()的其他参数和其原本的参数。

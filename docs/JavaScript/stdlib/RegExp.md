@@ -18,7 +18,7 @@ flags(以下几个值的任意组合):
 * [u](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) (ES6)：Unicode。将模式视为Unicode码位（code points）序列。
 * [y](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) (ES6)
 
-## RegExp.prototype.exec()
+## exec()
 
 * 语法：`regexObj.exec(str)`
 * 功能：为指定的一段字符串执行搜索匹配操作。它的返回值是一个数组或者 null
@@ -44,7 +44,7 @@ var result = re.exec('The Quick Brown Fox Jumps Over The Lazy Dog');
 |             | multiline    | 是否使用了'm'标记使正则工作在多行模式（也就是，^ 和 $ 可以匹配字符串中每一行的开始和结束（行是由 \n 或 \r 分割的），而不只是整个输入字符串的最开始和最末尾处。） | false                                       |
 |             | source       | 正则模式的字符串                                                                                                                                                 | "quick\s(brown).+?(jumps)"                  |
 
-## RegExp.prototype.test()
+## test()
 
 * 语法：`regexObj.test(str)`
 * 功能：执行一个检索，用来查看正则表达式与指定的字符串是否匹配。返回 true 或 false。

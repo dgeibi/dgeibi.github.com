@@ -3,7 +3,7 @@ title: Number
 language: js
 ---
 
-## Number.prototype.toFixed()
+## toFixed()
 
 * 语法：`numObj.toFixed(digits)`
 * 功能：使用定点表示法来格式化一个数，自动舍入
@@ -28,7 +28,7 @@ numObj.toFixed(6);        // 返回 "12345.678900"：用0填充
 (-2.34).toFixed(1);       // 返回 "-2.3" （若用括号提高优先级，则返回字符串）
 ```
 
-## Number.prototype.toExponential()
+## toExponential()
 
 * 语法：`numObj.toExponential(fractionDigits)`
 * 功能：以指数表示法返回该数值字符串表示形式
@@ -47,7 +47,7 @@ alert("77.1234.toExponential() is " + 77.1234.toExponential()); //输出 7.71234
 alert("77 .toExponential() is " + 77 .toExponential()); //输出 7.7e+1
 ```
 
-## Number.prototype.toPrecision()
+## toPrecision()
 
 * 语法：`numObj.toPrecision(precision)`
 * 功能：以指定的精度返回该数值对象的字符串表示

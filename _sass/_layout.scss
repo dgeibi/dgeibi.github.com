@@ -103,14 +103,23 @@
 
     h2 {
         font-size: 26px;
+        @include media-query($on-palm) {
+            font-size: 22px;
+        }
     }
 
     h3 {
         font-size: 24px;
+        @include media-query($on-palm) {
+            font-size: 20px;
+        }
     }
 
     h4 {
         font-size: 20px;
+        @include media-query($on-palm) {
+            font-size: 18px;
+        }
     }
 }
 

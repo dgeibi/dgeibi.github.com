@@ -51,14 +51,6 @@ An accessor descriptor also has the following optional keys:
 | get| A function which serves as a getter for the property, or undefined if there is no getter. The function return will be used as the value of property. The function has no parameter. | undefined |
 | set| A function which serves as a setter for the property, or undefined if there is no setter. The function will receive as only argument the new value being **assigned** to the property. | undefined |
 
-## Object.prototype.isPrototypeOf()
-
-`prototypeObj.isPrototypeOf(obj)`
-
-## Object.prototype.hasOwnProperty()
-
-`obj.hasOwnProperty(prop)`
-
 ## Object.keys()
 
 return an array of a given object's own enumerable properties
@@ -66,3 +58,11 @@ return an array of a given object's own enumerable properties
 ##  Object.getOwnPropertyNames()
 
 return an array of all properties (enumerable or not) found directly upon a given object.
+
+## isPrototypeOf()
+
+`prototypeObj.isPrototypeOf(obj)`
+
+## hasOwnProperty()
+
+`obj.hasOwnProperty(prop)`

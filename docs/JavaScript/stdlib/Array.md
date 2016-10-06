@@ -36,7 +36,7 @@ arr.join('||');  // "red||yellow"
 
 ## 栈方法
 
-### Array.prototype.push()
+### push()
 
 * 语法：`arr.push(element1, ..., elementN)`
 * 参数：被添加到末尾的新元素
@@ -69,17 +69,17 @@ Array.prototype.push.apply(vegetables, moreVegs);
 console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
-### Array.prototype.pop()
+### pop()
 
 * 语法：`arr.pop()`
 * 功能：删除掉数组(arr)的最后一个元素，返回被删除的元素
 
-### Array.prototype.shift()
+### shift()
 
 * 语法：`arr.shift()`
 * 功能：shift 方法移除索引为 0 的元素(即第一个元素)，返回被移除的元素 或 undefined （length为0时）。
 
-### Array.prototype.unshift()
+### unshift()
 
 * 语法：`arr.unshift(element1, ..., elementN)`
 * 功能：在数组(arr)的开头添加一个或者多个元素，返回数组新的 length 值
@@ -93,7 +93,7 @@ arr.unshift(-2, -1); // = 5
 
 ## 重排序方法
 
-### Array.prototype.sort()
+### sort()
 
 * 语法：`arr.sort([compareFunction])`
 * 功能：对数组的元素做原地的排序，返回这个数组。
@@ -101,14 +101,14 @@ arr.unshift(-2, -1); // = 5
 * 注意：如果 compareFunction(a, b) 小于 0 ，那么 a 会被排列到 b 之前
 
 
-### Array.prototype.reverse()
+### reverse()
 
 * 语法：`arr.reverse()`
 * 功能：颠倒数组中元素的位置，并返回该数组的引用。
 
 ## 操作方法
 
-### Array.prototype.concat()
+### concat()
 
 * 语法：`array.concat(value1, value2, ..., valueN)`
 * 功能：将传入的数组或非数组值与原数组合并（原数组未被修改），组成一个新的数组并返回
@@ -120,7 +120,7 @@ var alpha = ['a', 'b', 'c'];
 var alphaNumeric = alpha.concat(1, [2, 3]);
 ```
 
-### Array.prototype.slice()
+### slice()
 
 * 语法：`arr.slice([begin[,end]])`
 * 功能：slice() 方法把数组中一部分的浅复制（shallow copy）存入一个新的数组对象中，并返回这个新的数组
@@ -136,7 +136,7 @@ var newArr = arr.slice(1,3);
 // = [1,2]
 ```
 
-### Array.prototype.splice()
+### splice()
 
 * 语法：`array.splice(start, deleteCount[, item1[, item2[, ...]]])`
 * 参数：
@@ -147,21 +147,21 @@ var newArr = arr.slice(1,3);
 
 ## 位置方法
 
-### Array.prototype.indexOf()
+### indexOf()
 
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 * 语法： `arr.indexOf(searchElement[, fromIndex = 0])`
 * 功能：返回给定元素能找在数组中找到的第一个索引值，否则返回-1
 
-### Array.prototype.lastIndexOf()
+### lastIndexOf()
 
 * 语法：`arr.lastIndexOf(searchElement[, fromIndex = arr.length - 1])`
 * 功能：返回指定元素在数组中的最后一个的索引，如果不存在则返回 -1。从数组的后面向前查找，从 fromIndex 处开始。
 
 ## 迭代方法
 
-### Array.prototype.every()
+### every()
 
 * 语法：`arr.every(callback[, thisArg])`
 * 功能：测试数组的所有元素是否都通过了指定函数的测试
@@ -181,7 +181,7 @@ passed = [12, 54, 18, 130, 44].every(isBigEnough);
 // passed is true
 ```
 
-### Array.prototype.some()
+### some()
 
 * 语法：`arr.some(callback[, thisArg])`
 * 功能：测试数组中的某些元素是否通过了指定函数的测试
@@ -189,7 +189,7 @@ passed = [12, 54, 18, 130, 44].every(isBigEnough);
 	* callback：用来测试每个元素的函数
 	* thisArg：执行 callback 时使用的 this 值
 
-### Array.prototype.filter()
+### filter()
 
 * 语法：`arr.filter(callback[, thisArg])`
 * 功能：使用指定的函数测试所有元素，并创建一个包含所有通过测试的元素的新数组
@@ -197,7 +197,7 @@ passed = [12, 54, 18, 130, 44].every(isBigEnough);
 	* callback：用来测试每个元素的函数（返回true表示保留该元素（通过测试），false则不保留）
 	* thisArg：执行 callback 时使用的 this 值
 
-### Array.prototype.map()
+### map()
 
 * 语法：`array.map(callback[, thisArg])`
 * 功能：返回一个由原数组中的每个元素调用一个指定方法后的返回值组成的新数组
@@ -208,7 +208,7 @@ passed = [12, 54, 18, 130, 44].every(isBigEnough);
 		* array：callback 的第三个参数，调用 map 方法的数组
 	* thisArg：执行 callback 时使用的 this 值
 
-### Array.prototype.forEach()
+### forEach()
 
 * 语法：`array.forEach(callback[, thisArg])`
 * 功能：让数组的每一项都执行一次给定的函数
@@ -221,7 +221,7 @@ passed = [12, 54, 18, 130, 44].every(isBigEnough);
 
 ## 归并方法
 
-### Array.prototype.reduce()
+### reduce()
 
 * 语法：`arr.reduce(callback,[initialValue])`
 * 功能：接收一个函数作为累加器（accumulator），数组中的每个值（从左到右）开始合并，最终为一个值。
@@ -233,7 +233,7 @@ passed = [12, 54, 18, 130, 44].every(isBigEnough);
 		* array：调用 reduce 的数组
 	* initialValue：作为第一次调用 callback 的第一个参数
 
-### Array.prototype.reduceRight()
+### reduceRight()
 
 * 语法：`arr.reduceRight(callback[, initialValue])`
 * 功能：接受一个函数作为累加器（accumulator），让每个值（从右到左，亦即从尾到头）缩减为一个值。（与 reduce() 的执行方向相反）
