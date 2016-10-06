@@ -1,5 +1,6 @@
 ---
-title: CSS Selectors
+title: Selectors
+language: css
 ---
 
 ## 说明

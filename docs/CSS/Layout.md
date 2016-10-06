@@ -1,5 +1,6 @@
 ---
-title: CSS Layout
+title: Layout
+language: css
 ---
 
 ## 文档结构

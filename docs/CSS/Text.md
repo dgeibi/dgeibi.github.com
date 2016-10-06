@@ -1,5 +1,6 @@
 ---
-title: CSS Text
+title: Text
+language: css
 ---
 
 ## 属性简介

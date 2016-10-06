@@ -1,5 +1,6 @@
 ---
 title: HTML Attribute
+language: html
 ---
 
 ## tabindex

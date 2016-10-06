@@ -9,7 +9,7 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.toc %}<div id="toc"></div>{% endif %}
   </header>
-  <div class="post-content{% if page.toc %} toc-content{% endif %}">
+  <div class="post-content{% if page.toc %} toc-content{% endif %} {{ page.extraClass }}">
     {{ content }}
   </div>
 </article>

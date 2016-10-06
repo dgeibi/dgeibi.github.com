@@ -1,5 +1,6 @@
 ---
-title: CSS Color
+title: Color
+language: css
 ---
 
 ## RGB

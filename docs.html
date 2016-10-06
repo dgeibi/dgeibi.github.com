@@ -2,22 +2,14 @@
 layout: page
 title: 笔记
 toc: true
+extraClass: docs-index
 ---
-<h2>CSS</h2>
-<ul class="docs-list">
-    {% include note-list-item.html lang="CSS" name="Selectors" %}
-    {% include note-list-item.html lang="CSS" name="Color" %}
-    {% include note-list-item.html lang="CSS" name="Text" %}
-    {% include note-list-item.html lang="CSS" name="Shadow" %}
-    {% include note-list-item.html lang="CSS" name="Fonts" %}
-    {% include note-list-item.html lang="CSS" name="Borders" %}
-    {% include note-list-item.html lang="CSS" name="Content" %}
-    {% include note-list-item.html lang="CSS" name="Layout" %}
-    {% include note-list-item.html lang="CSS" name="Transform" %}
-</ul>
 
-<h2>HTML</h2>
-<ul class="docs-list">
-    {% include note-list-item.html lang="HTML" name="Attribute" %}
-    {% include note-list-item.html lang="HTML" name="Form" %}
+{% for lang in site.data.languages %}
+<h2>{{ lang.name }}</h2>
+<ul>
+    {% for note in lang.notes %}
+    <li><a href="{{ site.baseurl }}/docs/{{ lang.name }}/{{ note.subpath }}/">{{ note.title }}</a></li>
+    {% endfor %}
 </ul>
+{% endfor %}

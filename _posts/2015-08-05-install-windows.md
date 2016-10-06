@@ -21,7 +21,7 @@ toc: true
 
 ## 下载
 
-已通过微软官方渠道升级到 Win10 并确保激活的用户，可以免密钥安装相同版本的 Win10，联网可自动激活，所以要下载相同的 Win10 镜像。
+已通过微软官方渠道升级到 Win10 并确保激活的用户，可以免密钥安装相同版本的 Win10，联网可自动激活，所以要下载相同版本的 Win10 镜像。
 
 >查看已安装 Win10 的版本
 >
@@ -35,7 +35,7 @@ Win10 主要有家庭版、专业版、家庭中文版，“Windows 10 家庭中
 
 也可以在 [MSDN，我告诉你](http://msdn.itellyou.cn/) 获取其它系统的下载地址。
 
-如果 BIOS 模式为“传统”，就需要下载、安装 [EasyBCD](https://pan.baidu.com/s/1hsmEhSS)。
+如果系统启动方式为 Legacy BIOS，就需要下载、安装 [EasyBCD](https://pan.baidu.com/s/1hsmEhSS)。
 
 ## 解压镜像文件
 

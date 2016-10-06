@@ -1,5 +1,6 @@
 ---
-title: CSS Borders
+title: Borders
+language: css
 ---
 
 ## 属性简介

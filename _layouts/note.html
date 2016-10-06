@@ -1,10 +1,18 @@
 ---
 layout: default
 ---
+{% if page.language %}
+{% assign language = site.data.languageHash[page.language] %}
+{% endif %}
 <script type="text/javascript" defer="defer" src="{{ site.baseurl }}/assets/toc.js"></script>
 <article class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
+    {% if language %}
+    <p class="post-meta">
+    <span>语言：<a class="plain-link" href="{{ site.baseurl }}/docs/#{{ language.hash }}" >{{ language.name }}</a></span>
+    </p>
+    {% endif %}
     <div id="toc"></div>
   </header>
   <div class="post-content toc-content">

@@ -1,5 +1,6 @@
 ---
-title: CSS Shadow
+title: Shadow
+language: css
 ---
 
 ## text-shadow

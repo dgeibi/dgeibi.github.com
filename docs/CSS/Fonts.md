@@ -1,5 +1,6 @@
 ---
-title: CSS Fonts
+title: Fonts
+language: css
 ---
 
 ## font-family

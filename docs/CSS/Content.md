@@ -1,5 +1,6 @@
 ---
-title: CSS Content
+title: Content
+language: css
 ---
 
 ## content 属性
