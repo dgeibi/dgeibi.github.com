@@ -93,7 +93,7 @@ position:
 
 ### from Node.prototype
 
-[Node - JavaScript 笔记](/docs/JavaScript/DOM/Node/#节点的增删)
+[Node - JavaScript Note](/docs/JavaScript/DOM/Node/#节点的增删)
 
 ```javascript
 element.insertBefore()
@@ -101,8 +101,6 @@ element.appendChild()
 element.replaceChild()
 element.removeChild()
 ```
-
-
 
 ## Attribute and AttributeNode
 
