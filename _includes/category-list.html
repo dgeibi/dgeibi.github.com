@@ -1,6 +1,6 @@
 <h1 class="page-heading">日志分类</h1>
 <ul class="category-list">
     {% for category in site.my_categories %}
-    <li><a class="plain-link" href="{{ category.url | prepend: site.baseurl }}">{{ category.name }}（{{ site.categories[category.slug].size }}）</a></li>
+    <li><a class="plain-link" href="{{ category.url | prepend: site.baseurl }}">{{ category.title }}（{{ site.categories[category.slug].size }}）</a></li>
     {% endfor %}
 </ul>

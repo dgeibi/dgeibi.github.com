@@ -1,4 +1,4 @@
 ---
 slug: tutorial
-name: 教程
+title: 教程
 ---

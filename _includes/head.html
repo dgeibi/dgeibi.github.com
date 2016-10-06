@@ -13,7 +13,7 @@
     </div>
   <![endif]-->
 
-    <title>{% if page.title %}{{ page.title }}{% if page.language %} - {{ site.data.languageHash[page.language].name }} Note {% endif %} | {% endif %}{{ site.title }}</title>
+    <title>{% if page.title %}{% if page.layout == "blog_by_category" %}分类：{% endif %}{{ page.title }}{% if page.language %} - {{ site.data.languageHash[page.language].name }} Note {% endif %} | {% endif %}{{ site.title }}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <link rel="stylesheet" href="{{ "/assets/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">

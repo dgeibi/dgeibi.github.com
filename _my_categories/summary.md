@@ -1,4 +1,4 @@
 ---
 slug: summary
-name: 总结
+title: 总结
 ---

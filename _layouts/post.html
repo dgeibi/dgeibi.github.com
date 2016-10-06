@@ -5,7 +5,7 @@ layout: default
   {% assign category = category[0] %}
   {% if category %}
     {% capture category_content %}
-    <a class="plain-link" href="{{ category.url }}">{{ category.name }}</a>
+    <a class="plain-link" href="{{ category.url }}">{{ category.title }}</a>
     {% endcapture %}
   {% endif %}
 {% if page.toc %}
