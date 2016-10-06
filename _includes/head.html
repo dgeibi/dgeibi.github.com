@@ -15,7 +15,7 @@
     <title>
     {% if page.title %}
     {% if page.layout == "blog_by_category" %}分类：{% endif %}{{ page.title }}
-    {% if page.language %}
+    {% if page.language and page.layout == "note" %}
             {% assign language = site.data.languages | where: "slug", page.language %}
             {% assign language = language[0] %}
             - {{ language.name }} Note
