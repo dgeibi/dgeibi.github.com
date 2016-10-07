@@ -145,7 +145,7 @@ var element = document.elementFromPoint(x, y);
 
 ### document.elementsFromPoint()
 
-与 `document.elementFromPoint()` 的区别是返回的是一个数组，如 <p> <div> <body> <html>
+与 `document.elementFromPoint()` 的区别是返回的是一个数组，如 `<p>` `<div>` `<body>` `<html>`
 
 ## document.importNode(), document.adoptNode()
 
@@ -171,7 +171,6 @@ var node = document.adoptNode(externalNode);
 ```
 
 The node (externalNode) and its subtree is removed from the document it's in (if any), and its ownerDocument is changed to the current document.
-
 
 ## Write
 

@@ -2,12 +2,11 @@
 layout: page
 title: 笔记
 toc: true
-extraClass: docs-index
 ---
 
 {% for lang in site.data.languages %}
 <h2>{{ lang.name }}</h2>
-<ul>
+<ul class="docs-list">
     {% for note in lang.notes %}
     <li><a href="{{ site.baseurl }}/docs/{{ lang.name }}/{{ note.subpath }}/">{{ note.title }}</a></li>
     {% endfor %}
