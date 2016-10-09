@@ -171,6 +171,14 @@ blockquote {
 /**
  * Code formatting
  */
+pre,
+code,
+kbd,
+samp,
+tt{
+  font-family: "Iosevka Slab", "Andale Mono", "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
+  font-size:1em;
+}
 code,
 pre {
     font-size: 15px;
