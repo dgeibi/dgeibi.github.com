@@ -158,7 +158,7 @@ element.scrollLeft
 
 `scrollTop`, `scrollLeft` 获取或设置DOM元素已经滚动到本身左边界或上边界的像素数。
 
-[视口位置](/docs/JavaScript/Window/#视口位置)
+[视口位置](/docs/JavaScript/Browser/Window/#视口位置)
 
 ### 长度或宽度
 

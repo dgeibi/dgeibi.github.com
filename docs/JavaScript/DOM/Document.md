@@ -34,7 +34,7 @@ document.title           // 标题
 document.dir             // 文档的文字方向；默认："ltr"; // "rtl" right to left
 ```
 
-[document.location](/docs/JavaScript/Window/#location)
+[document.location](/docs/JavaScript/Browser/Window/#location)
 
 ### document.readyState
 

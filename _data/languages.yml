@@ -80,7 +80,10 @@
       subpath: OOP/Inheritance
 
     - title: Window 对象
-      subpath: Window
+      subpath: Browser/Window
+
+    - title: Canvas 2D Context
+      subpath: Browser/Canvas2D
 
     - title: Node
       subpath: DOM/Node
