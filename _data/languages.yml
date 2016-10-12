@@ -7,6 +7,9 @@
     - title: Form
       subpath: Form
 
+    - title: Media Element
+      subpath: Media
+
 - name: CSS
   slug: css
   notes:

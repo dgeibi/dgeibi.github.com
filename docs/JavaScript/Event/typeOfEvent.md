@@ -122,39 +122,16 @@ format："text/plain"("text"), "text/uri-list"("url")
 
 ## Media Events
 
-[HTML Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#mediaevents)
+[Media Element - HTML Note](/docs/HTML/Media/mediaevents)
 
-* loadstart
-* progress
-* suspend
-* abort
-* error
-* emptied
-* stalled
-* loadedmetadata
-* loadeddata
-* canplay
-* canplaythrough
-* playing
-* waiting
-* seeking
-* seeked
-* ended
-* durationchange
-* timeupdate
-* play
-* pause
-* ratechange
-* resize
-* volumechange
-* error
+## Event handlers for objects of the text track APIs
+
 * change
 * addtrack
 * removetrack
 * cuechange
 * enter
 * exit
-
 
 ## Some HTML5 Event
 
