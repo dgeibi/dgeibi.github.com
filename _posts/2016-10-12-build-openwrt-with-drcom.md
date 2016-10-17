@@ -80,12 +80,15 @@ files/
 │   │   ├── firewall
 │   │   ├── luci
 │   │   ├── network
+│   │   ├── system
 │   │   └── wireless
 │   ├── dnsmasq.conf
 │   ├── drcom.conf
 │   ├── hotplug.d/
 │   │   └── iface/
 │   │       └── 99-drcom
+│   ├── opkg/
+│   │   └── distfeeds.conf
 │   └── sysupgrade.conf
 └── usr/
     └── bin/
@@ -97,9 +100,12 @@ files/
 ```bash
 mkdir -p files/etc/config
 scp root@192.168.1.1:"/etc/config/network /etc/config/luci /etc/config/wireless /etc/config/firewall" files/etc/config/
+scp root@192.168.1.1:"/etc/sysupgrade.conf" files/etc/
 ```
 
 也可以登录 luci，系统->备份/升级->生成备份，获得配置文件的压缩包。
+
+99-drcom、drcom、drcom.conf 可以从 [Drcom 折腾记录]({% post_url 2016-10-08-drcom %}) 获取。
 
 ## 编译固件
 
