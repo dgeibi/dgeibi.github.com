@@ -10,16 +10,14 @@ toc: true
 - [Image Generator (Image Builder) - EN [OpenWrt Wiki]](https://wiki.openwrt.org/doc/howto/obtain.firmware.generate)
 - [OpenWrt Downloads - 中科大镜像](http://openwrt.proxy.ustclug.org/)
 
-本文使用的硬件版本：ar71xx/generic；OpenWrt 的版本： trunk (Designated Driver)；Drcom的版本：5.2.1(p)
+本文假定使用的路由器：GL-iNet 6416A v1，使用的 CPU：ar71xx/generic；OpenWrt：15.05.1；Drcom：5.2.1(p)。
 
 ## 获取 Image Builder
 
 ```bash
 cd ~
 mkdir openwrt && cd openwrt
-wget http://openwrt.proxy.ustclug.org/snapshots/trunk/ar71xx/generic/OpenWrt-ImageBuilder-ar71xx-generic.Linux-x86_64.tar.bz2
-tar -xvjf OpenWrt-ImageBuilder-ar71xx-generic.Linux-x86_64.tar.bz2
-cd OpenWrt-ImageBuilder-ar71xx-generic.Linux-x86_64
+wget http://openwrt.proxy.ustclug.org/chaos_calmer/15.05.1/ar71xx/generic/OpenWrt-ImageBuilder-15.05.1-ar71xx-generic.Linux-x86_64.tar.bz2
 ```
 
 ## 修改 repositories.conf
@@ -27,14 +25,12 @@ cd OpenWrt-ImageBuilder-ar71xx-generic.Linux-x86_64
 修改 repositories.conf 如下
 
 ```
-# repositories.conf
-src/gz designated_driver_base http://openwrt.proxy.ustclug.org/snapshots/trunk/ar71xx/generic/packages/base
-src/gz designated_driver_kernel http://openwrt.proxy.ustclug.org/snapshots/trunk/ar71xx/generic/packages/kernel
-src/gz designated_driver_luci http://openwrt.proxy.ustclug.org/snapshots/trunk/ar71xx/generic/packages/luci
-src/gz designated_driver_management http://openwrt.proxy.ustclug.org/snapshots/trunk/ar71xx/generic/packages/management
-src/gz designated_driver_packages http://openwrt.proxy.ustclug.org/snapshots/trunk/ar71xx/generic/packages/packages
-src/gz designated_driver_routing http://openwrt.proxy.ustclug.org/snapshots/trunk/ar71xx/generic/packages/routing
-src/gz designated_driver_telephony http://openwrt.proxy.ustclug.org/snapshots/trunk/ar71xx/generic/packages/telephony
+src/gz chaos_calmer_base http://openwrt.proxy.ustclug.org/chaos_calmer/15.05.1/ar71xx/generic/packages/base
+src/gz chaos_calmer_luci http://openwrt.proxy.ustclug.org/chaos_calmer/15.05.1/ar71xx/generic/packages/luci
+src/gz chaos_calmer_management http://openwrt.proxy.ustclug.org/chaos_calmer/15.05.1/ar71xx/generic/packages/management
+src/gz chaos_calmer_packages http://openwrt.proxy.ustclug.org/chaos_calmer/15.05.1/ar71xx/generic/packages/packages
+src/gz chaos_calmer_routing http://openwrt.proxy.ustclug.org/chaos_calmer/15.05.1/ar71xx/generic/packages/routing
+src/gz chaos_calmer_telephony http://openwrt.proxy.ustclug.org/chaos_calmer/15.05.1/ar71xx/generic/packages/telephony
 src imagebuilder file:packages
 ```
 
@@ -71,31 +67,23 @@ endif
 
 ## 配置文件的准备
 
-例如：
+新建一个`files`目录，将所需的文件放在相应目录，以制作带有自定义文件的固件。
+
+Drcom 认证需要的文件（可以从 [Drcom 折腾记录]({% post_url 2016-10-08-drcom %}) 获取）：
 
 ```
 files/
 ├── etc/
-│   ├── config/
-│   │   ├── firewall
-│   │   ├── luci
-│   │   ├── network
-│   │   ├── system
-│   │   └── wireless
-│   ├── dnsmasq.conf
 │   ├── drcom.conf
-│   ├── hotplug.d/
-│   │   └── iface/
-│   │       └── 99-drcom
-│   ├── opkg/
-│   │   └── distfeeds.conf
-│   └── sysupgrade.conf
+│   └── hotplug.d/
+│       └── iface/
+│           └── 99-drcom
 └── usr/
     └── bin/
         └── drcom
 ```
 
-可以用 `scp` 备份配置：
+可以用 `scp` 备份其它配置文件：
 
 ```bash
 mkdir -p files/etc/config
@@ -104,8 +92,6 @@ scp root@192.168.1.1:"/etc/sysupgrade.conf" files/etc/
 ```
 
 也可以登录 luci，系统->备份/升级->生成备份，获得配置文件的压缩包。
-
-99-drcom、drcom、drcom.conf 可以从 [Drcom 折腾记录]({% post_url 2016-10-08-drcom %}) 获取。
 
 ## 编译固件
 
