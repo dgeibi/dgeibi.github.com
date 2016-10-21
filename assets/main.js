@@ -1,5 +1,4 @@
-$(document).ready(function() {
-
+window.addEventListener('DOMContentLoaded', function() {
     // from http://stackoverflow.com/a/4425214
     (function() {
         var links = document.links;
@@ -10,7 +9,7 @@ $(document).ready(function() {
         }
     })();
 
-    // add table-wrapper
+    /* add table-wrapper */
     (function() {
         var tables = document.getElementsByTagName("table");
         for (var i = 0, len = tables.length; i < len; i++) {
@@ -23,59 +22,34 @@ $(document).ready(function() {
     })();
 
     (function() {
-        $("#toc a").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 400, function() {
-                    window.location.hash = hash;
-                });
+        var backBtn = document.getElementById("back-to-top");
+        var scrollTrigger = 100;
+        var backToTop = function() {
+            var scrollTop = window.pageYOffset;
+            if (scrollTop > scrollTrigger) {
+                backBtn.classList.add('show');
+            } else {
+                backBtn.classList.remove('show');
             }
-        });
-    })();
-
-    (function() {
-        if ($('#back-to-top').length) {
-            var topPos = 0;
-            var scrollTrigger = topPos + 100; // px
-            var backToTop = function() {
-                var scrollTop = $(window).scrollTop();
-                if (scrollTop > scrollTrigger) {
-                    $('#back-to-top').addClass('show');
-                } else {
-                    $('#back-to-top').removeClass('show');
-                }
-            };
+        };
+        backToTop();
+        window.addEventListener('scroll', function() {
             backToTop();
-            $(window).on('scroll', function() {
-                backToTop();
-            });
-            $('#back-to-top').on('click', function(e) {
-                $('html,body').animate({
-                    scrollTop: topPos
-                }, 400);
-            });
-        }
+        });
+        backBtn.addEventListener('click', function() {
+            window.scrollTo(0, 0);
+        });
     })();
 
     /* nav-btn */
     (function() {
-
         "use strict";
-
         var toggle = document.getElementById("nav-btn");
         var nav = document.getElementById("nav");
         toggle.addEventListener("click", function(e) {
             e.preventDefault();
-            if (this.classList.contains("active")) {
-                this.classList.remove("active");
-                nav.classList.remove("active");
-            } else {
-                this.classList.add("active");
-                nav.classList.add("active");
-            }
+            this.classList.toggle("active");
+            nav.classList.toggle("active");
         });
     })();
-})
+});
