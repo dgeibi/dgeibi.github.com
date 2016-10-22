@@ -53,7 +53,7 @@ var person1 = new Person();
 var person2 = new Person();
 
 person1.name = "Mike";
-console.log(person1.name); // Mike //屏蔽了
+console.log(person1.name); // Mike // 屏蔽了
 console.log(person2.name); // XiaoMing
 
 person1.course.push("english");
@@ -63,7 +63,7 @@ console.log(person2.course); //["math", "chinese", "english"]
 
 缺点：
 
-1. 继承自原型对象的属性是共享的,引用类型指向的内存地址不变导致反直觉的结果。
+1. 继承自原型对象的属性是共享的, 引用类型指向的内存地址不变导致反直觉的结果。
 1. 初始化不方便。
 
 ## 组合使用构造函数和原型

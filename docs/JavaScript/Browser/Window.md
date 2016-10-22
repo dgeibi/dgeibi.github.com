@@ -110,11 +110,11 @@ navigator.registerContentHandler() //https://developer.mozilla.org/en-US/docs/We
 
 ## 框架窗口
 
-`window.frames` 返回一个类似数组的对象，成员为页面内所有框架窗口，包括`frame`元素和`iframe`元素。
+`window.frames` 返回一个类似数组的对象，成员为页面内所有框架窗口，包括 `frame` 元素和 `iframe` 元素。
 
 ```javascript
 window === frames // true
-window.length //返回当前网页包含的框架总数
+window.length // 返回当前网页包含的框架总数
 ```
 
 * `top` -> 最外层的框架
@@ -167,7 +167,7 @@ window.resizeBy()
 ```javascript
 // dom
 
-//可见 //布局（内容实际）
+// 可见 // 布局（内容实际）
 document.documentElement.clientWidth
 document.documentElement.clientHeight
 document.body.clientWidth
@@ -200,7 +200,7 @@ window.pageXOffset  // 视口相对于整个页面水平偏移量
 window.scrollX      // 视口相对于整个页面水平偏移量
 ```
 
-由MDN提供的跨浏览器的解决方案如下
+由 MDN 提供的跨浏览器的解决方案如下
 
 ```javascript
 var x = (window.pageXOffset !== undefined)
@@ -257,7 +257,7 @@ var timeoutID = window.setTimeout(code, [delay]);
 ```
 
 code: 代码字符串
-delay: 函数被调用/代码被执行等待的毫秒数
+delay: 函数被调用 / 代码被执行等待的毫秒数
 
 取消任务
 
@@ -270,7 +270,7 @@ clearTimeout(timeoutID);
 ```javascript
 var intervalID = window.setInterval(func, delay[, param1, param2, ...]);
 var intervalID = window.setInterval(code, delay);
-/*取消调用*/
+/* 取消调用 */
 clearInterval(intervalID);
 ```
 
@@ -337,7 +337,7 @@ window.TEMPORARY
 window.PERSISTENT
 window.status    // 返回或设置浏览器底部状态栏的文字
 window.toolbar   // 返回工具栏对象
-window.statusbar //返回状态栏对象
+window.statusbar // 返回状态栏对象
 window.scrollbars
 window.personalbar
 window.menubar

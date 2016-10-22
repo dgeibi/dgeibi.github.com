@@ -28,14 +28,14 @@ text.nodeName // "#text"
 text.nodeValue // -> text.textContent -> text.data // w/r
 text.textContent // text content of text
 
-text.wholeText // 返回当前Text节点与毗邻的Text节点的 data
+text.wholeText // 返回当前 Text 节点与毗邻的 Text 节点的 data
 text.getDestinationInsertionPoints()
 text.assignedSlot
 text.data   // text.textContent
 text.length // -> text.data.length -> text.nodeValue.length 文本字符数
-text.splitText(offset) // Text 类型特有 // 在offset处将文本分成两部分 // offset - 第n个字符后面（从1开始数）
+text.splitText(offset) // Text 类型特有 // 在 offset 处将文本分成两部分 // offset - 第 n 个字符后面（从 1 开始数）
 text.substringData(offset, count)
-text.appendData(textStr) // 将textStr追加到末尾
+text.appendData(textStr) // 将 textStr 追加到末尾
 text.insertData(offset, textStr)
 text.deleteData(offset, textStr)
 text.replaceData(offset, count, textStr)

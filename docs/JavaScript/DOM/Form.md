@@ -5,14 +5,14 @@ language: javascript
 
 ## HTMLFormElement
 
-`<form>`属性与方法
+`<form>` 属性与方法
 
 - acceptCharset：服务器能够处理的字符集。
-- action：接受请求的URL。
+- action：接受请求的 URL。
 - elements：表单中所有控件的集合。
 - enctype：请求的编码类型。
 - length：表单中控件的数目。
-- method：要发送的HTTP请求类型，"get"/"post"。
+- method：要发送的 HTTP 请求类型，"get"/"post"。
 - name：表单的名称。
 - reset()：将表单域重置为默认值。
 - submit()：提交表单。
@@ -24,7 +24,7 @@ language: javascript
 ```javascript
 var form = document.getElementById("form1");
 
-var field1 = form.elements[0]; /* 取得第1个的表单元素 */
+var field1 = form.elements[0]; /* 取得第 1 个的表单元素 */
 
 var field2 = form.elements["textbox1"]; /* 取得 name 为 "textbox1" 的表单元素 */
 ```
@@ -48,9 +48,9 @@ var field2 = form.elements["textbox1"]; /* 取得 name 为 "textbox1" 的表单�
     - valid
     - valueMissing
 
-`<fieldset>` 没有type属性。`<input>`的 type 与 HTML 特性 type 相同。
+`<fieldset>` 没有 type 属性。`<input>` 的 type 与 HTML 特性 type 相同。
 
-|HTML|type 属性|
+|HTML|type 属性 |
 |----|---------|
 |`<select> ... </select>`|"select-one"|
 |`<select multiple> ... </select>`|"select-multiple"|
@@ -59,7 +59,7 @@ var field2 = form.elements["textbox1"]; /* 取得 name 为 "textbox1" 的表单�
 |`<button type="reset"> ... </button>`|"reset"|
 |`<button type="submit"> ... </button>`|"submit"|
 
-**避免多次提交表单**
+** 避免多次提交表单 **
 
 ```javascript
 form.addEventListener("submit", function (event) {
@@ -98,9 +98,9 @@ el.setSelectionRange(selectionStart, selectionEnd);
 
 HTMLSelectionElement 的属性和方法：
 
-- add(newOption, relOption)：向控件中插入新`<option>`元素，位置在 relOption 之前。relOption 为 `undefiled` 时可插到最后面。
+- add(newOption, relOption)：向控件中插入新 `<option>` 元素，位置在 relOption 之前。relOption 为 `undefiled` 时可插到最后面。
 - multiple：boolean，表是否多选。
-- options：控件中所有`<option`的 HTMLCollection。
+- options：控件中所有 `<option` 的 HTMLCollection。
 - remove(index)：移除给定位置的选项。
 - size：选择框的可见行数。
 - selectedIndex：第一个已选择的选项索引，未选择时值为 -1。
@@ -120,9 +120,9 @@ HTMLOptionElement 的属性：
 - text：选项的文本。
 - value：值，等价于 HTML 上的 value 特性。
 
-不推荐用标准 DOM 技术修改`<option>` 的文本和值。
+不推荐用标准 DOM 技术修改 `<option>` 的文本和值。
 
-**添加选项**
+** 添加选项 **
 
 ```javascript
 var newOption = new Option("Option text", "Option value");

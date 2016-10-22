@@ -19,14 +19,14 @@ document instanceof Document
 ```javascript
 /* userAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2816.0 Safari/537.36 */
 document.ownerDocument   // null
-document.URL             // 文档地址字符串（HTML文档独有）== document.location.href
+document.URL             // 文档地址字符串（HTML 文档独有）== document.location.href
 document.documentURI     // 文档地址字符串
-document.origin          // 文档协议+域名
+document.origin          // 文档协议 + 域名
 document.domain          // 域名
 document.referrer        // Returns the URI of the page that linked to this page
 document.characterSet    // "UTF-8"
 document.charset         // "UTF-8"
-document.inputEncoding   // 已废弃，返回一个字符串,代表当前文档渲染时所使用的编码
+document.inputEncoding   // 已废弃，返回一个字符串, 代表当前文档渲染时所使用的编码
 document.contentType     // "text/html"
 document.cookie          // r/w cookie
 document.lastModified    // "09/26/2015 11:54:28" // 返回文档最后的修改时间
@@ -140,8 +140,8 @@ document.querySelectorAll(cssSelector) // return all matched elements
 var element = document.elementFromPoint(x, y);
 ```
 
-* x, y是相对左上角的坐标（px）
-* 返回位于这个位置的DOM元素，如果该元素不可返回（比如文本框的滚动条），则返回它的父元素（比如文本框）。如果坐标值无意义（比如负值），则返回null。
+* x, y 是相对左上角的坐标（px）
+* 返回位于这个位置的 DOM 元素，如果该元素不可返回（比如文本框的滚动条），则返回它的父元素（比如文本框）。如果坐标值无意义（比如负值），则返回 null。
 
 ### document.elementsFromPoint()
 
@@ -228,7 +228,7 @@ var bool = document.execCommand(commandName, showDefaultUI, valueArgument)
 
 - document.queryCommandEnabled(command)：确定命令是否已启用，反映在选择的文本应用指定命令是否合适。
 - document.queryCommandSupported(command)：确定指定命令是否受到浏览器支持。
-- document.queryCommandIndeterm(command)：确定指定命令是否在不确定的(indeterminate)状态。
+- document.queryCommandIndeterm(command)：确定指定命令是否在不确定的 (indeterminate) 状态。
 - document.queryCommandState(command)：确定是否已经将指定命令应用到选择的文本。
 - document.queryCommandValue(command)：返回选择的文本应用指定命令时传递的值。
 
@@ -256,13 +256,13 @@ IE9
 var doctype = document.implementation.createDocumentType(qualifiedNameStr, publicId, systemId)
 ```
 
-### 创建一个 XML文档
+### 创建一个 XML 文档
 
 ```javascript
 var doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, documentType);
 ```
 
-### 创建一个 HTML文档
+### 创建一个 HTML 文档
 
 ```javascript
 var newDoc = document.implementation.createHTMLDocument(title);

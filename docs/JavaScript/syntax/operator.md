@@ -10,7 +10,7 @@ language: javascript
 1. 创建一个对象
 1. 将构造函数的作用域赋给新对象
 1. 执行构造函数中的代码
-1. 返回新对象(对象的存在指向构造函数的属性[[Prototype]])
+1. 返回新对象 (对象的存在指向构造函数的属性 [[Prototype]])
 
 ## typeof
 
@@ -31,7 +31,7 @@ language: javascript
 
 `variable instanceof constructor`
 
-检测引用类型是否属于xx构造函数
+检测引用类型是否属于 xx 构造函数
 
 ## 一元操作符
 

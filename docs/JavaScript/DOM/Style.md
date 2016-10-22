@@ -10,9 +10,9 @@ language: javascript
 
 element.style - instance of CSSStyleDeclaration
 
-包含通过HTML的style特性指定的所有样式信息，不包含与外部样式表或嵌入样式表经层叠而来的样式。
+包含通过 HTML 的 style 特性指定的所有样式信息，不包含与外部样式表或嵌入样式表经层叠而来的样式。
 
-| CSS属性          |   JavaScript属性      |
+| CSS 属性          |   JavaScript 属性      |
 | :--------------  | :----------------     |
 | background-image | style.backgroundImage |
 | color            | style.color           |
@@ -20,8 +20,8 @@ element.style - instance of CSSStyleDeclaration
 
 ```javascript
 element.style.cssText // cssCode w/r
-element.style.item(index) // 给定位置的 CSS属性名称
-element.style.length      // element 的 CSS属性数量
+element.style.item(index) // 给定位置的 CSS 属性名称
+element.style.length      // element 的 CSS 属性数量
 element.style.parentRule  // return CSSRule which containing CSSStyleDeclaration
 element.style.getPropertyValue(propertyName)    // 返回指定属性值
 element.style.getPropertyPriority(propertyName) // 如果指定属性值有'!important', 则返回 "important"，否则返回 ""
@@ -79,7 +79,7 @@ rule.selectorText //-> "body" "p" "#id" ...
 rule.style // similar to element.style, r/w
 ```
 
-直接从`<link>`或`<style>`元素取得 CSSStyleSheet 对象：
+直接从 `<link>` 或 `<style>` 元素取得 CSSStyleSheet 对象：
 
 ```javascript
 function getStyleSheet(element) {

@@ -14,7 +14,7 @@ function hoisted() {
 ```
 
 ```javascript
-//函数表达式不会提升
+// 函数表达式不会提升
 notHoisted(); // TypeError: notHoisted is not a function
 
 var notHoisted = function() {
@@ -26,7 +26,7 @@ var notHoisted = function() {
 
 ### arguments
 
-`arguments`是类数组对象。
+`arguments` 是类数组对象。
 
 通过 `arguments` 对象访问参数「数组」，在非严格模式下，`arguments[i]` 与 `argi` 始终相互同步。
 

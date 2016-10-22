@@ -49,7 +49,7 @@ language: html
 * seeking：正在移动到新位置
 * seeked：找到新位置
 * ended：停止播放，已播放到末尾
-* durationchange：duration的值改变
+* durationchange：duration 的值改变
 * timeupdate：currentTime 被不合理或意外的方式更新
 * pause：播放已停止
 * ratechange：播放速度改变

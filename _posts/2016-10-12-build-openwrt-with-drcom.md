@@ -55,7 +55,7 @@ yum group install "Development Tools"
 	$(OPKG) update || true; \
 	fi
 	$(MAKE) package_install
-	# 添加以下2行，注意缩进，用 tab
+	# 添加以下 2 行，注意缩进，用 tab
 	sed -i '/proto_run_command/i username=`echo -e "$$username"`' "$(TARGET_DIR)/lib/netifd/proto/ppp.sh"
 	sed -i '/proto_run_command/i password=`echo -e "$$password"`' "$(TARGET_DIR)/lib/netifd/proto/ppp.sh"
 ifneq ($(USER_FILES),)
@@ -67,7 +67,7 @@ endif
 
 ## 配置文件的准备
 
-新建一个`files`目录，将所需的文件放在相应目录，以制作带有自定义文件的固件。
+新建一个 `files` 目录，将所需的文件放在相应目录，以制作带有自定义文件的固件。
 
 Drcom 认证需要的文件（可以从 [Drcom 折腾记录]({% post_url 2016-10-08-drcom %}) 获取）：
 
@@ -91,7 +91,7 @@ scp root@192.168.1.1:"/etc/config/network /etc/config/luci /etc/config/wireless 
 scp root@192.168.1.1:"/etc/sysupgrade.conf" files/etc/
 ```
 
-也可以登录 luci，系统->备份/升级->生成备份，获得配置文件的压缩包。
+也可以登录 luci，系统 -> 备份 / 升级 -> 生成备份，获得配置文件的压缩包。
 
 ## 编译固件
 

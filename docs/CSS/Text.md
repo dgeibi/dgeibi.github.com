@@ -5,16 +5,16 @@ language: css
 
 ## 属性简介
 
-| 属性  |说明| 值 |
+| 属性  | 说明 | 值 |
 | ----- |----| -- |
-| color |字体颜色设定 |[CSS Color]({{ site.baseurl }}/docs/CSS/Color/) |
-|direction|方向|ltr, rtl|
-|text-align|内容对齐|left, right, center, justify|
-|text-indent|指定内容缩进| em, px, %(width of container), [ hanging \|\| each-line ] |
+| color | 字体颜色设定 |[CSS Color]({{ site.baseurl }}/docs/CSS/Color/) |
+|direction | 方向 | ltr, rtl|
+|text-align | 内容对齐 | left, right, center, justify|
+|text-indent | 指定内容缩进 | em, px, %(width of container), [ hanging \|\| each-line ] |
 |vertical-align|[w3schools](http://www.w3schools.com/cssref/pr_pos_vertical-align.asp)|sub, super, px, %, ...|
-|line-height|行间距|px, em|
-|letter-spacing|字间距|px, em|
-|word-spacing|词间距|px, em|
+|line-height | 行间距 | px, em|
+|letter-spacing | 字间距 | px, em|
+|word-spacing | 词间距 | px, em|
 
 ## text-decoration
 

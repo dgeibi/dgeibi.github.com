@@ -10,7 +10,7 @@ language: javascript
 * `HTMLElement`: Inherits properties from its parent, `Element`, and implements those from `GlobalEventHandlers` and
 * `TouchEventHandlers`.
 * `Attr`
-* `CharacterData` (Text, Comment,CDATASection继承该类型)
+* `CharacterData` (Text, Comment,CDATASection 继承该类型)
 * `ProcessingInstruction`
 * `DocumentFragment`
 * `DocumentType`
@@ -55,7 +55,7 @@ node.firstChild     // 第一个子节点
 node.lastChild      // 最后一个子节点
 node.previousSibling // 上一个同胞节点
 node.nextSibling     // 下一个同胞节点
-node.nodeValue       // 如果node是元素，return null;
+node.nodeValue       // 如果 node 是元素，return null;
 node.hasChildNodes() // ture：如果有子节点
 node.getRootNode()
 node.normalize() // 处理文本节点的异常 element.normalize();
@@ -69,11 +69,11 @@ node.isSameNode()  // node.isSameNode(otherNode) // true: point to the same node
 ie9
 
 * 如果 element 是 Document，DocumentType 或者 Notation 类型节点，则 textContent 返回 null。
-* 如果节点是个CDATA片段，注释，ProcessingInstruction节点或一个文本节点，textContent 返回节点内部的文本内容（即 nodeValue）。
-* 对于其他节点类型，textContent 将所有子节点的 textContent 合并后返回，除了注释、ProcessingInstruction节点。如果该节点没有子节点的话，返回一个空字符串。
+* 如果节点是个 CDATA 片段，注释，ProcessingInstruction 节点或一个文本节点，textContent 返回节点内部的文本内容（即 nodeValue）。
+* 对于其他节点类型，textContent 将所有子节点的 textContent 合并后返回，除了注释、ProcessingInstruction 节点。如果该节点没有子节点的话，返回一个空字符串。
 * 在节点上设置 textContent 属性的话，会删除它的所有子节点，并替换为一个具有给定值的文本节点。
 
-[textContent与innerText的区别](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent#与innerText的区别)
+[textContent 与 innerText 的区别](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent# 与 innerText 的区别)
 
 ## 节点位置
 
@@ -85,13 +85,13 @@ ie9
 node.compareDocumentPosition( otherNode )
 ```
 
-|常量名           	                       |十进制值  |   含义                |
+| 常量名           	                       | 十进制值  |   含义                |
 |-----------------------------------------|----------|-----------------------|
 |DOCUMENT_POSITION_DISCONNECTED	          |    1 	 |   不在同一文档中      |
-|DOCUMENT_POSITION_PRECEDING              |    2     |   otherNode在node之前 |
-|DOCUMENT_POSITION_FOLLOWING	          |    4	 |   otherNode在node之后 |
-|DOCUMENT_POSITION_CONTAINS	              |    8	 |   otherNode包含node   |
-|DOCUMENT_POSITION_CONTAINED_BY	          |    16    |   node包含 otherNode  |
+|DOCUMENT_POSITION_PRECEDING              |    2     |   otherNode 在 node 之前 |
+|DOCUMENT_POSITION_FOLLOWING	          |    4	 |   otherNode 在 node 之后 |
+|DOCUMENT_POSITION_CONTAINS	              |    8	 |   otherNode 包含 node   |
+|DOCUMENT_POSITION_CONTAINED_BY	          |    16    |   node 包含 otherNode  |
 |DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC|	   32    |  待定                 |
 
 
@@ -148,7 +148,7 @@ experimental
 node.remove();
 ```
 
-将node从节点树中删除。
+将 node 从节点树中删除。
 
 ### ChildNode.after()
 
@@ -156,7 +156,7 @@ node.remove();
 node.after(nodes);
 ```
 
-向node的父节点下于node之后插入一系列节点，参数顺序和文档上的顺序一致。
+向 node 的父节点下于 node 之后插入一系列节点，参数顺序和文档上的顺序一致。
 
 ### ChildNode.before()
 
@@ -164,7 +164,7 @@ node.after(nodes);
 node.before(nodes);
 ```
 
-向node的父节点下于node之前插入一系列节点，参数顺序和文档上的顺序一致。
+向 node 的父节点下于 node 之前插入一系列节点，参数顺序和文档上的顺序一致。
 
 ### ChildNode.replaceWith()
 
@@ -172,7 +172,7 @@ node.before(nodes);
 node.replaceWith(nodes);
 ```
 
-将node替换成一系列节点。
+将 node 替换成一系列节点。
 
 ## ParentNode
 
@@ -194,7 +194,7 @@ ParentNode.parentElement           // parent Element Node; if parentNode is not 
 ParentNode.append(nodes);
 ```
 
-在ParentNode的子节点列表最后添加一系列节点
+在 ParentNode 的子节点列表最后添加一系列节点
 
 ### ParentNode.prepend()
 

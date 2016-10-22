@@ -93,7 +93,7 @@ position:
 
 ### from Node.prototype
 
-[Node - JavaScript Note](/docs/JavaScript/DOM/Node/#节点的增删)
+[Node - JavaScript Note](/docs/JavaScript/DOM/Node/# 节点的增删)
 
 ```javascript
 element.insertBefore()
@@ -139,7 +139,7 @@ element.matches() // element.matches(selectorString) -> boolean // https://devel
 
 element.style: [Style](/docs/JavaScript/DOM/Style/)
 
-[一张图彻底掌握scrollTop, offsetTop, scrollLeft, offsetLeft......](https://github.com/pramper/Blog/issues/10)
+[一张图彻底掌握 scrollTop, offsetTop, scrollLeft, offsetLeft......](https://github.com/pramper/Blog/issues/10)
 
 ### 偏移量
 
@@ -149,16 +149,16 @@ element.offsetTop
 element.offsetLeft
 ```
 
-`offsetTop`, `offsetLeft`：只读属性。要确定的这两个属性的值，首先得确定元素的`offsetParent`。`offsetParent` 指的是距该元素最近的 `position` 不为 `static` 的祖先元素，如果没有则指向 `body`。确定了 `offsetParent`，`offsetLeft` 指的是元素左侧偏移 `offsetParent`的距离，同理 `offsetTop` 指的是上侧偏移的距离。
+`offsetTop`, `offsetLeft`：只读属性。要确定的这两个属性的值，首先得确定元素的 `offsetParent`。`offsetParent` 指的是距该元素最近的 `position` 不为 `static` 的祖先元素，如果没有则指向 `body`。确定了 `offsetParent`，`offsetLeft` 指的是元素左侧偏移 `offsetParent` 的距离，同理 `offsetTop` 指的是上侧偏移的距离。
 
 ```javascript
 element.scrollTop
 element.scrollLeft
 ```
 
-`scrollTop`, `scrollLeft` 获取或设置DOM元素已经滚动到本身左边界或上边界的像素数。
+`scrollTop`, `scrollLeft` 获取或设置 DOM 元素已经滚动到本身左边界或上边界的像素数。
 
-[视口位置](/docs/JavaScript/Browser/Window/#视口位置)
+[视口位置](/docs/JavaScript/Browser/Window/# 视口位置)
 
 ### 长度或宽度
 
@@ -167,8 +167,8 @@ element.offsetWidth  //（只读） 元素的可见宽度 (包括边框、内边
 element.offsetHeight //（只读） 元素的可见高度 (包括边框、内边距和滚动条)
 element.scrollWidth  //（只读） 元素的完整宽度
 element.scrollHeight //（只读） 元素的完整高度
-element.clientWidth  //（只读） 内容+内边距的可见部分的宽度，不包含滚动部分
-element.clientHeight //（只读） 内容+内边距的可见部分的高度，不包含滚动部分
+element.clientWidth  //（只读） 内容 + 内边距的可见部分的宽度，不包含滚动部分
+element.clientHeight //（只读） 内容 + 内边距的可见部分的高度，不包含滚动部分
 element.clientTop    //（只读） 元素的上边框的宽度
 element.clientLeft   //（只读） 元素的左边框的宽度
 ```

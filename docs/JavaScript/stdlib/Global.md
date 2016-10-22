@@ -76,7 +76,7 @@ isNaN("blabla")   // true: "blabla" is converted to a number.
 
 ## encodeURI()
 
-encodeURI() 是对统一资源标识符（URI）进行编码的方法。它使用1到4个转义字符串来替换UTF-8编码字符串中的每个字符（只有由两个代理字符区组成的字符才用四个转义字符编码）。
+encodeURI() 是对统一资源标识符（URI）进行编码的方法。它使用 1 到 4 个转义字符串来替换 UTF-8 编码字符串中的每个字符（只有由两个代理字符区组成的字符才用四个转义字符编码）。
 
 ```javascript
 var encodedURI = encodeURI(uri); /* 编码 */
@@ -91,9 +91,9 @@ var decodedURI = decodeURI(encodedURI); /* 解码 */
 
 ## encodeURIComponent()
 
-encodeURIComponent()是对统一资源标识符（URI）的组成部分进行编码的方法。它使用一到四个转义字符串来替换UTF-8编码字符串中的每个字符（只有由两个Unicode代理区字符组成的字符才用四个转义字符编码）。
+encodeURIComponent() 是对统一资源标识符（URI）的组成部分进行编码的方法。它使用一到四个转义字符串来替换 UTF-8 编码字符串中的每个字符（只有由两个 Unicode 代理区字符组成的字符才用四个转义字符编码）。
 
-encodeURIComponent 转义除了字母，十进制数字， `(` `)` `.` `!` `~` `*` `'` `-` `_`之外的所有字符。
+encodeURIComponent 转义除了字母，十进制数字， `(` `)` `.` `!` `~` `*` `'` `-` `_` 之外的所有字符。
 
 由 encodeURIComponent() 编码的 URI 可用 decodeURIComponent() 解码。
 

@@ -72,7 +72,7 @@ var person = {
 
 var person1 = object(person);
 ```
-person1的原型对象是person，所以它们的引用类型是共享的。
+person1 的原型对象是 person，所以它们的引用类型是共享的。
 
 ES5 中的 `Object.create()` 与 `object()` 相似。
 

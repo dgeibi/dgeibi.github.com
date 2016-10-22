@@ -30,7 +30,7 @@ NodeFilter.SHOW_PROCESSING_INSTRUCTION // dropped
 NodeFilter.SHOW_DOCUMENT_FRAGMENT // dropped
 ```
 
-* filter: NodeFilter 对象/函数/null
+* filter: NodeFilter 对象 / 函数 / null
 
 ```javascript
 NodeFilter.FILTER_ACCEPT // 保留节点
@@ -94,7 +94,7 @@ NodeFilter.FILTER_SKIP // 跳过节点
 ```javascript
 var range = document.createRange();
 
-range.startContainer  //第一个节点的父节点
+range.startContainer  // 第一个节点的父节点
 range.startOffset     // 第一个节点在父节点中的索引
 range.endContainer    // 最后一个节点的父节点
 range.endOffset       // 最后一个节点在父节点中的索引
@@ -103,8 +103,8 @@ range.commonAncestorContainer // range.startContainer 和 range.endContainer 最
 /* 设置属性的方法 */
 range.setStart(refNode, offset) // startContainer = refNode, startOffset = offset
 range.setEnd(refNode, offset) // endContainer = refNode, endOffset = offset
-range.selectNode( refNode )       // 选择包括 refNode 本身及子节点的范围
-range.selectNodeContents( refNode )  // 选择包括 refNode 的所有子节点的范围
+range.selectNode(refNode)       // 选择包括 refNode 本身及子节点的范围
+range.selectNodeContents(refNode)  // 选择包括 refNode 的所有子节点的范围
 range.setStartBefore( refNode )
 range.setStartAfter( refNode )
 range.setEndBefore( refNode )
@@ -112,7 +112,7 @@ range.setEndAfter( refNode )
 
 /* 折叠 */
 range.collapsed // 范围选区为空时 -> true
-range.collapse(boolean) // boolean: true->折叠到范围的起点，false->折叠到范围的终点
+range.collapse(boolean) // boolean: true-> 折叠到范围的起点，false-> 折叠到范围的终点
 
 /* 比较 DOM 范围 */
 
@@ -130,15 +130,15 @@ range.START_TO_END // range 的起点与 anotherRange 的终点比较
 range.END_TO_END
 range.END_TO_START // range 的终点与 anotherRange 的起点比较
 
-/* 操作方法 （必要时会自动构建有效的DOM结构）*/
-range.deleteContents() //删除
-range.extractContents() //剪切（返回值是文档片段）
-range.cloneContents() //克隆（返回值是文档片段）
-range.insertNode(node) //向范围选区开始处插入一个节点
-range.surroundContents(node) //将选区的内容剪切到node.innerHTML，并且将node放在原选区的位置
+/* 操作方法 （必要时会自动构建有效的 DOM 结构）*/
+range.deleteContents() // 删除
+range.extractContents() // 剪切（返回值是文档片段）
+range.cloneContents() // 克隆（返回值是文档片段）
+range.insertNode(node) // 向范围选区开始处插入一个节点
+range.surroundContents(node) // 将选区的内容剪切到 node.innerHTML，并且将 node 放在原选区的位置
 
-range.cloneRange() //克隆范围
-range.detach() //从文档中分离范围，一般与 range=null 一起用
+range.cloneRange() // 克隆范围
+range.detach() // 从文档中分离范围，一般与 range=null 一起用
 
 // etc
 range.isPointInRange()

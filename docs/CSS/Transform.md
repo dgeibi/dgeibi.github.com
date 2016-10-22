@@ -33,9 +33,9 @@ transform: translate3d(tx,ty,tz)
 
 - tx：代表横向坐标位移向量的长度；
 - ty：代表纵向坐标位移向量的长度；
-- tz：代表Z轴位移向量的长度。此值不能是一个百分比值，如果取值为百分比值，将会认为无效值。
+- tz：代表 Z 轴位移向量的长度。此值不能是一个百分比值，如果取值为百分比值，将会认为无效值。
 
-当z轴值越大时，元素也离观看者更近，从视觉上元素就变得更大；反之其值越小时，元素也离观看者更远，从视觉上元素就变得更小。
+当 z 轴值越大时，元素也离观看者更近，从视觉上元素就变得更大；反之其值越小时，元素也离观看者更远，从视觉上元素就变得更小。
 
 单独设置：
 
@@ -52,9 +52,9 @@ transform: translate3d(tx,ty,tz)
 ```css
 /* 长宽都放大到原来的 2 倍 */
 transform: scale(2);
-/* 宽度是原来的0.5，高度是原来的0.7 */
+/* 宽度是原来的 0.5，高度是原来的 0.7 */
 transform: scale(0.5,0.7);
-/* 先旋转180度再放大到原来的1.5倍 */
+/* 先旋转 180 度再放大到原来的 1.5 倍 */
 transform: scale(-1.5);
 ```
 
@@ -66,7 +66,7 @@ transform: scale3d(sx,sy,sz)
 
 * scaleX(sx)：等价于 scale(sx, 1)
 * scaleY(sy)：等价于 scale(1, sy)
-* scaleZ(sz)：指定元素每个点在Z轴的比例。
+* scaleZ(sz)：指定元素每个点在 Z 轴的比例。
 
 scaleZ() 和 scale3d() 函数单独使用时没有任何效果，需要配合其他的变形函数一起使用才会有效果。
 
@@ -87,25 +87,25 @@ transform: rotate(-45deg);
 transform: rotate3d(x,y,z,a)
 ```
 
-以向量 (x,y,z) 为轴，旋转a
+以向量 (x,y,z) 为轴，旋转 a
 
-x,y,z均为0到1的值。
+x,y,z 均为 0 到 1 的值。
 
-- rotateX(a)：以x轴为轴，顺时针旋转 a
-- rotateY(a)：以y轴为轴，顺时针旋转 a
-- rotateZ(a)：以z轴为轴，顺时针旋转 a，实际上和 rotate(a) 等效。
+- rotateX(a)：以 x 轴为轴，顺时针旋转 a
+- rotateY(a)：以 y 轴为轴，顺时针旋转 a
+- rotateZ(a)：以 z 轴为轴，顺时针旋转 a，实际上和 rotate(a) 等效。
 
 ## 偏离
 
 skew: (verb) to move or lie at an angle, especially in a position that is not normal.
 
 ```css
-/* 使元素在x轴上偏离10度，y轴上偏离15度。*/
+/* 使元素在 x 轴上偏离 10 度，y 轴上偏离 15 度。*/
 transform: skew(10deg,15deg);
-/* 使元素在x轴上偏离10度*/
+/* 使元素在 x 轴上偏离 10 度 */
 transform: skew(10deg);
 transform: skewX(10deg);
-/* 使元素在y轴上偏离10度*/
+/* 使元素在 y 轴上偏离 10 度 */
 transform: skewY(10deg);
 ```
 

@@ -5,32 +5,32 @@ language: css
 
 ## 属性简介
 
-|属性名|说明|
+| 属性名 | 说明 |
 |------|----|
-|border|四边，值：border-width border-style border-color|
-|border-top|上|
-|border-right|右|
-|border-bottom|下|
-|border-left|左|
-|border-width|宽度: medium\|thin\|thick\|length|
-|border-color|颜色|
-|border-top-width|顶部边框的宽度|
-|border-left-color|左边框的颜色|
-|border-bottom-style|底边框的样式|
+|border | 四边，值：border-width border-style border-color|
+|border-top | 上 |
+|border-right | 右 |
+|border-bottom | 下 |
+|border-left | 左 |
+|border-width | 宽度: medium\|thin\|thick\|length|
+|border-color | 颜色 |
+|border-top-width | 顶部边框的宽度 |
+|border-left-color | 左边框的颜色 |
+|border-bottom-style | 底边框的样式 |
 |...|...|
 
 ## border-style
 
-|值      |说明     |
+| 值      | 说明     |
 |--------|---------|
 |none    |no border  |
 |hidden  |none       |
-|dotted  |点         |
-|dashed  |破折号     |
-|solid   |实心的     |
-|double  |双层的     |
-|groove  |(3D)像槽的 |
-|ridge   |(3D)隆起的 |
+|dotted  | 点         |
+|dashed  | 破折号     |
+|solid   | 实心的     |
+|double  | 双层的     |
+|groove  |(3D) 像槽的 |
+|ridge   |(3D) 隆起的 |
 |inset   |(3D)       |
 |outset  |(3D)       |
 

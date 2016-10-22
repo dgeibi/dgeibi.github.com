@@ -24,7 +24,7 @@ background: no-repeat center/80% url("../img/image.png");
 Syntax:
 
 ```
-[ <bg-layer> , ]* <final-bg-layer> // 多层次背景
+[<bg-layer> , ]* <final-bg-layer> // 多层次背景
 where
 <bg-layer> = <bg-image> || <position> [ / <bg-size> ]? || <repeat-style> || <attachment> || <box>{1,2}
 <final-bg-layer> = <bg-image> || <position> [ / <bg-size> ]? || <repeat-style> || <attachment> || <box> || <box> || <'background-color'>
@@ -44,11 +44,11 @@ where
 
 ## background-clip
 
-|值|说明|
+| 值 | 说明 |
 |--|----|
-|border-box|背景延伸到边框外沿|
-|padding-box|背景延伸到内边距外沿|
-|content-box|背景裁剪到内容区外沿|
+|border-box | 背景延伸到边框外沿 |
+|padding-box | 背景延伸到内边距外沿 |
+|content-box | 背景裁剪到内容区外沿 |
 
 ## background-image
 

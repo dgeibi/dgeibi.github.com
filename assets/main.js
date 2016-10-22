@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     scrollToPos(hash, 700);
                     window.location.hash = hash;
                 }
-            }
+            };
         }
     })();
 

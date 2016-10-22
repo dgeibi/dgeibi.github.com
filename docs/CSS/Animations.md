@@ -96,8 +96,8 @@ cubic-bezier(<number>, <number>, <number>, <number>)
 值：
 
 - none：（默认）动画的产生的样式不会在开始前和结束后应用于元素。
-- forwards：动画结束后，元素保留最后的样式。（与`animation-direction`、`animation-iteration-count`有关）
-- backwards：动画开始前的延迟时段内，元素的使用动画开始时的样式。（与`animation-direction`有关）
+- forwards：动画结束后，元素保留最后的样式。（与 `animation-direction`、`animation-iteration-count` 有关）
+- backwards：动画开始前的延迟时段内，元素的使用动画开始时的样式。（与 `animation-direction` 有关）
 - both：forwards & backwards
 
 ## 参考

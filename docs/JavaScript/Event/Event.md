@@ -15,13 +15,13 @@ language: javascript
 function() {
     with(document) {
         with(this) {
-            //这里执行
+            // 这里执行
         }
     }
 }
 ```
 
-`this` -> `<input>`；所以可以直接访问`value`，不用这样 `this.value`;
+`this` -> `<input>`；所以可以直接访问 `value`，不用这样 `this.value`;
 
 ```javascript
 // element.onclick
@@ -36,7 +36,7 @@ function(event) {
 var btn = document.getElementById("myBtn");
 btn.onclick = function() {
     alert(this.id); // myBtn
-} //添加
+} // 添加
 
 btn.onclick = null; // 移除
 ```
@@ -44,8 +44,8 @@ btn.onclick = null; // 移除
 ## DOM Level 2 事件处理程序
 
 ```javascript
-eventTarget.addEventListener(type, listener, [useCapture]); //添加
-eventTarget.removeEventListener(type, listener[, useCapture]); //移除，listener 不能是匿名函数
+eventTarget.addEventListener(type, listener, [useCapture]); // 添加
+eventTarget.removeEventListener(type, listener[, useCapture]); // 移除，listener 不能是匿名函数
 ```
 
 - type: 'click' 'load' ...
@@ -60,8 +60,8 @@ In listener, this -> eventTarget
 ## IE <= 8 的事件处理程序
 
 ```javascript
-eventTarget.attachEvent(eventNameWithOn, callback)//添加
-eventTarget.detachEvent(eventNameWithOn, callback) //移除，callback 不能是匿名函数
+eventTarget.attachEvent(eventNameWithOn, callback)// 添加
+eventTarget.detachEvent(eventNameWithOn, callback) // 移除，callback 不能是匿名函数
 ```
 
 - eventNameWithOn: 'onclick' 'onload' ...
@@ -70,7 +70,7 @@ In callback, this -> window
 
 ## DOM Event 对象
 
-- 在HTML 特性事件处理程序中`event`
+- 在 HTML 特性事件处理程序中 `event`
 - DOM 0/DOM 2 方法中指定的函数的第一个参数
 
 以下属性和方法均只读
@@ -84,18 +84,18 @@ In callback, this -> window
 - target：Element，具体的触发事件的目标
 - type：String，被触发事件的类型
 - preventDefault()： 取消事件默认行为
-- stopImmediatePropagation()： DOM3 取消事件进一步冒泡/捕获，阻止任何事件处理程序被调用
-- stopPropagation()：取消事件进一步冒泡/捕获
+- stopImmediatePropagation()： DOM3 取消事件进一步冒泡 / 捕获，阻止任何事件处理程序被调用
+- stopPropagation()：取消事件进一步冒泡 / 捕获
 
 ## IE Event 对象
 
 - DOM 0: window.event
 - 使用 attachEvent()：callback 的第一个参数
-- 在HTML 特性事件处理程序中`event`
+- 在 HTML 特性事件处理程序中 `event`
 
 属性：
 
-- cancelBubble：Boolean，r/w，false:默认，true: 取消事件冒泡
+- cancelBubble：Boolean，r/w，false: 默认，true: 取消事件冒泡
 - returnValue： Boolean，r/w，true: 默认，false: 取消事件默认行为
 - srcElement：Element，readonly，in DOM called `target'
 - type：String，被触发事件的类型
@@ -113,8 +113,8 @@ var target = document.getElementById('checkbox');
 target.dispatchEvent(event); /* 在目标上触发事件 */
 ```
 
-- typeArg：事件类型，如 'click' 'mousedown'
-- mouseEventInit（Optional）：json，用于event对象属性的设定。
+- typeArg：事件类型，如'click' 'mousedown'
+- mouseEventInit（Optional）：json，用于 event 对象属性的设定。
 
 ## 自定义事件
 

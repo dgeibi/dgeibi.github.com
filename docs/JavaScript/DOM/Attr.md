@@ -5,7 +5,7 @@ language: javascript
 
 元素的特性
 
-`element.attributes`中的节点
+`element.attributes` 中的节点
 
 ```javascript
 var attr = document.createAttribute("align");

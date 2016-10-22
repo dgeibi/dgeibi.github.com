@@ -17,7 +17,7 @@ array.length = 100;
 ## 检测数组
 
 ```javascript
-if (value instanceof Array) {} //不一定正确
+if (value instanceof Array) {} // 不一定正确
 ```
 ES 5：
 
@@ -42,7 +42,7 @@ arr.join('||');  // "red||yellow"
 * 参数：被添加到末尾的新元素
 * 功能：添加元素到数组末尾，返回新的 arr.length
 
-例子1：添加元素到数组
+例子 1：添加元素到数组
 
 下面的代码创建了 sports 数组，包含两个元素，然后又把两个元素添加给它。total 变量为数组的新长度值。
 
@@ -54,7 +54,7 @@ console.log(sports); // ["soccer", "baseball", "football", "swimming"]
 console.log(total);  // 4
 ```
 
-例子2：合并两个数组
+例子 2：合并两个数组
 
 该示例使用 apply() 添加第二个数组的所有元素。
 
@@ -72,17 +72,17 @@ console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ### pop()
 
 * 语法：`arr.pop()`
-* 功能：删除掉数组(arr)的最后一个元素，返回被删除的元素
+* 功能：删除掉数组 (arr) 的最后一个元素，返回被删除的元素
 
 ### shift()
 
 * 语法：`arr.shift()`
-* 功能：shift 方法移除索引为 0 的元素(即第一个元素)，返回被移除的元素 或 undefined （length为0时）。
+* 功能：shift 方法移除索引为 0 的元素 (即第一个元素)，返回被移除的元素 或 undefined （length 为 0 时）。
 
 ### unshift()
 
 * 语法：`arr.unshift(element1, ..., elementN)`
-* 功能：在数组(arr)的开头添加一个或者多个元素，返回数组新的 length 值
+* 功能：在数组 (arr) 的开头添加一个或者多个元素，返回数组新的 length 值
 
 ```javascript
 var arr = [0, 1, 2];
@@ -97,7 +97,7 @@ arr.unshift(-2, -1); // = 5
 
 * 语法：`arr.sort([compareFunction])`
 * 功能：对数组的元素做原地的排序，返回这个数组。
-* 参数：`compareFunction` 可选。用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的诸个字符的`Unicode`位点进行排序。
+* 参数：`compareFunction` 可选。用来指定按某种顺序进行排列的函数。如果省略，元素按照转换为的字符串的诸个字符的 `Unicode` 位点进行排序。
 * 注意：如果 compareFunction(a, b) 小于 0 ，那么 a 会被排列到 b 之前
 
 
@@ -116,7 +116,7 @@ arr.unshift(-2, -1); // = 5
 ```javascript
 var alpha = ['a', 'b', 'c'];
 
-// 组成新数组 ["a", "b", "c", 1, 2, 3], 原alpha数组未被修改
+// 组成新数组 ["a", "b", "c", 1, 2, 3], 原 alpha 数组未被修改
 var alphaNumeric = alpha.concat(1, [2, 3]);
 ```
 
@@ -125,8 +125,8 @@ var alphaNumeric = alpha.concat(1, [2, 3]);
 * 语法：`arr.slice([begin[,end]])`
 * 功能：slice() 方法把数组中一部分的浅复制（shallow copy）存入一个新的数组对象中，并返回这个新的数组
 * 参数：
-    * begin 为负数则将 begin 看成 begin + arr.length ，即倒数第\|begin\|个
-    * end 为负数则将 end 看成 end + arr.length ，即倒数第\|end\|个
+    * begin 为负数则将 begin 看成 begin + arr.length ，即倒数第 \|begin\| 个
+    * end 为负数则将 end 看成 end + arr.length ，即倒数第 \|end\| 个
     * 注意：结束位置小于起始位置，返回空数组
 
 ```javascript
@@ -152,7 +152,7 @@ var newArr = arr.slice(1,3);
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 * 语法： `arr.indexOf(searchElement[, fromIndex = 0])`
-* 功能：返回给定元素能找在数组中找到的第一个索引值，否则返回-1
+* 功能：返回给定元素能找在数组中找到的第一个索引值，否则返回 - 1
 
 ### lastIndexOf()
 
@@ -194,7 +194,7 @@ passed = [12, 54, 18, 130, 44].every(isBigEnough);
 * 语法：`arr.filter(callback[, thisArg])`
 * 功能：使用指定的函数测试所有元素，并创建一个包含所有通过测试的元素的新数组
 * 参数：
-	* callback：用来测试每个元素的函数（返回true表示保留该元素（通过测试），false则不保留）
+	* callback：用来测试每个元素的函数（返回 true 表示保留该元素（通过测试），false 则不保留）
 	* thisArg：执行 callback 时使用的 this 值
 
 ### map()

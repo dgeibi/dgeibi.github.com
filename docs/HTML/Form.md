@@ -15,10 +15,10 @@ language: html
 </form>
 ```
 
-|Attr|描述|
+|Attr | 描述 |
 |----|----|
-|action|一个处理这个form信息的程序所在的URL|
-|method|浏览器提交 form 的方式。值："post", "get"|
+|action | 一个处理这个 form 信息的程序所在的 URL|
+|method | 浏览器提交 form 的方式。值："post", "get"|
 
 ## 表单元素
 
@@ -27,24 +27,24 @@ language: html
 
 [\<fieldset\> - HTML \| MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset/)
 
-将控件与label集合在`<fieldset></fieldset>`内
+将控件与 label 集合在 `<fieldset></fieldset>` 内
 
 ### legend
 
-为在父级的\<fieldset\>添加说明文字。
+为在父级的 \<fieldset\> 添加说明文字。
 
 ### input
 
 [input - HTML（超文本标记语言） \| MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/Input/)
 
-`<input>` 用来创建交互控件(control)
+`<input>` 用来创建交互控件 (control)
 
-|Attr|描述|值|
+|Attr | 描述 | 值 |
 |----|----|--|
-|type|类型|text(文本), button(按钮), radio(单选按钮), password(密码), checkbox(复选框), submit(提交按钮)...|
-|checked|如果该元素的type属性的值为radio或者checkbox,则该布尔属性的存在与否表明了该控件是否是默认选择状态|无|
-|name|提交的名字|字符串|
-|value|初始值（若type为checkbox/radio则必须有value）|字符串|
+|type | 类型 | text(文本), button(按钮), radio(单选按钮), password(密码), checkbox(复选框), submit(提交按钮)...|
+|checked | 如果该元素的 type 属性的值为 radio 或者 checkbox, 则该布尔属性的存在与否表明了该控件是否是默认选择状态 | 无 |
+|name | 提交的名字 | 字符串 |
+|value | 初始值（若 type 为 checkbox/radio 则必须有 value）| 字符串 |
 
 ### 文本框
 
@@ -60,13 +60,13 @@ language: html
 
 ### label
 
-为控件(control)加说明文字
+为控件 (control) 加说明文字
 
 ```html
 <label for="username">Click me</label>
 <input type="text" id="username">
 
-<!--等效-->
+<!-- 等效 -->
 
 <label>Click me <input type="text"></label>
 ```
@@ -131,13 +131,13 @@ language: html
 * ...
 
 ```html
-<textarea>默认文字</textarea>
+<textarea> 默认文字 </textarea>
 ```
 
-<textarea>默认文字</textarea>
+<textarea> 默认文字 </textarea>
 
 ## 特性
 
 - `required`：存在则必填，适用于 `<input>, <textarea>, <select>`。
-- `novalidate`：使表单不进行验证，适用于`<form>`。
+- `novalidate`：使表单不进行验证，适用于 `<form>`。
 - `formnovalidate`：使表单字段不进行验证，适用于表单字段。

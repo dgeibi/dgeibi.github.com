@@ -9,7 +9,7 @@ language: javascript
 <canvas id="drawing" width="600" height="600">A drawing of something.</canvas>
 ```
 
-如果不支持 canvas 就只会显示"A drawing of something."。
+如果不支持 canvas 就只会显示 "A drawing of something."。
 
 ## 绘制
 
@@ -26,9 +26,9 @@ if (drawing.getContext) { /* 检测 getContext() 是否存在 */
     /* 绘制 */
 
     /* 矩形 */
-    context.fillRect(10,10,40,40); /*绘制长为40px宽为40px的红色矩形 */
+    context.fillRect(10,10,40,40); /* 绘制长为 40px 宽为 40px 的红色矩形 */
     context.fillStyle = "rgba(0,0,255,0.5)";
-    context.fillRect(30,30,40,40); /*绘制半透明的蓝色矩形 */
+    context.fillRect(30,30,40,40); /* 绘制半透明的蓝色矩形 */
     context.strokeRect(70,70,40,40); /* 绘制黄色的描边矩形 */
     context.clearRect(30,30,20,20); /* 绘制透明矩形 */
 
@@ -38,12 +38,12 @@ if (drawing.getContext) { /* 检测 getContext() 是否存在 */
     context.strokeStyle = "#000000";
     context.beginPath();
     context.arc(70,140,60,0, 2*Math.PI, false);
-    /* 圆心坐标为（70,140）半径为 60,绘制起始位置为0弧度，2PI绘制结束，false 表示逆时针 */
+    /* 圆心坐标为（70,140）半径为 60, 绘制起始位置为 0 弧度，2PI 绘制结束，false 表示逆时针 */
     context.rect(140,140,40,40);
 
     /* 移动绘图游标 */
     context.moveTo(20,120);
-    context.lineTo(120,120); /*绘制直线 */
+    context.lineTo(120,120); /* 绘制直线 */
 
     /* 二次曲线 */
     context.moveTo(120, 20);
