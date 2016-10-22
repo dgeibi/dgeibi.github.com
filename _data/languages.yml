@@ -43,6 +43,9 @@
     - title: Transform
       subpath: Transform
 
+    - title: Animations
+      subpath: Animations
+
 - name: JavaScript
   slug: javascript
   notes:
