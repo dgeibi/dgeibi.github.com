@@ -1,4 +1,40 @@
 window.addEventListener('DOMContentLoaded', function() {
+    /* https://gist.github.com/joshcanhelp/a3a669df80898d4097a1e2c01dea52c1 */
+    function scrollToPos(scrollTo, scrollDuration) {
+        if (typeof scrollTo === 'string') {
+            var scrollToObj = document.querySelector(scrollTo);
+            if (scrollToObj && typeof scrollToObj.getBoundingClientRect === 'function') {
+                scrollTo = window.pageYOffset + scrollToObj.getBoundingClientRect().top;
+            } else {
+                throw 'error: No element found with the selector "' + scrollTo + '"';
+            }
+        } else if (typeof scrollTo !== 'number') {
+            scrollTo = 0;
+        }
+        var anchorHeightAdjust = 30;
+        if (scrollTo > anchorHeightAdjust) {
+            scrollTo = scrollTo - anchorHeightAdjust;
+        }
+        if (typeof scrollDuration !== 'number' || scrollDuration < 0) {
+            scrollDuration = 1000;
+        }
+        var cosParameter = (window.pageYOffset - scrollTo) / 2,
+            scrollCount = 0,
+            oldTimestamp = window.performance.now();
+        function step(newTimestamp) {
+            var tsDiff = newTimestamp - oldTimestamp;
+            scrollCount += Math.PI / (scrollDuration / tsDiff);
+            if (scrollCount >= Math.PI) {
+                return;
+            }
+            var moveStep = Math.round(scrollTo + cosParameter + cosParameter * Math.cos(scrollCount));
+            window.scrollTo(0, moveStep);
+            oldTimestamp = newTimestamp;
+            window.requestAnimationFrame(step);
+        }
+        window.requestAnimationFrame(step);
+    }
+
     // from http://stackoverflow.com/a/4425214
     (function() {
         var links = document.links;
@@ -36,9 +72,24 @@ window.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', function() {
             backToTop();
         });
-        backBtn.addEventListener('click', function() {
-            window.scrollTo(0, 0);
+        backBtn.addEventListener('click', function(e) {
+            scrollToPos(0, 500);
         });
+    })();
+
+    (function() {
+        var links = document.querySelectorAll("#toc a");
+        var length = links.length;
+        for (var i = 0; i < length; i++) {
+            links[i].onclick = function(e) {
+                if (this.hash != "") {
+                    e.preventDefault();
+                    var hash = this.hash;
+                    scrollToPos(hash, 700);
+                    window.location.hash = hash;
+                }
+            }
+        }
     })();
 
     /* nav-btn */
