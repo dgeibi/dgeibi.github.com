@@ -11,10 +11,6 @@ window.addEventListener('DOMContentLoaded', function() {
         } else if (typeof scrollTo !== 'number') {
             scrollTo = 0;
         }
-        var anchorHeightAdjust = 30;
-        if (scrollTo > anchorHeightAdjust) {
-            scrollTo = scrollTo - anchorHeightAdjust;
-        }
         if (typeof scrollDuration !== 'number' || scrollDuration < 0) {
             scrollDuration = 1000;
         }
@@ -72,7 +68,7 @@ window.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', function() {
             backToTop();
         });
-        backBtn.addEventListener('click', function(e) {
+        backBtn.addEventListener('click', function() {
             scrollToPos(0, 500);
         });
     })();
