@@ -40,3 +40,9 @@ task :push do
   puts   "`master' branch updated."
   puts
 end
+
+desc "commit"
+task :commit do
+  system "git add -A"
+  system "git commit -m 'update at #{Time.now.utc}'"
+end
