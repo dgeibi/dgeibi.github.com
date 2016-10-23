@@ -1,7 +1,7 @@
-{% if jekyll.environment == "production" %}
+{% if jekyll.environment != "production" %}
 <div id="comment">
-    <a id="enDisqus" class="comment-link">Post a comment with Disqus</a>
-    <a id="enDuoshuo" class="comment-link">使用多说留言</a>
+    <a id="enDisqus"  href="#disqus" class="comment-link">Post a comment with Disqus</a>
+    <a id="enDuoshuo" href="#duosho" class="comment-link">使用多说留言</a>
     <script>
         var comment = document.getElementById("comment");
         var enDuoshuo = document.getElementById("enDuoshuo");
@@ -11,7 +11,8 @@
             short_name: "{{ site.duoshuo_id }}"
         };
 
-        var useDuoshuo = function() {
+        var useDuoshuo = function(e) {
+            e.preventDefault();
             var el = document.createElement('div');
             el.setAttribute('data-thread-key', '{% if page.id %}{{ page.id }}{% else %}{{ page.url }}{% endif %}');
             el.setAttribute('data-url', '{{ site.url }}{{ page.url }}');
@@ -20,7 +21,8 @@
             comment.appendChild(el);
             enDuoshuo.style.display = "none";
         };
-        var useDisqus = function() {
+        var useDisqus = function(e) {
+            e.preventDefault();
             var div = document.createElement('div');
             div.id = "disqus_thread";
             comment.appendChild(div);
