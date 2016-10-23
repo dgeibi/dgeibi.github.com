@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', function() {
         var cosParameter = (window.pageYOffset - scrollTo) / 2,
             scrollCount = 0,
             oldTimestamp = window.performance.now();
+
         function step(newTimestamp) {
             var tsDiff = newTimestamp - oldTimestamp;
             scrollCount += Math.PI / (scrollDuration / tsDiff);
@@ -38,8 +39,22 @@ window.addEventListener('DOMContentLoaded', function() {
             if (links[i].hostname != window.location.hostname) {
                 links[i].target = '_blank';
             }
+            links[i].addEventListener('mouseenter', function(e) {
+                e.target.classList.add('hover');
+            });
+            links[i].addEventListener('mouseleave', function(e) {
+                e.target.classList.remove('hover');
+            });
         }
     })();
+
+    window.addEventListener('touchstart', function(e) {
+        e.target.classList.add('hover');
+    });
+
+    window.addEventListener('click', function(e) {
+        e.target.classList.remove('hover');
+    });
 
     /* add table-wrapper */
     (function() {

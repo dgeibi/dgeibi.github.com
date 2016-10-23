@@ -4,6 +4,9 @@
 .toc-content {
     counter-reset: section;
 
+    h2, h3, h4{
+        color: darken($brand-color, 10%);
+    }
     h2 {
         counter-reset: subsection;
     }

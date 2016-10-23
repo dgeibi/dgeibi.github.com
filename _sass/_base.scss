@@ -148,8 +148,7 @@ a {
     color: $brand-color;
     text-decoration: none;
 
-    &:hover {
-        color: $text-color;
+    &.hover {
         text-decoration: underline;
     }
 }
@@ -171,19 +170,19 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
 code,
 kbd,
+pre,
 samp,
-tt{
-  font-family: "Iosevka Slab", "Andale Mono", "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
-  font-size:1em;
+tt {
+    font-family: "Iosevka Slab", "Andale Mono", "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
+    font-size: 1em;
 }
+
 code,
 pre {
     font-size: 16px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
+    border-radius: 2px;
     background-color: $code-background-color;
 }
 
