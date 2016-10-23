@@ -30,7 +30,10 @@ numObj.toFixed(6);        // 返回 "12345.678900"：用 0 填充
 
 ## toExponential()
 
-* 语法：`numObj.toExponential(fractionDigits)`
+* 语法：
+
+        numObj.toExponential(fractionDigits)
+
 * 功能：以指数表示法返回该数值字符串表示形式
 
 ```javascript
