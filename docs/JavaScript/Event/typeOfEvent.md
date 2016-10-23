@@ -28,7 +28,6 @@ language: javascript
 
 ## 	Mouse Events
 
-
 * click：单击主鼠标按钮，或者回车
 * dblclick：双击主鼠标按钮
 * mousedown：按下任意鼠标按钮
@@ -39,14 +38,14 @@ language: javascript
 * mouseover：鼠标光标进入元素本身（从子元素 / 其它元素）
 * mouseup：释放鼠标按钮
 
-** 位置 **
+**位置**
 
 * MouseEvent.clientX, MouseEvent.clientY：   事件发生时，鼠标在视口中的位置。
 * MouseEvent.pageX, MouseEvent.pageY：       事件发生时，鼠标在页面中的位置。
 * MouseEvent.screenX, MouseEvent.screenY：   事件发生时，鼠标在屏幕中的位置。
 * MouseEvent.offsetX, MouseEvent.offsetY：   事件发生时，鼠标在目标（target）的内边界内的位置。
 
-** 按键 **
+**按键**
 
 * MouseEvent.shiftKey：鼠标事件触发的同时，shift 键被按，返回 ture。
 * MouseEvent.ctrlKey：鼠标事件触发的同时，ctrl 键被按，返回 ture。
@@ -70,10 +69,7 @@ wheel：鼠标滚轮发生移动时触发 (取代 mousewheel)
 * WheelEvent.deltaZ：z 轴移动量
 * WheelEvent.deltaMode：移动量的单位
 
-
 [wheel - Event reference \| MDN](https://developer.mozilla.org/en-US/docs/Web/Events/wheel)
-
-
 
 ## Keyboard Events
 
@@ -122,7 +118,7 @@ format："text/plain"("text"), "text/uri-list"("url")
 
 ## Media Events
 
-[Media Element - HTML Note](/docs/HTML/Media/mediaevents)
+[Media Element - HTML Note](/docs/HTML/Media/#mediaevents)
 
 ## Event handlers for objects of the text track APIs
 
