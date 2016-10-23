@@ -3,7 +3,7 @@
  */
 .toc-content {
     counter-reset: section;
-    
+
     h2 {
         counter-reset: subsection;
     }
@@ -55,7 +55,7 @@
     transition: opacity 0.2s ease-out;
     opacity: 0;
 
-    &:hover {
+    &.hover {
         background: #e9ebec;
     }
 
