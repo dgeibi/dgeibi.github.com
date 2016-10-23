@@ -48,10 +48,12 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     })();
 
+    window.addEventListener('touchmove', function(e) {
+        e.target.classList.remove('hover');
+    });
     window.addEventListener('touchstart', function(e) {
         e.target.classList.add('hover');
     });
-
     window.addEventListener('click', function(e) {
         e.target.classList.remove('hover');
     });
