@@ -75,7 +75,7 @@ document.images     // all <img>
 document.all        // all tag
 document.embeds     // all <OBJECT>
 document.plugins    // all <embed>
-document.anchors    // all <a>
+//document.anchors  Deprecated  // all <a>
 document.links      // all <a> which has `href`
 document.forms      // all <form>
 document.applets    // all <applet>
