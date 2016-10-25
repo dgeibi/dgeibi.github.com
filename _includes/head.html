@@ -16,10 +16,10 @@
     <title>
     {% if page.title %}
     {% if page.layout == "blog_by_category" %}分类：{% endif %}{{ page.title }}
-    {% if page.language and page.layout == "note" %}
-            {% assign language = site.data.languages | where: "slug", page.language %}
-            {% assign language = language[0] %}
-            - {{ language.name }} Note
+    {% if page.note and page.layout == "note" %}
+            {% assign note = site.data.notes | where: "slug", page.note %}
+            {% assign note = note[0] %}
+            - {{ note.name }} Note
     {% endif %} | {% endif %}{{ site.title }}
     </title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">

@@ -28,7 +28,7 @@ function createDirectory(article, directory, isDirNum) {
 
     // 获取标题编号 标题内容
     levelArray = (function(article, contentArray, titleId) {
-        var titleElem = children(article.childNodes, /^h\d$/),
+        var titleElem = children(article.childNodes, /^h[23]$/),
             levelArray = [],
             lastNum = +titleElem[0].tagName.match(/\d/)[0],
             lastRevNum = 1,

@@ -40,7 +40,7 @@ defaults:
           layout: "blog_by_category"
     -
         scope:
-            path: "docs"
+            path: "notes"
         values:
             layout: "note"
 

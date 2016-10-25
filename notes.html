@@ -1,0 +1,14 @@
+---
+layout: page
+title: 笔记
+toc: true
+---
+
+{% for collection in site.data.notes %}
+<h2>{{ collection.name }}</h2>
+<ul class="docs-list">
+    {% for note in collection.notes %}
+    <li><a href="{{ site.baseurl }}/notes/{{ collection.name }}/{{ note.subpath }}/">{{ note.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endfor %}
