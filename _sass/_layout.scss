@@ -127,11 +127,12 @@
 /**
  * Comment
  */
-.comment-link {
+a.comment-link {
     cursor: pointer;
     text-align: center;
     display: block;
     box-sizing: border-box;
+    text-decoration: none;
     padding: 10px;
     margin: 5px auto;
     border: 1px solid #eee;
@@ -141,7 +142,6 @@
     overflow: hidden;
 
     &:hover {
-        text-decoration: none;
         background-color: #eee;
     }
 }
