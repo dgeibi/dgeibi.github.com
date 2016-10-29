@@ -1,6 +1,5 @@
 ---
 title: Media Element
-note: html
 ---
 
 ## Usage

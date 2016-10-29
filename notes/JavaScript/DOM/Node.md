@@ -1,6 +1,5 @@
 ---
 title: Node
-note: javascript
 ---
 
 下面这些类型的元素继承了该接口的所有属性和方法：

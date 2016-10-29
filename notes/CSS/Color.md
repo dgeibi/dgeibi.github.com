@@ -1,6 +1,5 @@
 ---
 title: Color
-note: css
 ---
 
 ## RGB

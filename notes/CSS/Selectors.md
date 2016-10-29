@@ -1,6 +1,5 @@
 ---
 title: Selectors
-note: css
 ---
 
 ## 说明

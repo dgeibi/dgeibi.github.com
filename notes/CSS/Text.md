@@ -1,6 +1,5 @@
 ---
 title: Text
-note: css
 ---
 
 ## 属性简介

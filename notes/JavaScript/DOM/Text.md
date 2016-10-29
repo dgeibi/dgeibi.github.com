@@ -1,6 +1,5 @@
 ---
 title: Text, Comment, CDATASection
-note: javascript
 ---
 
 ## Text

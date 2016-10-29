@@ -1,6 +1,5 @@
 ---
 title: Operator
-note: javascript
 ---
 
 ## new

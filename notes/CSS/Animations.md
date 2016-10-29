@@ -1,6 +1,5 @@
 ---
 title: Animations
-note: css
 ---
 
 ## @keyframes

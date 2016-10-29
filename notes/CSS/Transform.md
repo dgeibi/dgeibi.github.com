@@ -1,6 +1,5 @@
 ---
 title: Transform
-note: css
 ---
 
 ## transform-origin 属性

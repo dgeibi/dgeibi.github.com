@@ -1,6 +1,5 @@
 ---
 title: Form
-note: javascript
 ---
 
 ## HTMLFormElement

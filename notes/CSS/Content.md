@@ -1,6 +1,5 @@
 ---
 title: Content
-note: css
 ---
 
 selectors:before 和 selectors:after 里的 [content](https://developer.mozilla.org/zh-CN/docs/Web/CSS/content)

@@ -1,6 +1,5 @@
 ---
 title: Element
-note: javascript
 ---
 
 ## Create Element

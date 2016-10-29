@@ -1,6 +1,5 @@
 ---
 title: DocumentFragment
-note: javascript
 ---
 
 轻量的 document，作为文档仓库

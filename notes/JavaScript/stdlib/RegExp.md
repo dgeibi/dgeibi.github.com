@@ -1,6 +1,5 @@
 ---
 title: RegExp
-note: javascript
 ---
 
 ## 创建一个正则表达式

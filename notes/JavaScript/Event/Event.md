@@ -1,6 +1,5 @@
 ---
 title: Event
-note: javascript
 ---
 
 ## HTML 事件处理程序

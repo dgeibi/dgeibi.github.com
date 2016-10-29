@@ -1,6 +1,5 @@
 ---
 title: Canvas 2D Context
-note: javascript
 ---
 
 ## Canvas

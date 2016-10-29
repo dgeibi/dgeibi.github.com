@@ -1,6 +1,5 @@
 ---
 title: Fonts
-note: css
 ---
 
 ## font-family

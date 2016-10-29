@@ -1,6 +1,5 @@
 ---
 title: Statement
-note: javascript
 ---
 
 ## if

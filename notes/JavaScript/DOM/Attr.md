@@ -1,6 +1,5 @@
 ---
 title: Attr
-note: javascript
 ---
 
 元素的特性

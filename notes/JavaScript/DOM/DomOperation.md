@@ -1,6 +1,5 @@
 ---
 title: DOM Operation
-note: javascript
 ---
 
 ## 动态脚本

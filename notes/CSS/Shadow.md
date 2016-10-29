@@ -1,6 +1,5 @@
 ---
 title: Shadow
-note: css
 ---
 
 ## text-shadow

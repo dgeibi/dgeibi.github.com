@@ -1,6 +1,5 @@
 ---
 title: Borders
-note: css
 ---
 
 ## 属性简介

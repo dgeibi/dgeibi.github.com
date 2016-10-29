@@ -1,6 +1,5 @@
 ---
 title: Object
-note: javascript
 lang: en
 ---
 

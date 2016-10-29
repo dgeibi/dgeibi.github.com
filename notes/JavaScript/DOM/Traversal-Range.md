@@ -1,6 +1,5 @@
 ---
 title: Traversal & Range
-note: javascript
 ---
 
 [Document Object Model (DOM) Level 2 Traversal and Range Specification](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/)

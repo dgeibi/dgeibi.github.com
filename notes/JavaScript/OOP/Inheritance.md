@@ -1,6 +1,5 @@
 ---
 title: 继承
-note: javascript
 ---
 
 ## 原型链

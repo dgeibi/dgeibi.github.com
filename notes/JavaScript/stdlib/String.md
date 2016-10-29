@@ -1,6 +1,5 @@
 ---
 title: String
-note: javascript
 ---
 
 ## 字符方法

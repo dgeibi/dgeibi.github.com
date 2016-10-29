@@ -1,6 +1,5 @@
 ---
 title: Array
-note: javascript
 ---
 
 ## 初始化

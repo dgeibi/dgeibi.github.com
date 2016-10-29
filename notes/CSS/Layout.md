@@ -1,6 +1,5 @@
 ---
 title: Layout
-note: css
 ---
 
 ## 文档结构

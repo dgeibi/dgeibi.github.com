@@ -1,6 +1,5 @@
 ---
 title: Number
-note: javascript
 ---
 
 ## toFixed()
