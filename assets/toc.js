@@ -95,7 +95,7 @@ function createDirectory(article, directory, isDirNum) {
         link = document.createElement('a');
         link.href = '#' + titleId[i];
         link.className = "plain-link";
-        link.innerHTML = !isDirNum ? contentArray[i] :
+        link.innerText = !isDirNum ? contentArray[i] :
             dirNum.join('.') + '. ' + contentArray[i];
         li.appendChild(link);
         currentList.appendChild(li);

@@ -19,7 +19,7 @@
     {% if page.note and page.layout == "note" %}
             {% assign note = site.data.notes | where: "slug", page.note %}
             {% assign note = note[0] %}
-            - {{ note.name }} Note
+            - {{ note.name }}
     {% endif %} | {% endif %}{{ site.title }}
     </title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">

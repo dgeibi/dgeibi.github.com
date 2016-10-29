@@ -43,6 +43,36 @@ defaults:
             path: "notes"
         values:
             layout: "note"
+    -
+        scope:
+            path: "notes/CSS"
+        values:
+            note: "css"
+    -
+        scope:
+            path: "notes/JavaScript"
+        values:
+            note: "javascript"
+    -
+        scope:
+            path: "notes/HTML"
+        values:
+            note: "html"
+    -
+        scope:
+            path: "notes/Bash"
+        values:
+            note: "bash"
+    -
+        scope:
+            path: "notes/System"
+        values:
+            note: "system"
+    -
+        scope:
+            path: "notes/tools"
+        values:
+            note: "tools"
 
 # Build settings
 highlighter: rouge

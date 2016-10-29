@@ -67,7 +67,7 @@ ul {
 .plain-link {
     &,
     &:visited {
-        color: $grey-color-dark;
+        text-decoration: none;
     }
 }
 
@@ -145,11 +145,11 @@ h6 {
  * Links
  */
 a {
-    color: $brand-color;
-    text-decoration: none;
+    color: $grey-color-dark;
+    text-decoration: underline;
 
-    &.hover {
-        text-decoration: underline;
+    &:hover {
+        color: $brand-color;
     }
 }
 /**

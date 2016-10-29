@@ -140,7 +140,7 @@
     border-radius: 5px;
     overflow: hidden;
 
-    &.hover {
+    &:hover {
         text-decoration: none;
         background-color: #eee;
     }
@@ -247,13 +247,23 @@ div.right-box {
     font-size: 18px;
     counter-reset: sect;
     list-style-type: none;
+    margin-bottom: $spacing-unit/2;
 
     a {
-        color: $grey-color-dark;
+        width: 44%;
+        display: block;
+        float: left;
+        margin: 0 3%;
+        padding: 3px 0;
+    }
 
-        &::before {
-            counter-increment: sect;
-            content: counter(sect) ". ";
+    .title {
+        float: left;
+    }
+    .post-meta {
+        float: right;
+        @media (max-width: 800px) {
+            display: none;
         }
     }
 }

@@ -39,24 +39,10 @@ window.addEventListener('DOMContentLoaded', function() {
             if (links[i].hostname != window.location.hostname) {
                 links[i].target = '_blank';
             }
-            links[i].addEventListener('mouseenter', function(e) {
-                e.target.classList.add('hover');
-            });
-            links[i].addEventListener('mouseleave', function(e) {
-                e.target.classList.remove('hover');
-            });
         }
     })();
 
-    window.addEventListener('touchmove', function(e) {
-        e.target.classList.remove('hover');
-    });
-    window.addEventListener('touchstart', function(e) {
-        e.target.classList.add('hover');
-    });
-    window.addEventListener('click', function(e) {
-        e.target.classList.remove('hover');
-    });
+
 
     /* add table-wrapper */
     (function() {
