@@ -2,49 +2,49 @@
   slug: html
   notes:
     - title: Attribute
-      subpath: Attribute
+      subpath: attribute
 
     - title: Form
-      subpath: Form
+      subpath: form
 
     - title: Media Element
-      subpath: Media
+      subpath: media
 
 - name: CSS
   slug: css
   notes:
     - title: Selectors
-      subpath: Selectors
+      subpath: selectors
 
     - title: Color
-      subpath: Color
+      subpath: color
 
     - title: Text
-      subpath: Text
+      subpath: text
 
     - title: Shadow
-      subpath: Shadow
+      subpath: shadow
 
     - title: Fonts
-      subpath: Fonts
+      subpath: fonts
 
     - title: Borders
-      subpath: Borders
+      subpath: forders
 
     - title: Background
-      subpath: Background
+      subpath: background
 
     - title: Content
-      subpath: Content
+      subpath: content
 
     - title: Layout
-      subpath: Layout
+      subpath: layout
 
     - title: Transform
-      subpath: Transform
+      subpath: transform
 
     - title: Animations
-      subpath: Animations
+      subpath: animations
 
 - name: JavaScript
   slug: javascript
@@ -56,79 +56,79 @@
       subpath: syntax/statement
 
     - title: Global
-      subpath: stdlib/Global
+      subpath: stdlib/global
 
     - title: Array
-      subpath: stdlib/Array
+      subpath: stdlib/array
 
     - title: Date
-      subpath: stdlib/Date
+      subpath: stdlib/date
 
     - title: Function
-      subpath: stdlib/Function
+      subpath: stdlib/function
 
     - title: Math
-      subpath: stdlib/Math
+      subpath: stdlib/math
 
     - title: Number
-      subpath: stdlib/Number
+      subpath: stdlib/number
 
     - title: String
-      subpath: stdlib/String
+      subpath: stdlib/string
 
     - title: Object
-      subpath: stdlib/Object
+      subpath: stdlib/object
 
     - title: RegExp
-      subpath: stdlib/RegExp
+      subpath: stdlib/regexp
 
     - title: 创建对象
-      subpath: OOP/createObject
+      subpath: oop/createobject
 
     - title: 继承
-      subpath: OOP/Inheritance
+      subpath: oop/inheritance
 
     - title: Window 对象
-      subpath: Browser/Window
+      subpath: browser/window
 
     - title: Canvas 2D Context
-      subpath: Browser/Canvas2D
+      subpath: browser/canvas2d
 
     - title: Node
-      subpath: DOM/Node
+      subpath: dom/node
 
     - title: Document
-      subpath: DOM/Document
+      subpath: dom/document
 
     - title: Element
-      subpath: DOM/Element
+      subpath: dom/element
 
     - title: Form
-      subpath: DOM/Form
+      subpath: dom/form
 
     - title: Text
-      subpath: DOM/Text
+      subpath: dom/text
 
     - title: DocumentFragment
-      subpath: DOM/Fragment
+      subpath: dom/fragment
 
     - title: Attr
-      subpath: DOM/Attr
+      subpath: dom/attr
 
     - title: DomOperation
-      subpath: DOM/DomOperation
+      subpath: dom/domoperation
 
     - title: Style
-      subpath: DOM/Style
+      subpath: dom/style
 
     - title: Traversal & Range
-      subpath: DOM/Traversal-Range
+      subpath: dom/traversal-range
 
     - title: 事件
-      subpath: Event/Event
+      subpath: event/event
 
     - title: 事件类型
-      subpath: Event/typeOfEvent
+      subpath: event/typeofevent
 
 - name: Bash
   slug: bash
@@ -190,6 +190,9 @@
     - subpath: grep
       title: grep
 
+    - subpath: sed
+      title: sed
+      
     - subpath: netctl
       title: netctl
 

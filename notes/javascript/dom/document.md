@@ -33,7 +33,7 @@ document.title           // 标题
 document.dir             // 文档的文字方向；默认："ltr"; // "rtl" right to left
 ```
 
-[document.location - JavaScript Note]({{ site.baseurl }}/notes/JavaScript/Browser/Window/#location)
+[document.location - JavaScript Note]({{ site.baseurl }}/notes/javascript/browser/window/#location)
 
 ### document.readyState
 
@@ -90,7 +90,7 @@ document.selectedStylesheetSet // 被浏览器选择的样式表（返回 title 
 ```
 
 - [document.preferredStyleSheetSet \| MDN](https://developer.mozilla.org/en/docs/Web/API/Document/preferredStyleSheetSet)
-- [document.styleSheets  - JavaScript Note]({{ site.baseurl }}/notes/JavaScript/DOM/Style/#stylesheet)
+- [document.styleSheets  - JavaScript Note]({{ site.baseurl }}/notes/javascript/dom/style/#stylesheet)
 
 ## document.getSelection()
 

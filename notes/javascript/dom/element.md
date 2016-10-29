@@ -92,7 +92,7 @@ position:
 
 ### from Node.prototype
 
-[Node - JavaScript Note]({{ site.baseurl }}/notes/JavaScript/DOM/Node/#节点的增删)
+[Node - JavaScript Note]({{ site.baseurl }}/notes/javascript/dom/node/#节点的增删)
 
 ```javascript
 element.insertBefore()
@@ -131,12 +131,12 @@ element.querySelector() // cssSelector: "img.button" "body"… return the first 
 element.querySelectorAll() // return all matched elements within element
 element.closest() // experimental IE Not supported // element.closest(selectorString) // return closest parentNode matches selectorString
 element.webkitMatchesSelector() // element.webkitMatchesSelector() -> boolean
-element.matches() // element.matches(selectorString) -> boolean // https://developer.mozilla.org/en-US{{ site.baseurl }}/notes/Web/API/Element/matches
+element.matches() // element.matches(selectorString) -> boolean // https://developer.mozilla.org/en-US{{ site.baseurl }}/notes/web/api/element/matches
 ```
 
 ## DOM 元素的大小与位置
 
-element.style: [Style]({{ site.baseurl }}/notes/JavaScript/DOM/Style/)
+element.style: [Style]({{ site.baseurl }}/notes/javascript/dom/style/)
 
 [一张图彻底掌握 scrollTop, offsetTop, scrollLeft, offsetLeft......](https://github.com/pramper/Blog/issues/10)
 
@@ -157,7 +157,7 @@ element.scrollLeft
 
 `scrollTop`, `scrollLeft` 获取或设置 DOM 元素已经滚动到本身左边界或上边界的像素数。
 
-[视口位置]({{ site.baseurl }}/notes/JavaScript/Browser/Window/#视口位置)
+[视口位置]({{ site.baseurl }}/notes/javascript/browser/window/#视口位置)
 
 ### 长度或宽度
 
@@ -175,7 +175,7 @@ element.clientLeft   //（只读） 元素的左边框的宽度
 ### Rect
 
 ```javascript
-element.getClientRects() // 返回一个指向客户端中每一个盒子的边界矩形的矩形集合 // https://developer.mozilla.org/zh-CN{{ site.baseurl }}/notes/Web/API/Element/getClientRects
+element.getClientRects() // 返回一个指向客户端中每一个盒子的边界矩形的矩形集合 // https://developer.mozilla.org/zh-CN{{ site.baseurl }}/notes/web/api/element/getclientrects
 element.getBoundingClientRect() // 返回边界矩形: 元素的大小及其相对于视口的位置
 ```
 
@@ -198,7 +198,7 @@ element.scrollIntoViewIfNeeded(alignCenter)
 
 ## Event
 
-[Event - JavaScript 笔记]({{ site.baseurl }}/notes/JavaScript/Event/Event/)
+[Event - JavaScript 笔记]({{ site.baseurl }}/notes/javascript/event/event/)
 
 ```javascript
 element.onbeforecopy

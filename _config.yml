@@ -45,27 +45,27 @@ defaults:
             layout: "note"
     -
         scope:
-            path: "notes/CSS"
+            path: "notes/css"
         values:
             note: "css"
     -
         scope:
-            path: "notes/JavaScript"
+            path: "notes/javascript"
         values:
             note: "javascript"
     -
         scope:
-            path: "notes/HTML"
+            path: "notes/html"
         values:
             note: "html"
     -
         scope:
-            path: "notes/Bash"
+            path: "notes/bash"
         values:
             note: "bash"
     -
         scope:
-            path: "notes/System"
+            path: "notes/system"
         values:
             note: "system"
     -

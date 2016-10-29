@@ -130,4 +130,4 @@ selectElem.add(newOption, undefined);
 
 ## 表单事件
 
-[表单事件]({{ site.baseurl }}/notes/JavaScript/Event/typeOfEvent/#formevents)
+[表单事件]({{ site.baseurl }}/notes/javascript/event/typeofevent/#formevents)

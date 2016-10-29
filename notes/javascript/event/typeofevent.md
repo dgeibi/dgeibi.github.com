@@ -117,7 +117,7 @@ format："text/plain"("text"), "text/uri-list"("url")
 
 ## Media Events
 
-[Media Element - HTML Note]({{ site.baseurl }}/notes/HTML/Media/#mediaevents)
+[Media Element - HTML Note]({{ site.baseurl }}/notes/html/media/#mediaevents)
 
 ## Event handlers for objects of the text track APIs
 
