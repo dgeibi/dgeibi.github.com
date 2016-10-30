@@ -46,6 +46,9 @@
     - title: Animations
       subpath: animations
 
+    - title: Style Guide
+      subpath: styleguide
+
 - name: JavaScript
   slug: javascript
   notes:
@@ -192,7 +195,7 @@
 
     - subpath: sed
       title: sed
-      
+
     - subpath: netctl
       title: netctl
 
