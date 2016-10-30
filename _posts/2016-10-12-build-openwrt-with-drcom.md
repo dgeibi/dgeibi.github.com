@@ -55,9 +55,8 @@ yum group install "Development Tools"
 	$(OPKG) update || true; \
 	fi
 	$(MAKE) package_install
-	# 添加以下 2 行，注意缩进，用 tab
+	# 添加以下 1 行，注意缩进，用 tab
 	sed -i '/proto_run_command/i username=`echo -e "$$username"`' "$(TARGET_DIR)/lib/netifd/proto/ppp.sh"
-	sed -i '/proto_run_command/i password=`echo -e "$$password"`' "$(TARGET_DIR)/lib/netifd/proto/ppp.sh"
 ifneq ($(USER_FILES),)
 	$(MAKE) copy_files
 endif

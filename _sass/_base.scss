@@ -222,18 +222,20 @@ table {
     min-width: 500px;
     border-collapse: collapse;
     border-spacing: 0;
-    border: 1px solid $grey-color-light;
 }
 
 th {
-    vertical-align: middle;
-    text-align: center;
-    border: 1px solid $grey-color-light;
-    padding: 6px 13px;
+    vertical-align: bottom;
+    font-weight: bold;
 }
 
 td {
     vertical-align: middle;
-    border: 1px solid $grey-color-light;
-    padding: 6px 13px;
+    border-top: 0.0625em solid #e0e0e0;
+}
+
+td,
+th {
+    text-align: left;
+    padding: 0.625em;
 }
