@@ -51,7 +51,7 @@ font-variant: small-caps;
 font: 2em "Open Sans", sans-serif;
 
 /* style | size | family */
-font: italic 2em "Open Sans", sans-serif;
+font: italic 2em 'Open Sans', sans-serif;
 
 /* style | variant | weight | size/line-height | family */
 font: italic small-caps bolder 16px/3 cursive;
@@ -74,8 +74,8 @@ font: unset;
 ```css
 @font-face {
     font-family: myfont; /* 声明字体名称 */
-    src: local(Example Font), url('examplefont.woff') format("woff"),
-      url('examplefont.woff') format("opentype");   /* 指定来源 */
+    src: local(Example Font), url(examplefont.woff) format("woff"),
+      url(examplefont.woff) format("opentype");   /* 指定来源 */
     font-weight: bold;
     font-style: normal;
 }

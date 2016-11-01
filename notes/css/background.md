@@ -11,13 +11,13 @@ Example:
 background: green;
 
 /* Using a <bg-image> and <repeat-style> */
-background: url("test.jpg") repeat-y;
+background: url(test.jpg) repeat-y;
 
 /* Using a <box> and <background-color> */
 background: border-box red;
 
 /* <repeat-style>， <position>， <bg-image> */
-background: no-repeat center/80% url("../img/image.png");
+background: no-repeat center/80% url(../img/image.png);
 ```
 
 Syntax:

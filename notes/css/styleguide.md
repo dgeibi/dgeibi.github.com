@@ -16,7 +16,7 @@ font-size: .8em;
 
 Use single quotation marks for attribute selectors and property values.
 
-Use single ('') rather than double ("") quotation marks for attribute selectors or property values. Do not use quotation marks in URI values (url()).
+Use single (`''`) rather than double (`""`) quotation marks for attribute selectors or property values. Do not use quotation marks in URI values (url()).
 
 Exception: If you do need to use the @charset rule, use double quotation marks—single quotation marks are not permitted.
 
