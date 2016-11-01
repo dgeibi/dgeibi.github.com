@@ -22,6 +22,9 @@ window.addEventListener('DOMContentLoaded', function() {
             var tsDiff = newTimestamp - oldTimestamp;
             scrollCount += Math.PI / (scrollDuration / tsDiff);
             if (scrollCount >= Math.PI) {
+                if(scrollTo === 0) {
+                    window.scrollTo(0,0);
+                }
                 return;
             }
             var moveStep = Math.round(scrollTo + cosParameter + cosParameter * Math.cos(scrollCount));
