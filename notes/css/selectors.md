@@ -43,13 +43,15 @@ title: Selectors
 :enabled              /* 启用的元素 */
 :disabled             /* 被禁用的元素 */
 :focus                /* 当元素成为焦点 */
+:not(<selector>#)     /* 取反 */
 :first-child          /* 父级元素下的第一个子元素 (ie 7+)*/
 :last-child           /* 父级元素下的最后一个子元素 ie 9+ */
-:nth-child(an+b)      /* 父级元素下的第 an+b 个子元素 n=0,1,2,… */
-:nth-last-child(an+b) /* 从后开始数的 :nth-child */
-:first-of-type        /* 父级元素下的第一个同类子元素 */
-:last-of-type(an+b)   /* 从后开始数的 nth-of-type */
-:nth-of-type(an+b)    /* 父级元素下的第 an+b 个同类子元素 */
+:nth-child(An+B)      /* 父级元素下的第 An+B 个子元素 n=0,1,2,… */
+:nth-last-child(An+B) /* 从后开始数的 :nth-child */
+li:first-of-type          /* 父级元素下的第一个 li 元素 */
+li:last-of-type           /* 父级元素下的最后一个 li 元素 */
+li:nth-of-type(An+B)      /* 父级元素下的第 An+B 个 li 元素 */
+li:nth-last-of-type(An+B) /* 父级元素下的倒数第 An+B 个 li 元素 */
 ```
 
 伪元素

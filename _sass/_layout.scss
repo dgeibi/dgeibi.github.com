@@ -217,7 +217,7 @@ a.comment-link {
     margin-left: 0;
     list-style: none;
 
-    > li {
+    > li:not(:last-of-type) {
         width: 100%;
         margin-bottom: $spacing-unit/2;
     }
@@ -232,11 +232,11 @@ div.left-box {
     display: inline-block;
     float: left;
     margin-right: $spacing-unit;
-    margin-bottom: $spacing-unit;
     @include media-query(500px + 130px) {
+        margin-bottom: $spacing-unit;
+        margin-right: 0;
         width: auto;
         max-width: 500px;
-        margin-right: 0;
         float: none;
         display: block;
     }

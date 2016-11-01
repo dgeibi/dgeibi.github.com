@@ -19,6 +19,7 @@ disqus_shortname: dgeibi
 duoshuo_id: dgeibi
 permalink: '/:year/:month/:day/:title/'
 paginate: 10
+timezone: Asia/Shanghai
 
 collections:
   my_categories:

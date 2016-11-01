@@ -16,7 +16,7 @@ You may build your own firmware with following packages:
 * [pcap-dnsproxy](https://github.com/wongsyrone/openwrt-Pcap_DNSProxy)
 
 
-Refering to two external packages' README, [OpenWrt build system – Installation [OpenWrt Wiki]](https://wiki.openwrt.org/doc/howto/buildroot.exigence) and [OpenWrt build system – Usage [OpenWrt Wiki]](https://wiki.openwrt.org/doc/howto/build), set up OpenWrt build system, and build your firmware.
+Referring to two external packages' README, [OpenWrt build system – Installation [OpenWrt Wiki]](https://wiki.openwrt.org/doc/howto/buildroot.exigence) and [OpenWrt build system – Usage [OpenWrt Wiki]](https://wiki.openwrt.org/doc/howto/build), set up OpenWrt build system, and build your firmware.
 
 `make menuconfig`:
 
@@ -129,7 +129,7 @@ no-negcache
 cache-size=10000
 ```
 
-Get `dnsmasq-blocklist.conf` from [dgeibi/blocked](https://github.com/dgeibi/blocked) and place it into `/etc/dnsmasq.d`.
+Get `dnsmasq-blocklist.conf` from [dgeibi/blocked](https://github.com/dgeibi/blocked) and place it into `/etc/dnsmasq.d`. It contains domains which are blocked in China.
 
 Run following command to apply the configuration:
 
