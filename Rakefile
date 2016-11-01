@@ -35,7 +35,7 @@ desc "Push to github"
 task :push do
   puts   "Pushing to `master' branch:"
   system "git add -A"
-  system "git commit -m 'update at #{Time.now.utc}'"
+  system "git commit -m 'update at #{Time.now}'"
   system "git push origin master"
   puts   "`master' branch updated."
   puts
@@ -44,5 +44,5 @@ end
 desc "commit"
 task :commit do
   system "git add -A"
-  system "git commit -m 'update at #{Time.now.utc}'"
+  system "git commit -m 'update at #{Time.now}'"
 end
