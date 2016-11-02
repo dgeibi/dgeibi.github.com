@@ -57,12 +57,13 @@ start_service() {
     procd_close_instance
 }
 
-reload_service() {
-    stop
-    sleep 5s
-    start
+# launched through hotplug
+boot() {
+    return 0
 }
 ```
+
+create a hotplug script for shadowsocks [60-shadowsocks](https://github.com/dgeibi/files-proxy/blob/master/etc/hotplug.d/iface/60-shadowsocks)
 
 |program|ip|port|
 |-------|--|----|
@@ -151,7 +152,7 @@ iptables -t nat -A PREROUTING -p tcp -m set --match-set gfwlist dst -j REDIRECT 
 
 If it works, add the commands above to `/etc/firewall.user`.
 
-Note: If pcap-dnsproxy and shadowsocks do not start after your router's system reboot, they may be trying to start before the network interface is fully up. Modifying hotplug scripts may help, please refer to [99-pcap-dnsproxy](https://github.com/dgeibi/files-proxy/blob/master/etc/hotplug.d/iface/99-pcap-dnsproxy).
+Note: If pcap-dnsproxy and shadowsocks do not start after your router's system reboot, they may be trying to start before the network interface is fully up. Modifying hotplug scripts and init scripts may help, please refer to [dgeibi/files-proxy](https://github.com/dgeibi/files-proxy).
 
 ## Build into Firmware
 
@@ -161,3 +162,11 @@ git clone https://github.com/dgeibi/files-proxy.git files
 ```
 
 Modify configurations in files and build again.
+
+## Thanks
+
+- [shadowsocks/shadowsocks-libev: libev port of shadowsocks](https://github.com/shadowsocks/shadowsocks-libev)
+- [shadowsocks/openwrt-shadowsocks: Shadowsocks-libev for OpenWrt](https://github.com/shadowsocks/openwrt-shadowsocks)
+- [chengr28/Pcap_DNSProxy: A local DNS server based on WinPcap and LibPcap](https://github.com/chengr28/Pcap_DNSProxy)
+- [wongsyrone/openwrt-Pcap_DNSProxy: Pcap_DNSProxy for OpenWrt/LEDE](https://github.com/wongsyrone/openwrt-Pcap_DNSProxy)
+- [wongsyrone/lede-1: LEDE Project with modifications](https://github.com/wongsyrone/lede-1)
