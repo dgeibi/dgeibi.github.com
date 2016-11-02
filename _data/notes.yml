@@ -97,6 +97,9 @@
     - title: Canvas 2D Context
       subpath: browser/canvas2d
 
+    - title: Web Storage
+      subpath: browser/web-storage
+
     - title: Node
       subpath: dom/node
 
