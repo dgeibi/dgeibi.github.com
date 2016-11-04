@@ -1,10 +1,12 @@
 window.addEventListener('DOMContentLoaded', function() {
+    var doc = document;
+    var win = window;
     /* https://gist.github.com/joshcanhelp/a3a669df80898d4097a1e2c01dea52c1 */
     function scrollToPos(scrollTo, scrollDuration) {
         if (typeof scrollTo === 'string') {
-            var scrollToObj = document.querySelector(scrollTo);
+            var scrollToObj = doc.querySelector(scrollTo);
             if (scrollToObj && typeof scrollToObj.getBoundingClientRect === 'function') {
-                scrollTo = window.pageYOffset + scrollToObj.getBoundingClientRect().top;
+                scrollTo = win.pageYOffset + scrollToObj.getBoundingClientRect().top;
             } else {
                 throw 'error: No element found with the selector "' + scrollTo + '"';
             }
@@ -14,32 +16,32 @@ window.addEventListener('DOMContentLoaded', function() {
         if (typeof scrollDuration !== 'number' || scrollDuration < 0) {
             scrollDuration = 1000;
         }
-        var cosParameter = (window.pageYOffset - scrollTo) / 2,
+        var cosParameter = (win.pageYOffset - scrollTo) / 2,
             scrollCount = 0,
-            oldTimestamp = window.performance.now();
+            oldTimestamp = win.performance.now();
 
         function step(newTimestamp) {
             var tsDiff = newTimestamp - oldTimestamp;
             scrollCount += Math.PI / (scrollDuration / tsDiff);
             if (scrollCount >= Math.PI) {
                 if(scrollTo === 0) {
-                    window.scrollTo(0,0);
+                    win.scrollTo(0,0);
                 }
                 return;
             }
             var moveStep = Math.round(scrollTo + cosParameter + cosParameter * Math.cos(scrollCount));
-            window.scrollTo(0, moveStep);
+            win.scrollTo(0, moveStep);
             oldTimestamp = newTimestamp;
-            window.requestAnimationFrame(step);
+            win.requestAnimationFrame(step);
         }
-        window.requestAnimationFrame(step);
+        win.requestAnimationFrame(step);
     }
 
     // from http://stackoverflow.com/a/4425214
     (function() {
-        var links = document.links;
+        var links = doc.links;
         for (var i = 0, linksLength = links.length; i < linksLength; i++) {
-            if (links[i].hostname != window.location.hostname) {
+            if (links[i].hostname != win.location.hostname) {
                 links[i].target = '_blank';
             }
         }
@@ -49,21 +51,21 @@ window.addEventListener('DOMContentLoaded', function() {
 
     /* add table-wrapper */
     (function() {
-        var tables = document.getElementsByTagName("table");
+        var tables = doc.getElementsByTagName("table");
         for (var i = 0, len = tables.length; i < len; i++) {
-            var div = document.createElement("div");
+            var div = doc.createElement("div");
             div.className = "table-wrapper";
-            var range = document.createRange();
+            var range = doc.createRange();
             range.selectNode(tables[i]);
             range.surroundContents(div);
         }
     })();
 
     (function() {
-        var backBtn = document.getElementById("back-to-top");
+        var backBtn = doc.querySelector('[data-js-backtotop]');
         var scrollTrigger = 100;
         var backToTop = function() {
-            var scrollTop = window.pageYOffset;
+            var scrollTop = win.pageYOffset;
             if (scrollTop > scrollTrigger) {
                 backBtn.classList.add('show');
             } else {
@@ -71,7 +73,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         };
         backToTop();
-        window.addEventListener('scroll', function() {
+        win.addEventListener('scroll', function() {
             backToTop();
         });
         backBtn.addEventListener('click', function() {
@@ -80,7 +82,7 @@ window.addEventListener('DOMContentLoaded', function() {
     })();
 
     (function() {
-        var links = document.querySelectorAll("#toc a");
+        var links = doc.querySelectorAll("[data-js-toc] a");
         var length = links.length;
         for (var i = 0; i < length; i++) {
             links[i].onclick = function(e) {
@@ -88,7 +90,7 @@ window.addEventListener('DOMContentLoaded', function() {
                     e.preventDefault();
                     var hash = this.hash;
                     scrollToPos(hash, 700);
-                    window.location.hash = hash;
+                    win.location.hash = hash;
                 }
             };
         }
@@ -97,8 +99,8 @@ window.addEventListener('DOMContentLoaded', function() {
     /* nav-btn */
     (function() {
         "use strict";
-        var toggle = document.getElementById("nav-btn");
-        var nav = document.getElementById("nav");
+        var toggle = doc.getElementById("nav-btn");
+        var nav = doc.getElementById("nav");
         toggle.addEventListener("click", function(e) {
             e.preventDefault();
             this.classList.toggle("active");

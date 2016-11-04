@@ -1,7 +1,7 @@
 /**
  * Toc
  */
-.toc-content {
+.toc-src {
     counter-reset: section;
 
     h2 {
@@ -19,7 +19,7 @@
     }
 }
 
-#toc {
+.toc {
     h2 {
         font-size: 26px;
     }
@@ -37,7 +37,7 @@
 /**
  * Back to Top
  */
-#back-to-top {
+.back-to-top {
     position: fixed;
     bottom: 40px;
     right: 40px;
@@ -64,7 +64,7 @@
     }
 }
 /**
- * Nav-btn http://codepen.io/webduke/pen/LELwRb
+ * cmn-toggle-switch http://codepen.io/webduke/pen/LELwRb
  */
 .cmn-toggle-switch {
     display: none;

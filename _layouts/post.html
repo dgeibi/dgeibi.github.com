@@ -13,22 +13,17 @@ layout: default
   {% assign author = site.data.authors[site.author] %}
 {% endif %}
 
-{% if page.toc %}
-<script type="text/javascript" defer="defer" src="{{ site.baseurl }}/assets/toc.js"></script>
-{% endif %}
-
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
         <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
         <p class="post-meta">
-
             作者：<span itemprop="author" itemscope itemtype="http://schema.org/Person"><a class="plain-link" href="{{ author.website }}" itemprop="name">{{ author.name }}</a></span>
             {% if category_content %} | 分类：{{ category_content }}{% endif %}
         </p>
         <p class="post-meta">日期：<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y-%m-%d" }}</time></p>
-        {% if page.toc %}<div id="toc"></div>{% endif %}
+        {% include toc.html %}
     </header>
-    <div class="post-content{% if page.toc %} toc-content{% endif %}" itemprop="articleBody">
+    <div class="post-content{% if page.toc %} toc-src{% endif %}" itemprop="articleBody">
         {{ content }}
     </div>
 </article>

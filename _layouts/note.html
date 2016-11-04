@@ -5,13 +5,12 @@ layout: default
 {% assign note = site.data.notes | where: "slug", page.note %}
 {% assign note = note[0] %}
 {% endif %}
-<script type="text/javascript" defer="defer" src="{{ site.baseurl }}/assets/toc.js"></script>
 <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="plain-link" href="{{ site.baseurl }}/notes/#{{ note.slug }}">{{ note.name }}</a> » {{ page.title }}</h1>
-    <div id="toc"></div>
+    {% include toc.html %}
   </header>
-  <div class="post-content toc-content">
+  <div class="post-content toc-src">
     {{ content }}
   </div>
 </article>

@@ -29,7 +29,7 @@
       subpath: fonts
 
     - title: Borders
-      subpath: forders
+      subpath: borders
 
     - title: Background
       subpath: background
