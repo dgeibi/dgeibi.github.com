@@ -1,28 +1,6 @@
 // copy from http://blog.lxjwlt.com/front-end/2014/07/06/js-create-directory.html
-(function(){
-    var doc = document;
-    function children(childNodes, reg) {
-        var result = [],
-            isReg = typeof reg === 'object',
-            isStr = typeof reg === 'string',
-            node, i, len;
-
-        for (i = 0, len = childNodes.length; i < len; i++) {
-            node = childNodes[i];
-
-            if ((node.nodeType === 1 || node.nodeType === 9) &&
-                (!reg ||
-                    isReg && reg.test(node.tagName.toLowerCase()) ||
-                    isStr && node.tagName.toLowerCase() === reg)) {
-
-                result.push(node);
-            }
-        }
-        return result;
-    }
-
-    // 创建目录
-    function createDirectory(article, directory, isDirNum) {
+$script.ready('zepto', function() {
+    $.createDirectory = function(article, directory, isDirNum) {
         var contentArray = [],
             titleId = [],
             levelArray, root, level,
@@ -30,21 +8,20 @@
 
         // 获取标题编号 标题内容
         levelArray = (function(article, contentArray, titleId) {
-            var titleElem = children(article.childNodes, /^h[23]$/),
+            var titleElem = $(article + '>h2,' + article + '>h3'),
                 levelArray = [],
                 lastNum = +titleElem[0].tagName.match(/\d/)[0],
                 lastRevNum = 1,
                 count = 0,
-                lastRevNum, num, elem, rootNum = lastNum;
+                lastRevNum, num, rootNum = lastNum;
 
-            while (titleElem.length) {
-                elem = titleElem.shift();
+            $(article + '>h2,' + article + '>h3').each(function() {
 
                 // 保存标题内容
-                contentArray.push(elem.innerText);
+                contentArray.push($(this).text());
 
                 // 修正
-                num = +elem.tagName.match(/\d/)[0] - rootNum + 1;
+                num = +this.tagName.match(/\d/)[0] - rootNum + 1;
 
                 if (num > lastNum) {
                     levelArray.push(1);
@@ -62,9 +39,10 @@
                 lastNum = num;
 
                 // 添加标识符
-                elem.id = elem.id || elem.innerText.replace(/[\s&\/\\#,.+=$~%'":*?<>{}\]\[()@`]/g, "").toLowerCase();
-                titleId.push(elem.id);
-            }
+                this.id = this.id || $(this).text().replace(/[\s&\/\\#,.+=$~%'":*?<>{}\]\[()@`]/g, "").toLowerCase();
+                titleId.push(this.id);
+            });
+
 
             // 避免一开始就进入下一层
             if (count !== 0 && levelArray[0] === 1) levelArray[0] = 0;
@@ -73,14 +51,14 @@
         })(article, contentArray, titleId);
 
         // 构造目录
-        currentList = root = doc.createElement('ul');
+        currentList = root = document.createElement('ul');
         var dirNum = [0];
         for (i = 0, len = levelArray.length; i < len; i++) {
             level = levelArray[i];
             if (level === 1) {
-                list = doc.createElement('ul');
+                list = document.createElement('ul');
                 if (!currentList.lastElementChild) {
-                    currentList.appendChild(doc.createElement('li'));
+                    currentList.appendChild(document.createElement('li'));
                 }
                 currentList.lastElementChild.appendChild(list);
                 currentList = list;
@@ -93,8 +71,8 @@
                 }
             }
             dirNum[dirNum.length - 1]++;
-            li = doc.createElement('li');
-            link = doc.createElement('a');
+            li = document.createElement('li');
+            link = document.createElement('a');
             link.href = '#' + titleId[i];
             link.className = "plain-link";
             link.innerText = !isDirNum ? contentArray[i] :
@@ -104,13 +82,9 @@
         }
 
         if (len) {
-            directory.innerHTML = "<h2>目录</h2>";
-            directory.appendChild(root);
+            $(directory).html("<h2>目录</h2>");
+            $(directory).append(root);
         }
-    }
-
-    try {
-        createDirectory(doc.querySelector('.toc-src'),
-            doc.querySelector('[data-js-toc]'), true);
-    } catch (e) {}
-})();
+    };
+    $script.done('toc');
+});
