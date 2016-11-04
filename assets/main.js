@@ -1,48 +1,37 @@
 /* external links */
-$('a').each(function() {
-    if (this.hostname != location.hostname) {
-        this.target = '_blank';
+Array.prototype.forEach.call(document.links, function(link) {
+    if (link.hostname != location.hostname) {
+        link.target = '_blank';
     }
 });
 
 /* add table-wrapper */
-$('table').each(function() {
+Array.prototype.forEach.call(document.querySelectorAll('table'), function(table) {
     var div = document.createElement("div");
     div.className = "table-wrapper";
     var range = document.createRange();
-    range.selectNode(this);
+    range.selectNode(table);
     range.surroundContents(div);
-    div = null;
-    range = null;
 });
 
 /* back to top */
-var backToTop = function() {
-    if ($(window).scrollTop() > 100) {
-        $('[data-js-backtotop]').addClass('show');
-    } else {
-        $('[data-js-backtotop]').removeClass('show');
-    }
-};
-backToTop();
-$(window).on('scroll', backToTop);
-$('[data-js-backtotop]').on('click', $.scrollToPos);
-
-/* toc */
-try {
-    $.createDirectory('.toc-src', '[data-js-toc]', true);
-    $("[data-js-toc] a").on('click', function(e) {
-        if (this.hash != "") {
-            e.preventDefault();
-            $.scrollToPos(this.hash, 700);
-            window.location.hash = this.hash;
+(function() {
+    var topBtn = document.querySelector('[data-js-backtotop]');
+    var backToTop = function() {
+        if (window.pageYOffset > 100) {
+            topBtn.classList.add('show');
+        } else {
+            topBtn.classList.remove('show');
         }
-    });
-} catch (e) {}
+    };
+    backToTop();
+    window.addEventListener('scroll', backToTop);
+    topBtn.addEventListener('click', Util.scrollToPos);
+})();
 
 /* nav-btn */
-$('#nav-btn').on('click', function(e) {
+document.getElementById('nav-btn').addEventListener('click', function(e) {
     e.preventDefault();
-    $(this).toggleClass("active");
-    $('#nav').toggleClass("active");
+    this.classList.toggle("active");
+    document.getElementById('nav').classList.toggle("active");
 });

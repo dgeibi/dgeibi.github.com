@@ -1,3 +1,16 @@
 {% if page.toc %}
 <div data-js-toc class="toc"></div>
+<script>
+    window.addEventListener('load', function() {
+        Util.createTOC('.toc-src', '[data-js-toc]', true);
+        Array.prototype.forEach.call(document.querySelectorAll("[data-js-toc] a"), function(link) {
+            var hash = link.hash;
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                Util.scrollToPos(hash, 700);
+                window.location.hash = hash;
+            });
+        });
+    });
+</script>
 {% endif %}

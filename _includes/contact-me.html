@@ -1,5 +1,8 @@
-<script type="text/javascript" src="{{ "/assets/svg4everybody.min.js " | prepend: site.baseurl }}"></script>
-<script>svg4everybody();</script>
+<script>
+$script("{{ site.baseurl }}/assets/svg4everybody.min.js",function(){
+    svg4everybody();
+});
+</script>
 <div class="contact-me">
     <small class="post-meta">关注我：</small>
     <a href="https://twitter.com/{{ site.twitter_username }}"><svg role="img" class="icon"> <use xlink:href="{{ site.baseurl }}/assets/image/icon.svg#twitter"></use></svg><!--[if lt IE 9]>Twitter<![endif]--></a>

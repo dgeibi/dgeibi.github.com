@@ -33,6 +33,7 @@ defaults:
             type: "posts"
         values:
             layout: "post"
+            comment: true
     -
         scope:
           path: ""

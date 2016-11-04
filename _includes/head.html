@@ -36,12 +36,10 @@
     <link rel="manifest" href="{{ site.baseurl }}/assets/favicon/manifest.json">
     <link rel="me" href="https://github.com/{{ site.github_username }}" type="text/html">
     <link rel="me" href="mailto:{{ site.email }}">
-    <script src="{{ "/assets/script.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ site.baseurl }}/assets/script.min.js"></script>
     <script>
-    $script('{{ site.baseurl }}/assets/zepto.min.js','zepto');
-    $script(['{{ site.baseurl }}/assets/scrollToPos.js'{% if page.toc %},'{{ site.baseurl }}/assets/toc.js'{% endif %}], 'bundle');
-    $script.ready('bundle',function () {
-        $script('{{ site.baseurl }}/assets/main.js');
-    });
+        $script("/assets/Util.js",function(){
+            $script("/assets/main.js");
+        });
     </script>
 </head>
