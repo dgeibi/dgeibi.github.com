@@ -14,10 +14,12 @@ layout: default
 {% endif %}
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <meta itemprop="description"
+        content="{{ content | strip_html | truncatewords: 40 }}" />
     <header class="post-header">
         <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
         <p class="meta">
-            作者：<span itemprop="author" itemscope itemtype="http://schema.org/Person"><a href="{{ author.website }}" itemprop="name">{{ author.name }}</a></span>
+            作者：<span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name"><a href="{{ author.website }}" itemprop="url" rel="author">{{ author.name }}</a></span></span>
             {% if category_content %} | 分类：{{ category_content }}{% endif %}
         </p>
         <p class="meta">日期：<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y-%m-%d" }}</time></p>

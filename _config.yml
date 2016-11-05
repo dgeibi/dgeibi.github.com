@@ -22,6 +22,24 @@ paginate: 10
 timezone: Asia/Shanghai
 google-analytics: UA-86886156-1
 
+gems:
+  - jekyll-assets
+
+assets:
+  compress:
+      css: true
+      js: true
+  autowrite: true
+  sources:
+    - _assets/css
+    - _assets/js
+    - _assets/image
+    - _assets/favicon
+    - _assets/files
+
+  prefix: "/assets"
+
+
 collections:
   my_categories:
     output: true

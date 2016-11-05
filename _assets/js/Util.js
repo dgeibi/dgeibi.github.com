@@ -1,13 +1,12 @@
 var Util = {};
-// copy from http://blog.lxjwlt.com/front-end/2014/07/06/js-create-directory.html
+/*copy from http://blog.lxjwlt.com/front-end/2014/07/06/js-create-directory.html */
 Util.createTOC = function(src, target, isDirNum) {
-
     var contentArray = [],
         titleId = [],
         levelArray, root, level,
         currentList, list, li, link, i, len;
     target=document.querySelector(target);
-    // 获取标题编号 标题内容
+    /*获取标题编号 标题内容*/
     levelArray = (function(src, contentArray, titleId) {
         var titleElem = document.querySelectorAll(src + '>h2,' + src + '>h3');
         var levelArray = [],
@@ -17,12 +16,10 @@ Util.createTOC = function(src, target, isDirNum) {
             lastRevNum, num, rootNum = lastNum;
 
         Array.prototype.forEach.call(titleElem,function(element){
-            // 保存标题内容
+            /*保存标题内容*/
             contentArray.push(element.innerText);
-
-            // 修正
+            /*修正*/
             num = +element.tagName.match(/\d/)[0] - rootNum + 1;
-
             if (num > lastNum) {
                 levelArray.push(1);
                 lastRevNum += 1;
@@ -34,23 +31,17 @@ Util.createTOC = function(src, target, isDirNum) {
                 levelArray.push(num - lastRevNum);
                 lastRevNum = num;
             }
-
             count += levelArray[levelArray.length - 1];
             lastNum = num;
-
-            // 添加标识符
+            /*添加标识符*/
             element.id = element.id || element.innerText.replace(/[\s&\/\\#,.+=$~%'":*?<>{}\]\[()@`]/g, "").toLowerCase();
             titleId.push(element.id);
         });
-
-
-        // 避免一开始就进入下一层
+        /*避免一开始就进入下一层*/
         if (count !== 0 && levelArray[0] === 1) levelArray[0] = 0;
-
         return levelArray;
     })(src, contentArray, titleId);
-
-    // 构造目录
+    /*构造目录*/
     currentList = root = document.createElement('ul');
     var dirNum = [0];
     for (i = 0, len = levelArray.length; i < len; i++) {
@@ -79,7 +70,6 @@ Util.createTOC = function(src, target, isDirNum) {
         li.appendChild(link);
         currentList.appendChild(li);
     }
-
     if (len) {
         target.innerHTML = "<h2>目录</h2>";
         target.appendChild(root);
