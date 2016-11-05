@@ -38,5 +38,7 @@
     <link rel="me" href="mailto:{{ site.email }}">
     <script async src="{{ site.baseurl }}/assets/Util.js"></script>
     <script async src="{{ site.baseurl }}/assets/main.js"></script>
+    {% if jekyll.environment == 'production' %}
     {% include analytics.html %}
+    {% endif %}
 </head>
