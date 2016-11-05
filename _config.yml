@@ -46,6 +46,7 @@ defaults:
         values:
             layout: "note"
             toc: true
+            comment: true
     -
         scope:
             path: "notes/css"

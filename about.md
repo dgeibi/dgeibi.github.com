@@ -2,7 +2,7 @@
 layout: page
 title: 关于
 permalink: /about/
-comments: true
+comment: true
 ---
 {% include contact-me.html %}
 
