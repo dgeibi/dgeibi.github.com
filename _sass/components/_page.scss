@@ -10,6 +10,7 @@
         margin-left: 0;
     }
     .wrapper .comment-btn {
+        @extend ._plain-link;
         margin: 5px auto;
     }
 }
@@ -34,7 +35,7 @@
 }
 
 .post-header {
-    .toc > ul > li > a {
+    .toc > ul > li a {
         @extend ._plain-link;
     }
 }
