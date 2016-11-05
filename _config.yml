@@ -20,6 +20,7 @@ duoshuo_id: dgeibi
 permalink: '/:year/:month/:day/:title/'
 paginate: 10
 timezone: Asia/Shanghai
+google-analytics: UA-86886156-1
 
 collections:
   my_categories:
