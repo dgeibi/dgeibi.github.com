@@ -74,7 +74,6 @@ Util.createTOC = function(src, target, isDirNum) {
         li = document.createElement('li');
         link = document.createElement('a');
         link.href = '#' + titleId[i];
-        link.className = "plain-link";
         link.innerText = !isDirNum ? contentArray[i] :
             dirNum.join('.') + '. ' + contentArray[i];
         li.appendChild(link);

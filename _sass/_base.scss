@@ -61,39 +61,7 @@ pre,
 ul {
     margin-bottom: $spacing-unit / 2;
 }
-/**
- * Color
- */
-.plain-link {
-    &,
-    &:visited {
-        text-decoration: none;
-    }
-}
 
-.grey-color {
-    color: $grey-color;
-}
-/**
- * Clearfix
- */
-.clearfix {
-    overflow: auto;
-    zoom: 1;
-}
-/**
- * Wrapper
- */
-.wrapper {
-    max-width: $content-width;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 $spacing-unit/2;
-}
-
-.post-content p {
-    line-height: 1.8;
-}
 /**
  * Images
  */
@@ -124,8 +92,8 @@ ul {
 }
 
 li {
-     > ul,
-    > ol {
+     > ol,
+    > ul {
         margin-bottom: 0;
     }
 }
@@ -140,6 +108,18 @@ h5,
 h6 {
     font-weight: $base-font-weight;
     word-wrap: break-word;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+h4 {
+    font-size: 19px;
 }
 /**
  * Links
@@ -201,22 +181,8 @@ pre {
     }
 }
 /**
- * Icons
- */
-.icon {
-    width: 35px;
-    height: 35px;
-    display: inline-block;
-    vertical-align: middle;
-    fill: $text-color;
-}
-/**
  * Tables
  */
-.table-wrapper {
-    margin-bottom: $spacing-unit/2;
-    overflow: auto;
-}
 
 table {
     min-width: 500px;

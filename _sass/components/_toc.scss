@@ -1,0 +1,36 @@
+/**
+ * Toc
+ */
+.toc-src {
+    counter-reset: section;
+
+    h2 {
+        counter-reset: subsection;
+    }
+
+    h2::before {
+        counter-increment: section;
+        content: counter(section) ". ";
+    }
+
+    h3::before {
+        counter-increment: subsection;
+        content: counter(section) "." counter(subsection) ". ";
+    }
+}
+
+.toc {
+    h2 {
+        font-size: 26px;
+    }
+
+    ul {
+        font-size: 18px;
+        list-style-type: none;
+    }
+
+    li {
+        padding: 0;
+        margin: 2px 0;
+    }
+}

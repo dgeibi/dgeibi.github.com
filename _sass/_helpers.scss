@@ -1,0 +1,35 @@
+._unmargin {
+    margin: 0 !important;
+}
+
+._center {
+    text-align: center !important;
+}
+
+._pull-left {
+    float: left !important;
+}
+
+._pull-right {
+    float: right !important;
+}
+
+._bottom-spacing {
+    margin-bottom: $spacing-unit/2 !important;
+}
+
+._plain-link {
+    &,
+    &:visited {
+        text-decoration: none !important;
+    }
+}
+
+._grey-color {
+    color: $grey-color !important;
+}
+
+._table-wrapper {
+    margin-bottom: $spacing-unit/2;
+    overflow: auto;
+}

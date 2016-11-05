@@ -1,0 +1,51 @@
+/**
+ * Navigation bar
+ */
+.nav-list {
+    list-style: none;
+
+    > .item {
+        font-size: 20px;
+    }
+
+    > .item > .link {
+        @extend ._plain-link;
+    }
+    @include media-query($on-palm) {
+        display: none;
+    }
+    @media screen and (min-width: $on-palm + 1px) {
+        float: right!important;
+    }
+}
+@media screen and (min-width: $on-palm + 1px) {
+    .nav-list > .item {
+        text-align: right!important;
+        display: inline-block!important;
+        line-height: 56px!important;
+        margin-left: 20px !important;
+    }
+
+    .nav-list > .item > .link {
+        padding: 0 !important;
+        display: inline!important;
+    }
+}
+
+.nav-list.active {
+    clear: both;
+    display: list-item;
+    float: none;
+
+    > .item {
+        display: block;
+        text-align: left;
+        line-height: 2;
+        margin: 0;
+    }
+
+    > .item > .link {
+        display: block;
+        padding-left: $spacing-unit*1.5;
+    }
+}

@@ -9,7 +9,7 @@ window.addEventListener('load',function(){
     /* add table-wrapper */
     Array.prototype.forEach.call(document.querySelectorAll('table'), function(table) {
         var div = document.createElement("div");
-        div.className = "table-wrapper";
+        div.className = "_table-wrapper";
         var range = document.createRange();
         range.selectNode(table);
         range.surroundContents(div);
@@ -31,9 +31,9 @@ window.addEventListener('load',function(){
     })();
 
     /* nav-btn */
-    document.getElementById('nav-btn').addEventListener('click', function(e) {
+    document.querySelector('[data-js-navbtn]').addEventListener('click', function(e) {
         e.preventDefault();
         this.classList.toggle("active");
-        document.getElementById('nav').classList.toggle("active");
+        document.querySelector('[data-js-navlist]').classList.toggle("active");
     });
 });

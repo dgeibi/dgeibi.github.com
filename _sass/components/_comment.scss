@@ -1,0 +1,21 @@
+/**
+ * Comment
+ */
+.comment-btn {
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px auto;
+    border: 1px solid #eee;
+    width: 250px;
+    color: $grey-color-dark;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &:hover {
+        background-color: #eee;
+    }
+}

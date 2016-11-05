@@ -1,14 +1,14 @@
 <header class="site-header">
-    <div class="wrapper clearfix">
-        <a class="plain-link site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-        <button id="nav-btn" class="cmn-toggle-switch cmn-toggle-switch__htx">
+    <div class="wrapper">
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <button data-js-navbtn class="cmn-toggle-switch cmn-toggle-switch__htx">
             <span></span>
         </button>
-        <ul id="nav" class="nav-list">
-            <li class="nav-item"><a class="plain-link" href="{{ "/about/" | prepend: site.baseurl }}">关于</a></li>
-            <li class="nav-item"><a class="plain-link" href="{{ "/notes/" | prepend: site.baseurl }}">笔记</a></li>
-            <li class="nav-item"><a class="plain-link" href="{{ "/archives/" | prepend: site.baseurl }}">归档</a></li>
-            <li class="nav-item"><a class="plain-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">Feed</a></li>
+        <ul data-js-navlist class="nav-list">
+            <li class="item"><a class="link" href="{{ "/about/" | prepend: site.baseurl }}">关于</a></li>
+            <li class="item"><a class="link" href="{{ "/notes/" | prepend: site.baseurl }}">笔记</a></li>
+            <li class="item"><a class="link" href="{{ "/archives/" | prepend: site.baseurl }}">归档</a></li>
+            <li class="item"><a class="link" href="{{ "/feed.xml" | prepend: site.baseurl }}">Feed</a></li>
         </ul>
     </div>
 </header>

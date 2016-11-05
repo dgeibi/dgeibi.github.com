@@ -25,9 +25,9 @@ title: 归档
             {% endif %}
         {% endunless %}
         <li class="archive-item">
-            <div class="archive-meta">{{ post.date | date: "%m-%d" }}</div>
-            <div class="archive-link-wrapper">
-                <a class="plain-link list-link" href="{{ post.url }}">{{ post.title }}</a>
+            <div class="meta">{{ post.date | date: "%m-%d" }}</div>
+            <div class="linkwrapper">
+                <a href="{{ post.url }}">{{ post.title }}</a>
             </div>
         </li>
         {% if forloop.last %}

@@ -1,0 +1,39 @@
+/**
+ * Post List
+ */
+.post-list {
+    list-style: none;
+    > li:not(:last-of-type) {
+        width: 100%;
+        margin-bottom: $spacing-unit/2;
+    }
+}
+/**
+ * Docs List
+ */
+.docs-list {
+    @include clearfix;
+    font-size: 18px;
+    counter-reset: sect;
+    list-style-type: none;
+
+    > a {
+        @extend ._plain-link;
+        width: 44%;
+        display: block;
+        float: left;
+        margin: 0 3%;
+        padding: 3px 0;
+    }
+
+    > a > .title {
+        float: left;
+    }
+
+    > a > .meta {
+        float: right;
+        @media (max-width: 800px) {
+            display: none;
+        }
+    }
+}
