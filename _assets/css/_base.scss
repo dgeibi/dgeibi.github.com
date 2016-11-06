@@ -88,7 +88,11 @@ ul {
 }
 
 ul {
-    list-style: square;
+    list-style: square inside url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==');
+}
+
+li:not(:last-of-type) {
+    margin-bottom: 4px;
 }
 
 li {
