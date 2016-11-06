@@ -33,12 +33,8 @@ assets:
   sources:
     - _assets/css
     - _assets/js
-    - _assets/image
-    - _assets/favicon
-    - _assets/files
 
   prefix: "/assets"
-
 
 collections:
   my_categories:
