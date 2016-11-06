@@ -3,7 +3,7 @@
 <script>
     window.addEventListener('DOMContentLoaded', function() {
         Util.createTOC('.toc-src', '[data-js-toc]', true);
-        Array.prototype.forEach.call(document.querySelectorAll("[data-js-toc]>ul>li>a"), function(link) {
+        Array.prototype.forEach.call(document.querySelectorAll("[data-js-toc]>ul li>a"), function(link) {
             var hash = link.hash;
             link.addEventListener('click', function(e) {
                 e.preventDefault();
