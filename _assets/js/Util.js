@@ -1,21 +1,25 @@
 var Util = {};
 /*copy from http://blog.lxjwlt.com/front-end/2014/07/06/js-create-directory.html */
 Util.createTOC = function(src, target, isDirNum) {
+    var headingElem = document.querySelectorAll(src + '>h2,' + src + '>h3');
+    if (headingElem.length === 0) {
+        return;
+    }
+    target=document.querySelector(target);
     var contentArray = [],
-        titleId = [],
+        headingId = [],
         levelArray, root, level,
         currentList, list, li, link, i, len;
-    target=document.querySelector(target);
     /*获取标题编号 标题内容*/
-    levelArray = (function(src, contentArray, titleId) {
-        var titleElem = document.querySelectorAll(src + '>h2,' + src + '>h3');
+    levelArray = (function(headingElem, contentArray, headingId) {
+
         var levelArray = [],
-            lastNum =  +titleElem[0].tagName.match(/\d/)[0],
+            lastNum =  +headingElem[0].tagName.match(/\d/)[0],
             lastRevNum = 1,
             count = 0,
             lastRevNum, num, rootNum = lastNum;
 
-        Array.prototype.forEach.call(titleElem,function(element){
+        Array.prototype.forEach.call(headingElem,function(element){
             /*保存标题内容*/
             contentArray.push(element.innerText);
             /*修正*/
@@ -35,12 +39,12 @@ Util.createTOC = function(src, target, isDirNum) {
             lastNum = num;
             /*添加标识符*/
             element.id = element.id || element.innerText.replace(/[\s&\/\\#,.+=$~%'":*?<>{}\]\[()@`]/g, "").toLowerCase();
-            titleId.push(element.id);
+            headingId.push(element.id);
         });
         /*避免一开始就进入下一层*/
         if (count !== 0 && levelArray[0] === 1) levelArray[0] = 0;
         return levelArray;
-    })(src, contentArray, titleId);
+    })(headingElem, contentArray, headingId);
     /*构造目录*/
     currentList = root = document.createElement('ul');
     var dirNum = [0];
@@ -64,14 +68,14 @@ Util.createTOC = function(src, target, isDirNum) {
         dirNum[dirNum.length - 1]++;
         li = document.createElement('li');
         link = document.createElement('a');
-        link.href = '#' + titleId[i];
+        link.href = '#' + headingId[i];
         link.innerText = !isDirNum ? contentArray[i] :
             dirNum.join('.') + '. ' + contentArray[i];
         li.appendChild(link);
         currentList.appendChild(li);
     }
     if (len) {
-        target.innerHTML = "<h2>目录</h2>";
+        target.innerHTML = "<h3>Table of Contents</h3>";
         target.appendChild(root);
     }
 };
