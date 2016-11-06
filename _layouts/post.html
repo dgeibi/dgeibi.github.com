@@ -12,7 +12,6 @@ layout: default
 {% else %}
   {% assign author = site.data.authors[site.author] %}
 {% endif %}
-
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <meta itemprop="description"
         content="{{ content | strip_html | truncatewords: 40 }}" />
@@ -23,10 +22,9 @@ layout: default
             {% if category_content %} | 分类：{{ category_content }}{% endif %}
         </p>
         <p class="meta">日期：<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y-%m-%d" }}</time></p>
-        {% include toc.html %}
     </header>
-    <div class="post-content{% if page.toc %} toc-src{% endif %}" itemprop="articleBody">
-        {{ content }}
+    <div class="post-content toc-src" itemprop="articleBody">
+        {{ content | toc_generate }}
     </div>
 </article>
 <div class="post-navigation">

@@ -14,11 +14,6 @@
     letter-spacing: -1px;
 }
 
-.post-header {
-    .toc > ul > li a {
-        @extend ._plain-link;
-    }
-}
 .post-content {
      > h2,
      > h4,

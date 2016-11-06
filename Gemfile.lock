@@ -40,6 +40,9 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
     mercenary (0.3.6)
+    mini_portile2 (2.1.0)
+    nokogiri (1.6.8.1)
+      mini_portile2 (~> 2.1.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     rack (1.6.4)
@@ -62,6 +65,7 @@ DEPENDENCIES
   jekyll-assets
   jekyll-paginate
   jekyll-sitemap
+  nokogiri
   rake
 
 BUNDLED WITH

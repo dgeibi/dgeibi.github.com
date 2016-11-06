@@ -36,3 +36,13 @@ document.querySelector('[data-js-navbtn]').addEventListener('click', function(e)
     this.classList.toggle("active");
     document.querySelector('[data-js-navlist]').classList.toggle("active");
 });
+
+/* toc scroll */
+Array.prototype.forEach.call(document.querySelectorAll('[data-js-toc] > .contents > li a'), function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        var hash = this.hash;
+        Util.scrollToPos(hash, 700);
+        window.location.hash = hash;
+    }, false);
+});

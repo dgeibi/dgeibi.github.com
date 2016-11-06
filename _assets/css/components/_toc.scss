@@ -20,7 +20,7 @@
 }
 
 .toc {
-    h2 {
+    .heading {
         font-size: 26px;
     }
 
@@ -33,4 +33,8 @@
         padding: 0;
         margin: 2px 0;
     }
+}
+
+.toc > ul > li a {
+    @extend ._plain-link;
 }

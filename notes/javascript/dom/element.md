@@ -32,7 +32,7 @@ element.localName
 
 ie11+
 
-```HTML
+```html
 <div id="myDiv" data-myname="test"></div>
 ```
 
