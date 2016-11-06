@@ -3,13 +3,14 @@
 <script>
     window.addEventListener('DOMContentLoaded', function() {
         Util.createTOC('.toc-src', '[data-js-toc]', true);
-        Array.prototype.forEach.call(document.querySelectorAll("[data-js-toc]>ul li>a"), function(link) {
-            var hash = link.hash;
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                Util.scrollToPos(hash, 700);
+        document.querySelector('[data-js-toc]>ul').addEventListener('click',function (event) {
+            var target = event.target;
+            var hash = target.hash;
+            if (hash) {
+                event.preventDefault();
+                Util.scrollToPos(hash,700);
                 window.location.hash = hash;
-            });
+            }
         });
     });
 </script>
