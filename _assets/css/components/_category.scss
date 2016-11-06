@@ -1,0 +1,7 @@
+/**
+ * Category
+ */
+.category-list > li > a {
+    @extend ._plain-link;
+    font-size: 18px;
+}

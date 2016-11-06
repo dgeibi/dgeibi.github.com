@@ -155,7 +155,7 @@ kbd,
 pre,
 samp,
 tt {
-    font-family: "Iosevka Slab", "Andale Mono", "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
+    font-family: $monospace-font-family;
     font-size: 1em;
 }
 

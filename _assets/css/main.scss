@@ -1,27 +1,22 @@
 @charset "utf-8";
 
-// Our variables
-$chinese-fonts: 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Inziu Roboto SC', PingFangSC-Regular, 'Hiragino Sans GB', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei, 'WenQuanYi Zen Hei Sharp';
-$base-font-family: "Noto Serif", 'Palatino Linotype', 'Book Antiqua', Palatino, Times, 'Times New Roman', Bookman, Georgia, 'New Century Schoolbook', $chinese-fonts, serif;
+$monospace-font-family: "Iosevka Slab", "Andale Mono", "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace;
+$chinese-font-family: 'Noto Sans CJK SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Inziu Roboto SC', PingFangSC-Regular, 'Hiragino Sans GB', 'Microsoft YaHei', 'Wenquanyi Micro Hei', 'WenQuanYi Zen Hei', 'ST Heiti', SimHei;
+$base-font-family: "Noto Serif", 'Palatino Linotype', 'Book Antiqua', Palatino, Times, 'Times New Roman', Bookman, Georgia, 'New Century Schoolbook', $chinese-font-family, serif;
 $base-font-size:   17px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 $slide-width: 240px;
-
 $spacing-unit:     30px;
-
 $text-color:       #111;
 $background-color: #fff;
 $code-background-color: #fafafa;
 $brand-color:      #3F75C4;
-
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
-
 $content-width:    800px;
-
 $on-palm:          600px;
 $on-laptop:        800px;
 
@@ -34,19 +29,15 @@ $on-laptop:        800px;
 
 @import
         "base",
-        "layout",
         "helpers",
-        "syntax-highlighting",
         "components/site",
         "components/page",
-        "components/text",
-        "components/lists",
-        "components/back-to-top",
-        "components/cmn-toggle-switch",
-        "components/comment",
-        "components/icon",
+        "components/post-list",
+        "components/wrapper",
+        "components/toggle",
         "components/navbar",
-        "components/page-navigation",
-        "components/archive-item",
-        "components/toc"
+        "components/category",
+        "components/meta",
+        "components/pagination",
+        "components/back-to-top"
 ;
