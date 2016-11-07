@@ -2,6 +2,7 @@
  * Back to Top
  */
 .back-to-top {
+    @extend ._unselectable;
     position: fixed;
     bottom: 40px;
     right: 40px;

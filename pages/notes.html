@@ -7,7 +7,7 @@ toc: true
 
 {% for collection in site.data.notes %}
 <h2>{{ collection.name }}</h2>
-<div class="docs-list _bottom-spacing">
+<div class="docs-list _vertical-rhythm">
     {% for note in collection.notes %}
     <a href="{{ site.baseurl }}/notes/{{ collection.slug }}/{{ note.subpath }}/">
         <span class="title">{{ note.title }}</span>

@@ -45,7 +45,7 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-%vertical-rhythm,
+
 blockquote,
 dl,
 figure,
@@ -59,7 +59,7 @@ ol,
 p,
 pre,
 ul {
-    margin-bottom: $spacing-unit / 2;
+    @extend ._vertical-rhythm;
 }
 
 /**

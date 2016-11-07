@@ -3,6 +3,14 @@
     zoom: 1;
 }
 
+._unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
 ._unmargin {
     margin: 0 !important;
 }
@@ -19,8 +27,8 @@
     float: right !important;
 }
 
-._bottom-spacing {
-    margin-bottom: $spacing-unit/2 !important;
+._vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
 }
 
 ._plain-link {

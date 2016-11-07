@@ -2,6 +2,7 @@
  * Comment
  */
 .comment-btn {
+    @extend ._unselectable;
     cursor: pointer;
     text-align: center;
     display: block;
