@@ -1,17 +1,15 @@
 ---
 layout: default
 ---
-{% assign category = site.my_categories | where: "slug", page.category %}
-{% assign category = category[0] %}
-{% if category %}
-  {% capture category_content %}<a href="{{ category.url }}">{{ category.title }}</a>{% endcapture %}
-{% endif %}
-
 {% if page.author %}
   {% assign author = site.data.authors[page.author] %}
 {% else %}
   {% assign author = site.data.authors[site.author] %}
 {% endif %}
+{% if page.category %}
+  {% capture category_content %}<a href="{{ site.baseurl }}/archives/category/{{ page.category }}">{{ site.data.categories[page.category].name }}</a>{% endcapture %}
+{% endif %}
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <meta itemprop="description"
         content="{{ content | strip_html | truncatewords: 40 }}" />

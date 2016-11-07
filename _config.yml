@@ -20,9 +20,25 @@ kramdown:
     input: GFM
     auto_ids: false
 
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - categories
+  layouts:
+    year: year-archive
+    month: month-archive
+    category: category-archive
+  permalinks:
+    year: '/archives/:year/'
+    month: '/archives/:year/:month/'
+    category: '/archives/category/:name/'
+
 exclude: ["vendor", "Gemfile", "Gemfile.lock", "Rakefile"]
+
 gems:
   - jekyll-assets
+  - jekyll-archives
 
 assets:
   compress:
@@ -35,11 +51,6 @@ assets:
 
   prefix: "/assets"
 
-collections:
-  my_categories:
-    output: true
-    permalink: '/category/:name/'
-
 defaults:
     -
         scope:
@@ -48,12 +59,6 @@ defaults:
         values:
             layout: "post"
             comment: true
-    -
-        scope:
-          path: ""
-          type: "my_categories"
-        values:
-          layout: "blog_by_category"
     -
         scope:
             path: "notes"

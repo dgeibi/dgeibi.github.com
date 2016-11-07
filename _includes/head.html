@@ -15,7 +15,7 @@
   <![endif]-->
     <title>
     {% if page.title %}
-    {% if page.layout == "blog_by_category" %}分类：{% endif %}{{ page.title }}
+    {% if page.layout == "category-archive" %}{{ site.data.categories[page.title].name }} - 分类{% else %}{{ page.title }}{% endif %}
     {% if page.note and page.layout == "note" %}
             {% assign note = site.data.notes | where: "slug", page.note %}
             {% assign note = note[0] %}

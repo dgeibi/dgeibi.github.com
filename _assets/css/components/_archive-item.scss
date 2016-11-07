@@ -13,4 +13,8 @@
     > .linkwrapper {
         margin-left: $spacing-unit*2;
     }
+
+    &._year > .linkwrapper {
+        margin-left: $spacing-unit*3.2;
+    }
 }

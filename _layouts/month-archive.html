@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<h1>{{ page.date | date: "%Y 年 %-m 月" }}的所有日志</h1>
+
+<ul class="post-list">
+{% for post in page.posts %}
+  <li class="archive-item">
+    <div class="meta date">{{ post.date | date: "%m-%d" }}</div>
+    <div class="linkwrapper">
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </div>
+  </li>
+{% endfor %}
+</ul>
