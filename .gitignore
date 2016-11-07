@@ -3,3 +3,5 @@ _drafts
 .asset-cache
 .sass-cache
 .jekyll-metadate
+.bundle
+vendor

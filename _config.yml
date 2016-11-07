@@ -20,7 +20,7 @@ kramdown:
     input: GFM
     auto_ids: false
 
-exclude: ["Gemfile", "Gemfile.lock", "Rakefile"]
+exclude: ["vendor", "Gemfile", "Gemfile.lock", "Rakefile"]
 gems:
   - jekyll-assets
 
