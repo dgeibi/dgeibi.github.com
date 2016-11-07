@@ -24,12 +24,6 @@
     </title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     {% css main %}
-    {% if page.url != '/' %}
-    {% css extra %}
-    {% endif %}
-    {% if page.layout == "post" or page.layout == "note" %}
-    {% css highlight %}
-    {% endif %}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/favicon-16x16.png" sizes="16x16">
