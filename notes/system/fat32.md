@@ -27,7 +27,8 @@ Last sector, +sectors or +size{K,M,G,T,P} (2048-30851071, default 30851071):
 
 Command (m for help): t
 #Selected partition 1
-#Partition type (type L to list all types): c
+
+Partition type (type L to list all types): c
 #Changed type of partition 'Linux' to 'W95 FAT32 (LBA)'.
 
 Command (m for help): w

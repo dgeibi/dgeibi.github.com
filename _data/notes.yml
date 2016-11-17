@@ -216,3 +216,6 @@
 
     - subpath: vim
       title: 简明 Vim 练级攻略
+
+    - subpath: mysql
+      title: MySQL/MariaDB

@@ -198,7 +198,7 @@ Vim the Six Billion Dollar editor
 
 还有一个很有用的命令是 `dt"` → 删除所有的内容，直到遇到双引号—— "。
 
-### 区域选择 \<action\>a\<object\> 或 \<action\>i\<object\>
+### 区域选择
 
 在 visual 模式下，这些命令很强大，其命令格式为
 
@@ -218,7 +218,7 @@ Vim the Six Billion Dollar editor
 
 ![](http://ww3.sinaimg.cn/large/920f35bagw1eyoyg46z73j206q03imx6.jpg)
 
-### 块操作: `<C-v>`
+### 块操作
 
 块操作，典型的操作： `0` `<C-v>` `<C-d>` `I-- [ESC]`
 
@@ -231,7 +231,9 @@ Vim the Six Billion Dollar editor
 
 注：在 Windows 下的 vim，你需要使用 `<C-q>` 而不是 `<C-v>`。在剪贴板不空时，`<C-v>` 是粘贴。
 
-### 自动提示： `<C-n>` 和 `<C-p>`
+### 自动提示
+
+`<C-n>` 和 `<C-p>`
 
 在 INSERT 模式下，你可以输入一个词的开头，然后按 `<C-p>`或是`<C-n>`，自动补齐功能就出现了……
 
@@ -258,7 +260,9 @@ Vim the Six Billion Dollar editor
 
 ![](http://ww1.sinaimg.cn/large/920f35bagw1eyoyvmu0x0g20b4050t8p.gif)
 
-### 可视化选择：` v` `V` `<C-v>`
+### 可视化选择
+
+` v` `V` `<C-v>`
 
 前面，我们看到了 `<C-v>`的示例 （在Windows下应该是<C-q>），我们可以使用 v 和 V。一但被选好了，你可以做下面的事：
 
