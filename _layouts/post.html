@@ -20,10 +20,11 @@ layout: default
             {% if category_content %} | 分类：{{ category_content }}{% endif %}
         </p>
         <p class="meta">日期：<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y-%m-%d" }}</time></p>
+        {{ content | toc }}
     </header>
-    <div class="post-content toc-src" itemprop="articleBody">
-        {{ content | toc_generate }}
-    </div>
+    <section class="post-content toc-src" itemprop="articleBody">
+        {{ content | addID }}
+    </section>
 </article>
 <div class="post-navigation">
   {% if page.previous.url %}
