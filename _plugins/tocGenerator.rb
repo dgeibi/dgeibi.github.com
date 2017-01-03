@@ -5,20 +5,16 @@ module Jekyll
         PUNCTUATION_REGEXP = RUBY_VERSION > '1.9' ? /[^\p{Word}\- ]/u : /[^\w\- ]/
         TOGGLE_HTML = '<h1 class="heading">Contents</h1>'.freeze
         TOC_CONTAINER_HTML = '<section data-js-toc class="toc">%1<ul class="contents">%2</ul></section>'.freeze
-        HIDE_HTML = '<span class="toctoggle">[<a id="toctogglelink" class="internal" href="#">%1</a>]</span>'.freeze
+        TOC_TOP_TAG = 'h2'
+        TOC_SEC_TAG = 'h3'
+        MIN_ITEMS_TO_SHOW = 3
 
         def addID(html)
             return html unless @context.environments.first['page']['toc']
-            toc_top_tag = 'h2'
-            toc_top_tag = toc_top_tag.delete('h').to_i
-            toc_sec_tag = toc_top_tag + 1
-            toc_top_tag = "h#{toc_top_tag}"
-            toc_sec_tag = "h#{toc_sec_tag}"
-
             doc = Nokogiri::HTML(html)
-            doc.css(toc_top_tag).each do |tag|
-                ct = tag.xpath("count(following-sibling::#{toc_top_tag})")
-                sects = tag.xpath("following-sibling::#{toc_sec_tag}[count(following-sibling::#{toc_top_tag})=#{ct}]")
+            doc.css(TOC_TOP_TAG).each do |tag|
+                ct = tag.xpath("count(following-sibling::#{TOC_TOP_TAG})")
+                sects = tag.xpath("following-sibling::#{TOC_SEC_TAG}[count(following-sibling::#{TOC_TOP_TAG})=#{ct}]")
                 sects.each do |sect|
                     anchor_id = sect.text.downcase
                     anchor_id.gsub!(PUNCTUATION_REGEXP, '')
@@ -36,13 +32,6 @@ module Jekyll
         def toc(html)
             return unless @context.environments.first['page']['toc']
 
-            min_items_to_show_toc = 3
-            toc_top_tag = 'h2'
-            toc_top_tag = toc_top_tag.delete('h').to_i
-            toc_sec_tag = toc_top_tag + 1
-            toc_top_tag = "h#{toc_top_tag}"
-            toc_sec_tag = "h#{toc_sec_tag}"
-
             toc_html = ''
             toc_level = 1
             toc_section = 1
@@ -51,9 +40,9 @@ module Jekyll
 
             doc = Nokogiri::HTML(html)
 
-            doc.css(toc_top_tag).each do |tag|
-                ct = tag.xpath("count(following-sibling::#{toc_top_tag})")
-                sects = tag.xpath("following-sibling::#{toc_sec_tag}[count(following-sibling::#{toc_top_tag})=#{ct}]")
+            doc.css(TOC_TOP_TAG).each do |tag|
+                ct = tag.xpath("count(following-sibling::#{TOC_TOP_TAG})")
+                sects = tag.xpath("following-sibling::#{TOC_SEC_TAG}[count(following-sibling::#{TOC_TOP_TAG})=#{ct}]")
 
                 level_html    = ''
                 inner_section = 0
@@ -90,7 +79,7 @@ module Jekyll
 
             return if toc_html.empty?
 
-            if min_items_to_show_toc <= toc_index_count
+            if MIN_ITEMS_TO_SHOW <= toc_index_count
                 toc_table = TOC_CONTAINER_HTML
                             .gsub('%1', TOGGLE_HTML)
                             .gsub('%2', toc_html)
@@ -105,7 +94,8 @@ module Jekyll
                    .gsub('%1', anchor_id.to_s)
                    .gsub('%2', tocNumber.to_s + '.')
                    .gsub('%3', tocText)
-                   .gsub('%4', tocInner ? tocInner : '')
+                   .gsub('%4', tocInner)
+
             '<li class="level-%1 section-%2">%3</li>'
                 .gsub('%1', toc_level.to_s)
                 .gsub('%2', toc_section.to_s)
