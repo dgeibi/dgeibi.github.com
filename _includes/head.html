@@ -3,41 +3,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'>
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
-    <!--[if lt IE 10]>
-    <div style="background:#FFE070;top:0;left:0;font-size:16px;color:#A47703!important;padding:10px;">
-  很抱歉，目前不支持您正在使用的浏览器。建议您使用以下浏览器：
-      <ul>
-          <li><a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie">Internet Explorer 9+</a></li>
-          <li><a href="https://www.google.com/chrome/">Google Chrome</a></li>
-          <li><a href="https://www.mozilla.org/firefox/">Firefox</a></li>
-      </ul>
-    </div>
-  <![endif]-->
     <title>
-    {% if page.title %}
-    {% if page.layout == "category-archive" %}{{ site.data.categories[page.title].name }} - 分类{% else %}{{ page.title }}{% endif %}
-    {% if page.note and page.layout == "note" %}
-            {% assign note = site.data.notes | where: "slug", page.note %}
-            {% assign note = note[0] %}
-            - {{ note.name }}
-    {% endif %} | {% endif %}{{ site.title }}
+    {% if page.title %}{{ page.title }}{% if page.layout == 'note' %} - {% include label.html %}{% endif %} | {% endif %}{{ site.title }}
     </title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     {% css main %}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/favicon-48x48.png" sizes="48x48">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/favicon-64x64.png" sizes="64x64">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/favicon/android-chrome-512x512.png" sizes="512x512">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="{{ site.baseurl }}/assets/favicon/manifest.json">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" sizes="256x256">
+    <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
     <link rel="me" href="https://github.com/{{ site.github_username }}" type="text/html">
     <link rel="me" href="mailto:{{ site.email }}">
     {% js main defer %}
-    {% if jekyll.environment == 'production' %}
-    {% include analytics.html %}
-    {% endif %}
 </head>

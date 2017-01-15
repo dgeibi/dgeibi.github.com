@@ -2,11 +2,7 @@
  * Meta
  */
 .meta {
-    line-height: 1.2;
+    line-height: 1.4;
     font-size: $small-font-size;
     color: $grey-color;
-
-    a {
-        @extend ._plain-link;
-    }
 }

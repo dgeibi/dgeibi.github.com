@@ -1,4 +1,8 @@
-var Util = {};
+var Util = function(selector, context) {
+    context = context || document;
+    return context.querySelector(selector);
+};
+
 /* gist: a3a669df80898d4097a1e2c01dea52c1 */
 Util.scrollToPos = function(scrollTo, scrollDuration) {
     if (typeof scrollTo === 'string') {
@@ -34,3 +38,12 @@ Util.scrollToPos = function(scrollTo, scrollDuration) {
     }
     window.requestAnimationFrame(step);
 };
+
+Util.$ = function(selector, context) {
+    context = context || document;
+    var elements = context.querySelectorAll(selector);
+    return Array.prototype.slice.call(elements);
+};
+
+self.$ = self.$ || Util;
+self.$$ = self.$$ || Util.$;

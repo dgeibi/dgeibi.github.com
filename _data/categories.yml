@@ -2,3 +2,11 @@ tutorial:
     name: 教程
 summary:
     name: 总结
+network:
+    name: 网络
+openwrt:
+    name: OpenWrt
+linux:
+    name: Linux
+windows:
+    name: Windows

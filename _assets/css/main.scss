@@ -19,6 +19,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
+$header-height:    50px;
 
 
 @mixin media-query($device) {
@@ -32,20 +33,11 @@ $on-laptop:        800px;
         "helpers",
         "components/site",
         "components/page",
-        "components/post-list",
         "components/wrapper",
-        "components/toggle",
-        "components/navbar",
-        "components/category",
         "components/meta",
-        "components/pagination",
         "components/back-to-top",
         "components/docs-list",
-        "components/icon",
-        "components/comment",
-        "components/post-navigation",
         "components/post",
-        "components/archive-item",
         "components/toc",
         "components/syntax-highlighting"
 ;

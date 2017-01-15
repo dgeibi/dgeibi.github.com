@@ -1,7 +1,0 @@
-<h1 class="page-heading">日志分类</h1>
-<ul class="category-list">
-    {% for category in site.categories %}
-        {% assign slug = category[0] %}
-    <li><a href="{{ site.baseurl }}/archives/category/{{ slug }}">{{ site.data.categories[slug].name }} ({{ category[1].size }})</a></li>
-    {% endfor %}
-</ul>

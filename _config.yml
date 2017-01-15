@@ -1,18 +1,11 @@
-title: dgeibi's blog
+title: dgeibi's notebook
 email: png.inside@gmail.com
-description: dgeibi's blog
+description: dgeibi's notebook
 baseurl: ""
-url: "https://dgeibi.xyz"
+url: "https://note.dgeibi.xyz"
 lang: cmn-hans
 author: dgeibi
-twitter_username: dgeibi
-github_username:  dgeibi
-disqus_shortname: dgeibi
-duoshuo_id: dgeibi
-permalink: '/:year/:month/:day/:title/'
-paginate: 10
 timezone: Asia/Shanghai
-google-analytics: UA-86886156-1
 
 highlighter: rouge
 markdown: kramdown
@@ -20,25 +13,34 @@ kramdown:
     input: GFM
     auto_ids: false
 
-jekyll-archives:
-  enabled:
-    - year
-    - month
-    - categories
-  layouts:
-    year: year-archive
-    month: month-archive
-    category: category-archive
-  permalinks:
-    year: '/archives/:year/'
-    month: '/archives/:year/:month/'
-    category: '/archives/category/:name/'
+collections:
+    html:
+        output: true
+        permalink: /:collection/:path/
+    ecmascript:
+        output: true
+        permalink: /:collection/:path/
+    css:
+        output: true
+        permalink: /:collection/:path/
+    system:
+        output: true
+        permalink: /:collection/:path/
+    bash:
+        output: true
+        permalink: /:collection/:path/
+    webapi:
+        output: true
+        permalink: /:collection/:path/
+    tools:
+        output: true
+        permalink: /:collection/:path/
+
 
 exclude: ["vendor", "Gemfile", "Gemfile.lock", "Rakefile"]
 
 gems:
   - jekyll-assets
-  - jekyll-archives
 
 assets:
   compress:
@@ -48,51 +50,55 @@ assets:
   sources:
     - _assets/css
     - _assets/js
-
   prefix: "/assets"
 
 defaults:
     -
         scope:
             path: ""
-            type: "posts"
-        values:
-            layout: "post"
-            comment: true
-    -
-        scope:
-            path: "notes"
+            type: "html"
         values:
             layout: "note"
             toc: true
-            comment: true
     -
         scope:
-            path: "notes/css"
+            path: ""
+            type: "ecmascript"
         values:
-            note: "css"
+            layout: "note"
+            toc: true
     -
         scope:
-            path: "notes/javascript"
+            path: ""
+            type: "css"
         values:
-            note: "javascript"
+            layout: "note"
+            toc: true
     -
         scope:
-            path: "notes/html"
+            path: ""
+            type: "bash"
         values:
-            note: "html"
+            layout: "note"
+            toc: true
     -
         scope:
-            path: "notes/bash"
+            path: ""
+            type: "system"
         values:
-            note: "bash"
+            layout: "note"
+            toc: true
     -
         scope:
-            path: "notes/system"
+            path: ""
+            type: "tools"
         values:
-            note: "system"
+            layout: "note"
+            toc: true
     -
         scope:
-            path: "notes/tools"
+            path: ""
+            type: "webapi"
         values:
-            note: "tools"
+            layout: "note"
+            toc: true

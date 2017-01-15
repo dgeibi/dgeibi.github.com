@@ -7,7 +7,7 @@ Array.prototype.forEach.call(document.links, function(link) {
 });
 
 /* add table-wrapper */
-Array.prototype.forEach.call(document.querySelectorAll('table'), function(table) {
+$$('.post-content>table').forEach(function(table) {
     var div = document.createElement("div");
     div.className = "_table-wrapper";
     var range = document.createRange();
@@ -17,7 +17,7 @@ Array.prototype.forEach.call(document.querySelectorAll('table'), function(table)
 
 /* back to top */
 (function() {
-    var topBtn = document.querySelector('[data-js-backtotop]');
+    var topBtn = $('[data-js-backtotop]');
     var backToTop = function() {
         if (window.pageYOffset > 100) {
             topBtn.classList.add('show');
@@ -27,22 +27,15 @@ Array.prototype.forEach.call(document.querySelectorAll('table'), function(table)
     };
     backToTop();
     window.addEventListener('scroll', backToTop);
-    topBtn.addEventListener('click', Util.scrollToPos);
+    topBtn.addEventListener('click', $.scrollToPos);
 })();
 
-/* nav-btn */
-document.querySelector('[data-js-navbtn]').addEventListener('click', function(e) {
-    e.preventDefault();
-    this.classList.toggle("active");
-    document.querySelector('[data-js-navlist]').classList.toggle("active");
-});
-
 /* toc scroll */
-Array.prototype.forEach.call(document.querySelectorAll('[data-js-toc] > .contents > li a'), function(link) {
+$$('.toc li a').forEach(function(link) {
     link.addEventListener('click', function(event) {
         event.preventDefault();
         var hash = this.hash;
-        Util.scrollToPos(hash, 700);
+        $.scrollToPos(hash, 700);
         window.location.hash = hash;
     }, false);
 });
