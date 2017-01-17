@@ -2,6 +2,24 @@
 title: Statement
 ---
 
+## var
+
+The variable statement declares a variable, optionally initializing it to a value.
+
+## let
+
+``` javascript
+{
+    let variable;
+}
+
+variable // Uncaught ReferenceError: variable is not defined
+```
+
+## const
+
+Constants are block-scoped, much like variables defined using the let statement. The value of a constant cannot change through re-assignment, and it can't be redeclared. Complex types are NOT fully read-only
+
 ## if
 
 ```javascript

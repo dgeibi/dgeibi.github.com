@@ -2,6 +2,50 @@
 title: Operator
 ---
 
+## Rest
+
+```javascript
+function(a, b, ...theRest) {
+  // ...
+}
+```
+
+theRest 是函数未定义的参数数组
+
+也可以解构
+
+```javascript
+function f(...[a,b,c]){
+    return a+b+c;
+}
+
+// 等效
+function f(...arr){
+    var [a,b,c] = arr;
+    return a+b+c;
+}
+
+f(1,2,3,4); // 6
+```
+
+## Spread
+
+就地去掉中括号，可在函数调用和数组里使用。
+
+```javascript
+f(...[1,2,3]);
+// 等效
+f(1,2,3);
+
+f(1,2,...[3,4,5],7,8,...[9,10]);
+// 等效
+f(1,2,3,4,5,7,8,9,10);
+
+[1,2,3,...[4,5,6]];
+// 等效
+[1,2,3,4,5,6];
+```
+
 ## new
 
 作用

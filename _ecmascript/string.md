@@ -2,6 +2,38 @@
 title: String
 ---
 
+## Template Literals
+
+```javascript
+var str = `a string`;
+str // "a string"
+```
+
+```javascript
+var x = 12;
+`x=${x}` // "x=12"
+```
+
+```javascript
+var x = 2, y=3;
+`${ x  +  y }`//"5"
+```
+
+```javascript
+function f() {
+    return "有趣";
+}
+`${f()}` //"有趣"
+```
+
+```javascript
+`line1
+line2` // 'line1\nline2'
+
+`line1
+    line2` // 'line1\n    line2'
+```
+
 ## 字符方法
 
 ### charAt()
@@ -14,7 +46,9 @@ charAt() 方法返回字符串中指定位置的字符
 
 `str.charCodeAt(index)`
 
-charCodeAt() 方法返回 0 到 65535 之间的整数，代表索引处字符的 UTF-16 编码单元（在 Unicode 编码单元表示一个单一的 UTF-16 编码单元的情况下，UTF-16 编码单元匹配 Unicode 编码单元。否则，比如 Unicode 编码单元> 0x10000 的情况下，只能匹配 Unicode 代理对的第一个编码单元）。如果你希望得到整点编码值，使用 codePointAt()
+charCodeAt() 方法返回 0 到 65535 之间的整数，代表索引处字符的 UTF-16 编码单元（在 Unicode 编码单元表示一个单一的 UTF-16 编码单元的情况下，UTF-16 编码单元匹配 Unicode 编码单元。否则，比如 Unicode 编码单元 > 0x10000 的情况下，只能匹配 Unicode 代理对的第一个编码单元）。如果你希望得到整点编码值，使用 codePointAt()
+
+### codePointAt()
 
 ## 字符串格式化方法
 
@@ -145,12 +179,18 @@ separator 可以是一个字符串或正则表达式
 * 当 referenceStr 作 compareStr 后面时返回正数
 * 相同位置时返回 0
 
-### fromCharCode()
+### String.fromCharCode()
 
 根据指定的 Unicode 编码中的序号值来返回一个字符串。
 
 `String.fromCharCode(num1, ..., numN)`
 
-```javascript
+``` javascript
 String.fromCharCode(65,66,67); // 'ABC'
 ```
+
+缺陷：只能转换码点在16位（4位十六进制数）以内的字符，可使用 ES6 的 `String.fromCodePoint()` 替代。
+
+### String.fromCodePoint()
+
+return a string created by using the specified sequence of code points.

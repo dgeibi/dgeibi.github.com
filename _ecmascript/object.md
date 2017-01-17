@@ -3,6 +3,41 @@ title: Object
 lang: en
 ---
 
+## Object 字面量
+
+`{x: x}` is `{x}`
+
+inline functions, can written as `obj={func(){}}` instead of `obj={func:function(){}}`
+
+``` javascript
+const short = {
+  inlineFunc(){return 'I am inline'}
+};
+short.inlineFunc()//'I am inline'
+```
+
+properties may be computed values
+
+``` javascript
+const propertyName = 'x';
+const obj = {[propertyName]: 1};
+
+obj.x// 1
+```
+
+``` javascript
+const publicPropertyName = 'x';
+const privatePropertyName = '_' + publicPropertyName;
+const obj = {
+    [privatePropertyName] : null,
+    set [publicPropertyName](x) {
+        this[privatePropertyName] =x
+    }
+};
+obj.x = 'axe';
+obj._x//'axe'
+```
+
 ## Object.create()
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)

@@ -2,6 +2,38 @@
 title: Function
 ---
 
+## Arrow Functions
+
+```javascript
+function(a,b) {
+    return a+b;
+}
+
+// 等效
+(a,b) => a+b
+
+// 返回一个对象需要括号
+()=>({
+    key:value
+})
+```
+
+好处：方法里的 this 不再诡异。
+
+- arrow functions have lexical `this`, no dynamic `this`
+- can NOT bind a different context
+- `arguments` doesnt work inside arrow functions
+
+## Default parameters
+
+```javascript
+function fn(a=1,b) {
+    return a+b;
+}
+fn(undefined,2);
+//3
+```
+
 ## 函数声明提升
 
 ```javascript

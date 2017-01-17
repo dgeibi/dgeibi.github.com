@@ -2,6 +2,6 @@ _site
 _drafts
 .asset-cache
 .sass-cache
-.jekyll-metadate
+.jekyll-metadata
 .bundle
 vendor

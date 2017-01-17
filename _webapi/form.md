@@ -58,7 +58,7 @@ var field2 = form.elements["textbox1"]; /* 取得 name 为 "textbox1" 的表单�
 |`<button type="reset"> ... </button>`|"reset"|
 |`<button type="submit"> ... </button>`|"submit"|
 
-** 避免多次提交表单 **
+**避免多次提交表单**
 
 ```javascript
 form.addEventListener("submit", function (event) {
@@ -121,7 +121,7 @@ HTMLOptionElement 的属性：
 
 不推荐用标准 DOM 技术修改 `<option>` 的文本和值。
 
-** 添加选项 **
+**添加选项**
 
 ```javascript
 var newOption = new Option("Option text", "Option value");
