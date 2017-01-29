@@ -36,21 +36,7 @@ collections:
         output: true
         permalink: /:collection/:path/
 
-
 exclude: ["vendor", "Gemfile", "Gemfile.lock", "Rakefile"]
-
-gems:
-  - jekyll-assets
-
-assets:
-  compress:
-      css: true
-      js: true
-  autowrite: true
-  sources:
-    - _assets/css
-    - _assets/js
-  prefix: "/assets"
 
 defaults:
     -

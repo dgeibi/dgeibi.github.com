@@ -29,3 +29,8 @@ namespace :serve do
     end
   end
 end
+
+desc "sw"
+task :default do
+    system "sed -i \"s/#.*'$/#$(printf %x $(date +%s))'/\" sw.js"
+end
