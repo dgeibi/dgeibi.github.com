@@ -1,5 +1,5 @@
 //https://developers.google.com/web/fundamentals/getting-started/primers/service-workers
-var CACHE_NAME = '#588dd0c4'
+var CACHE_NAME = '#588dda93'
 var urlsToCache = [
   '/',
   '/assets/css/main.css',
