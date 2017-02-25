@@ -28,10 +28,13 @@ self.addEventListener('fetch', function (event) {
       respondFromNetworkThenCache(event, PAGES_CACHE)
     }
     else if (/\.(eot|otf|ttf|ttc|woff|woff2|jpg|jpeg|gif|png)$/.test(url.pathname)) {
-        respondFromNetworkThenCache(event, ASSETS_CACHE)
+        respondFromCacheThenNetwork(event, ASSETS_CACHE)
     }
     else if(!/\.(css|js)$/.test(url.pathname)) {
         respondFromCacheThenNetwork(event, PAGES_CACHE)
+    }
+    else if(/^\/assets/.test(url.pathname)) {
+        respondFromCacheThenNetwork(event, ASSETS_CACHE)
     }
   }
 });
