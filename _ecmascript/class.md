@@ -28,6 +28,24 @@ console.log(new Cat(111).miao === Cat.prototype.miao) //true
 typeof class {} === 'function'
 ```
 
+ES7:
+
+``` javascript
+class App extends React.Component {
+  state = {
+    value: 0
+  };
+}
+// =
+
+class App extends React.Component {
+    constructor() {
+        this.state = {
+            value: 0
+        }
+    }
+}
+```
 ## accessors
 
 ``` javascript
@@ -72,10 +90,12 @@ class Cat {
     static miao() {
         console.log('miao')
     }
+    static value = 0
 }
 var cat = new Cat()
 cat.miao // undefined
 Cat.miao() // miao
+Cat.value // 0
 ```
 
 ## extends

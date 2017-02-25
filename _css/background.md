@@ -29,6 +29,16 @@ where
 <final-bg-layer> = <bg-image> || <position> [ / <bg-size> ]? || <repeat-style> || <attachment> || <box> || <box> || <'background-color'>
 ```
 
+## background-size
+
+``` css
+background-size: auto; /* 初始值 */
+background-size: cover; /* 缩放背景图片以完全覆盖背景区，可能背景图片部分看不见。*/
+background-size: contain; /* 缩放背景图片以完全装入背景区，可能背景区部分空白。*/
+background-size: 50% auto; /* 第一个值指定图片的宽度，第二个值指定图片的高度 */
+background-size: 50%; /* 指定图片的宽度 */
+```
+
 ## background-attachment
 
 决定背景是在视口中固定的还是随包含它的区块滚动

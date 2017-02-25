@@ -42,7 +42,7 @@ obj._x//'axe'
 
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 
-`Object.create(proto[, propertiesObject])`
+`Object.create(proto[, propertiesObject])` return a object
 
 ## Object.defineProperty()
 
@@ -93,6 +93,42 @@ return an array of a given object's own enumerable properties
 
 return an array of all properties (enumerable or not) found directly upon a given object.
 
+
+## Object.preventExtensions()
+
+prevents new properties from ever being added to an object (i.e. prevents future extensions to the object).
+
+## Object.seal()
+
+Sealing an object prevents new properties from being added and marks all existing properties as non-configurable
+
+## Object.freeze()
+
+prevents new properties from being added to it; prevents existing properties from being removed; and prevents existing properties, or their enumerability, configurability, or writability, from being changed. The method returns the object being frozen.
+
+`Object.isFrozen(obj)` true
+
+
+## Object.is()
+
+``` javascript
++0 === -0 // true
+Object.is(+0, -0) // false
+Object.is(1, '1') // false
+Object.is(NaN,NaN) // true
+Object.is(NaN, 0/0) // true
+Object.is({},{}) // false
+```
+## Object.setPrototypeOf()
+
+``` javascript
+Object.setPrototypeOf(B.prototype, A.prototype);
+// 等同于
+B.prototype.__proto__ = A.prototype;
+```
+
+## Object.getPrototypeOf()
+
 ## isPrototypeOf()
 
 `prototypeObj.isPrototypeOf(obj)`
@@ -100,3 +136,9 @@ return an array of all properties (enumerable or not) found directly upon a give
 ## hasOwnProperty()
 
 `obj.hasOwnProperty(prop)`
+
+## Object.assign()
+
+`Object.assign(target, ...sources)` return target
+
+The Object.assign() method is used to copy the values of all enumerable own properties from one or more source objects to a target object. It will return the target object.

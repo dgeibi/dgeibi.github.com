@@ -9,8 +9,8 @@ toc: true
 {% capture label %}{% if site.data.notes[collection.label] %}{{ site.data.notes[collection.label] }}
 {% else %}{{collection.label}}{%endif%}{%endcapture%}
 
-<h2>{{ label }}</h2>
-<div class="docs-list _vertical-rhythm">
+<div class="docs-list">
+    <h2>{{ label }}</h2>
     {% for note in collection.docs %}
     <a href="{{ note.url }}">
         <span class="title">{{ note.title }}</span>

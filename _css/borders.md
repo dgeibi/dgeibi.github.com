@@ -59,11 +59,11 @@ title: Borders
 
 IE9
 
-```css
+``` css
 border-radius: length|%;
 ```
 
-```css
+``` css
 border-radius: 1px 2px 3px 4px;
 /* 等价 */
 border-top-left-radius: 1px
@@ -72,7 +72,7 @@ border-bottom-right-radius: 3px
 border-bottom-left-radius: 4px
 ```
 
-```css
+``` css
 border-radius: 1px 2px 3px;
 /* 等价 */
 border-top-left-radius: 1px
@@ -81,7 +81,7 @@ border-bottom-right-radius: 3px
 border-bottom-left-radius: 2px
 ```
 
-```css
+``` css
 border-radius: 1px 2px;
 /* 等价 */
 border-top-left-radius: 1px
@@ -89,3 +89,21 @@ border-top-right-radius: 2px
 border-bottom-right-radius: 1px
 border-bottom-left-radius: 2px
 ```
+
+## border-image
+
+border-image:
+
+```
+<'border-image-source'> || <'border-image-slice'> [ / <'border-image-width'> | / <'border-image-width'>? / <'border-image-outset'> ]? || <'border-image-repeat'>
+```
+
+border-image-slice：
+
+```
+<number-percentage>{1,4} && fill?
+where
+<number-percentage> = <number> | <percentage>
+```
+
+`fill` make the middle of the image display

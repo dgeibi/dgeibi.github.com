@@ -7,6 +7,9 @@
     counter-reset: sect;
     list-style-type: none;
 
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
     > a {
         @extend ._plain-link;
         width: 44%;
