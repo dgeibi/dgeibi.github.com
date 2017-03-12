@@ -5,6 +5,7 @@ task :default => :push
 desc "Push to github"
 task :push do
   puts   "Pushing to `master' branch:"
+  system "node getConfig.js"
   system "rake commit"
   system "git push origin master"
   puts   "`master' branch updated."
@@ -20,12 +21,14 @@ end
 desc "Set up Jekyll Server"
 task :serve do
   puts "Set up server (development)"
+  system "bundle exec jekyll clean"
   system "bundle exec jekyll serve --incremental"
 end
 namespace :serve do
   task :p do
     begin
       puts "Set up server (production)"
+      system "bundle exec jekyll clean"
       system "JEKYLL_ENV=production bundle exec jekyll serve --incremental"
     end
   end

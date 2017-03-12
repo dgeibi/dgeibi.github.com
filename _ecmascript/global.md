@@ -101,3 +101,22 @@ encodeURIComponent 转义除了字母，十进制数字， `(` `)` `.` `!` `~` `
 `eval(string)`
 
 将一个JavaScript代码字符串求值成特定的对象。
+
+## parseInt()
+
+`parseInt(string, radix)`
+
+radix: Different implementations produce different results when a radix is not specified, usually defaulting the value to 10.
+
+``` javascript
+console.log(Number.parseInt === parseInt) // true
+
+console.log(parseInt(1.6)) // 1
+console.log(Math.floor(1.6)) // 1
+
+console.log(parseInt(-1.2)) // -1
+console.log(Math.floor(-1.2)) // -2
+
+console.log(parseInt("11abc")) // 11
+console.log(Math.floor("11abc")) // NaN
+```

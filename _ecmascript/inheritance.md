@@ -60,7 +60,7 @@ var instance = new SubType("Mike", 29);
 
 ```javascript
 function object(o) {
-    funtion F(){}
+    function F(){}
     F.prototype = o;
     return new F();
 }
@@ -70,12 +70,16 @@ var person = {
 }
 
 var person1 = object(person);
+person1.friends = ["c"]
 ```
-person1 的原型对象是 person，所以它们的引用类型是共享的。
+
+person1 的原型对象是 person。
+
+注意：操作 `person1.friends[1] = 'aa'` 相当于 `person1.__proto__.friends[1] = 'aa'`，所以 `person.friends[1] === 'aa'`。
 
 ES5 中的 `Object.create()` 与 `object()` 相似。
 
-## 寄生组合式继承（最理想）
+## 寄生组合式继承
 
 ```javascript
 function inheritPrototype(subType, superType) {
@@ -108,3 +112,7 @@ SubType.prototype.sayAge = function() {
 
 1. 避免调用两次 SuperType
 1. 能正常使用 `instanceof` 和 `isPrototypeOf()`
+
+## Class Extends
+
+[Class](ecmascript/class/#extends)

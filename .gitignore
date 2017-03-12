@@ -4,4 +4,6 @@ _drafts
 .sass-cache
 .jekyll-metadata
 .bundle
-vendor
+/vendor
+/node_modules
+.jekyll-metadata
