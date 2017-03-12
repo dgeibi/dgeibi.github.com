@@ -2,7 +2,7 @@
 // https://github.com/14islands/vecka.14islands.com/blob/master/server/service-worker.js
 
 const ASSETS_CACHE = "assets-v1.2"
-const PAGES_CACHE = "pages-v1.1"
+const PAGES_CACHE = "pages-v1.2"
 const expectedCaches = [ASSETS_CACHE, PAGES_CACHE]
 const urlsToCache = [
   '/assets/css/main.css',
@@ -35,7 +35,7 @@ self.addEventListener('fetch', function (event) {
     respondFromCacheThenNetwork(event, ASSETS_CACHE)
   }
   else if (/^\/.+\/(\.html)?$/.test(url.pathname)) {
-    respondFromCacheThenNetwork(event, PAGES_CACHE)
+    respondFromNetworkThenCache(event, PAGES_CACHE)
   }
 
 });
