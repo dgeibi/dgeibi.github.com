@@ -2,7 +2,6 @@ _site
 _drafts
 .asset-cache
 .sass-cache
-.jekyll-metadata
 .bundle
 /vendor
 /node_modules
