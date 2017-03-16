@@ -104,8 +104,8 @@ arr.unshift(-2, -1); // = 5
 ## [].reverse()
 
 * 语法：`arr.reverse()`
-* 功能：颠倒数组中元素的位置，并返回该数组的引用。
-
+* 功能：颠倒数组中元素的位置，并返回该数组的引用，也就是 arr 本身。
+* 注意：方法并不改变 arr 引用的值，只改变元素的位置。
 
 ## [].concat()
 
@@ -118,6 +118,7 @@ var alpha = ['a', 'b', 'c'];
 // 组成新数组 ["a", "b", "c", 1, 2, 3], 原 alpha 数组未被修改
 var alphaNumeric = alpha.concat(1, [2, 3]);
 ```
+
 ## [].fill()
 
 ``` javascript

@@ -5,7 +5,7 @@ task :default => :push
 desc "Push to github"
 task :push do
   puts   "Pushing to `master' branch:"
-  system "node getConfig.js"
+  system "node _getConfig.js"
   system "rake commit"
   system "git push origin master"
   puts   "`master' branch updated."
