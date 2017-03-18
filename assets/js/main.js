@@ -105,7 +105,7 @@ if ('serviceWorker' in navigator) {
   $$('.toc li a').forEach(function (link) {
     link.addEventListener('click', function (event) {
       event.preventDefault()
-      var hash = this.hash
+      var hash = decodeURIComponent(this.hash)
       $.scrollToPos(hash)
       window.location.hash = hash
     }, false)
