@@ -77,17 +77,21 @@ obj.test = function() {console.log(this.color);};
 obj.test(); // red
 ```
 
-## 函数属性和方法
+## func.apply()
 
-### apply()
+* 语法：`func.apply(thisArg[, argsArray])`
 
-* 语法：`fun.apply(thisArg[, argsArray])`
+## func.call()
 
-### call()
+* 语法：`func.call(thisArg[, arg1[, arg2[, ...]]])`
 
-* 语法：`fun.call(thisArg[, arg1[, arg2[, ...]]])`
+## func.bind()
 
-### bind()
-
-* 语法：`fun.bind(thisArg[, arg1[, arg2[, ...]]])`
+* 语法：`func.bind(thisArg[, arg1[, arg2[, ...]]])`
 * 功能：创建一个新函数，当这个新函数被调用时，它的this值是传递给bind()的第一个参数，它的参数是bind()的其他参数和其原本的参数。
+
+## func.length
+
+函数的形参个数，不包括带默认值的形参之后的所有形参。
+
+[函数的扩展 - ECMAScript 6入门](http://es6.ruanyifeng.com/#docs/function#函数的-length-属性)

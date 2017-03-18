@@ -1,6 +1,6 @@
 require 'time'
 
-task :default => :push
+task :default => :serve
 
 desc "Push to github"
 task :push do
