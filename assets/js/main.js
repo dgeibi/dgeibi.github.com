@@ -1,60 +1,79 @@
-!(function (name, definition) {
-  var hasDefine = typeof define === 'function'
-  var hasExports = typeof module === 'object' && module.exports
+/* eslint-env commonjs */
+/* global $: true, $$: true */
+/* eslint-disable func-names,no-console*/
 
-  if (hasDefine) {
-    define(definition)
-  } else if (hasExports) {
-    module.exports = definition()
+function load(name, definition) {
+  var hasExports = typeof exports === 'object' && exports
+  if (hasExports) {
+    exports[name] = definition
   } else {
-    this[name] = definition()
+    this[name] = definition
   }
-})('$', function () {
+}
+
+(function load$() {
+  'use strict'
+
   function $(selector, context) {
-    context = context || document
-    return context.querySelector(selector)
+    var range = context || document
+    return range.querySelector(selector)
   }
 
-  $.$ = function (selector, context) {
-    if (typeof selector === 'string') {
-      context = context || document
-      var elements = context.querySelectorAll(selector)
-      return [].slice.call(elements)
-    }
-    else {
-      return [].slice.call(selector)
-    }
+  $.$ = function $$(selector, context) {
+    var range = context || document
+    var elements = null
+    if (typeof selector !== 'string') return [].slice.call(selector)
+    elements = range.querySelectorAll(selector)
+    return [].slice.call(elements)
   }
 
   /* https://gist.github.com/joshcanhelp/a3a669df80898d4097a1e2c01dea52c1 */
-  $.scrollToPos = function (scrollTo, scrollDuration) {
-    if (typeof scrollTo === 'string') {
-      var target = document.querySelector(scrollTo)
-      if (target) {
-        scrollTo = window.pageYOffset + target.getBoundingClientRect().top
-      }
-      else {
-        throw 'error: No element found with the selector "' + scrollTo + '"'
-      }
+  $.scrollToPos = function scrollToPos(scrollPosition, scrollDuration) {
+    var target
+    var start
+    var distanceSum
+    var position
+    var duration = 500
+
+
+    switch (typeof scrollPosition) {
+      case 'string':
+        target = document.querySelector(scrollPosition)
+        if (target) {
+          position = window.pageYOffset + target.getBoundingClientRect().top
+        } else {
+          throw new Error('error: No element found with the selector "' + scrollPosition + '"')
+        }
+        break
+      case 'number':
+        if (scrollPosition >= 0) {
+          position = scrollPosition
+        } else {
+          throw new Error('error: scrollPosition should not be a negative number')
+        }
+        break
+      default:
+        position = 0
     }
-    else if (typeof scrollTo !== 'number') {
-      scrollTo = 0
+
+    if (typeof scrollDuration === 'number' && scrollDuration > 0) {
+      duration = scrollDuration
     }
-    if (typeof scrollDuration !== 'number' || scrollDuration < 0) {
-      scrollDuration = 500
-    }
-    var distanceSum = window.pageYOffset - scrollTo
-    var start = null
+
+    distanceSum = window.pageYOffset - position
 
     function step(timestamp) {
+      var percent
+      var distance
+      var moveStep
       if (!start) {
         start = timestamp
         requestAnimationFrame(step)
         return
       }
-      var percent = Math.min(1, (timestamp - start) / scrollDuration)
-      var distance = (1 - percent) * distanceSum
-      var moveStep = scrollTo + distance
+      percent = Math.min(1, (timestamp - start) / duration)
+      distance = (1 - percent) * distanceSum
+      moveStep = position + distance
       window.scrollTo(0, moveStep)
       if (percent < 1) {
         requestAnimationFrame(step)
@@ -62,10 +81,10 @@
     }
     requestAnimationFrame(step)
   }
-  return $
-})
 
-/* ================ Util END ================== */
+  load('$', $)
+  load('$$', $.$)
+}())
 
 /* sw */
 if ('serviceWorker' in navigator) {
@@ -77,20 +96,19 @@ if ('serviceWorker' in navigator) {
     })
 }
 
-!(function ($, $$) {
-  /* add table-wrapper */
-  $.$('.post-content>table').forEach(function (table) {
-    var div = document.createElement("div")
-    div.className = "_table-wrapper"
-    var range = document.createRange()
-    range.selectNode(table)
-    range.surroundContents(div)
-  })
+/* add table-wrapper */
+$$('.post-content>table').forEach(function (table) {
+  var div = document.createElement('div')
+  var range = document.createRange()
+  div.className = '_table-wrapper'
+  range.selectNode(table)
+  range.surroundContents(div)
+});
 
-
-  /* back to top */
+/* back to top */
+(function () {
   var topBtn = $('[data-js-backtotop]')
-  var backToTop = function () {
+  function backToTop() {
     if (window.pageYOffset > 100) {
       topBtn.classList.add('show')
     } else {
@@ -100,14 +118,15 @@ if ('serviceWorker' in navigator) {
   backToTop()
   window.addEventListener('scroll', backToTop)
   topBtn.addEventListener('click', $.scrollToPos)
+}())
 
-  /* toc scroll */
-  $$('.toc li a').forEach(function (link) {
-    link.addEventListener('click', function (event) {
-      event.preventDefault()
-      var hash = decodeURIComponent(this.hash)
-      $.scrollToPos(hash)
-      window.location.hash = hash
-    }, false)
-  })
-})(this.$, this.$.$)
+/* toc scroll */
+$$('.toc li a').forEach(function handleLink(link) {
+  link.addEventListener('click', function handler(event) {
+    var hash
+    event.preventDefault()
+    hash = decodeURIComponent(this.hash)
+    $.scrollToPos(hash)
+    window.location.hash = hash
+  }, false)
+})

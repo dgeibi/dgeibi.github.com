@@ -2,5 +2,12 @@
   "dependencies": {
     "mz": "^2.6.0",
     "yaml-js": "^0.1.4"
-  }
+  },
+  "name": "note",
+  "version": "1.0.0",
+  "private": true,
+  "description": "persional notebook",
+  "repository": "git@github.com:dgeibi/note.dgeibi.xyz.git",
+  "author": "dgeibi <png.inside@gmail.com>",
+  "license": "MIT"
 }
