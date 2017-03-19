@@ -1,0 +1,21 @@
+source: .
+destination:  ./__public
+plugins_dir:  __theme/_plugins
+layouts_dir:  __theme/_layouts
+data_dir:     __theme/_data
+includes_dir: __theme/_includes
+title: dgeibi's notebook
+email: png.inside@gmail.com
+description: dgeibi's notebook
+baseurl: ''
+url: https://note.dgeibi.xyz
+lang: cmn-hans
+author: dgeibi
+timezone: Asia/Shanghai
+highlighter: rouge
+markdown: kramdown
+kramdown: {input: GFM, auto_ids: false}
+exclude: [vendor, Gemfile, Gemfile.lock, Rakefile, yarn.lock, package.json, node_modules, README.md]
+sass:
+    sass_dir: assets/_styles
+    style: compressed

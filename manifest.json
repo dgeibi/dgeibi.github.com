@@ -1,11 +1,11 @@
 {
 	"name": "dgeibi's notebook",
-	"short_name": "note",
+	"short_name": "Note",
 	"icons": [
 		{
 			"src": "/favicon.png",
 			"sizes": "256x256",
-			"type": "image\/png"
+			"type": "image/png"
 		}
 	],
 	"theme_color": "#000",

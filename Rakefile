@@ -21,6 +21,7 @@ end
 desc "Set up Jekyll Server"
 task :serve do
   puts "Set up server (development)"
+  system "node _getConfig.js"
   system "bundle exec jekyll clean"
   system "bundle exec jekyll serve --incremental"
 end

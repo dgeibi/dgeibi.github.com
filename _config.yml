@@ -1,3 +1,9 @@
+source: .
+destination: ./__public
+plugins_dir: __theme/_plugins
+layouts_dir: __theme/_layouts
+data_dir: __theme/_data
+includes_dir: __theme/_includes
 title: dgeibi's notebook
 email: png.inside@gmail.com
 description: dgeibi's notebook
@@ -9,7 +15,9 @@ timezone: Asia/Shanghai
 highlighter: rouge
 markdown: kramdown
 kramdown: {input: GFM, auto_ids: false}
-exclude: [vendor, Gemfile, Gemfile.lock, Rakefile, yarn.lock, package.json, README.md]
+exclude: [vendor, Gemfile, Gemfile.lock, Rakefile, yarn.lock, package.json, node_modules,
+  README.md]
+sass: {sass_dir: assets/_styles, style: compressed}
 collections:
   html: {output: true, permalink: '/:collection/:path/'}
   bash: {output: true, permalink: '/:collection/:path/'}
@@ -19,6 +27,7 @@ collections:
   tools: {output: true, permalink: '/:collection/:path/'}
   css: {output: true, permalink: '/:collection/:path/'}
   network: {output: true, permalink: '/:collection/:path/'}
+  node: {output: true, permalink: '/:collection/:path/'}
 defaults:
 - scope: {path: '', type: html}
   values: {layout: note, toc: true}
@@ -35,4 +44,6 @@ defaults:
 - scope: {path: '', type: css}
   values: {layout: note, toc: true}
 - scope: {path: '', type: network}
+  values: {layout: note, toc: true}
+- scope: {path: '', type: node}
   values: {layout: note, toc: true}

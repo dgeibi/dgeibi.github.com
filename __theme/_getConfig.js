@@ -1,7 +1,8 @@
 const yaml = require('yaml-js')
 const fs = require('mz/fs')
 
-const files = ['_data/notes.yml', '_default.yml']
+const files = [`${__dirname}/_data/notes.yml`, `${__dirname}/_default.yml`]
+
 Promise.all(files.map(file => fs.readFile(file, { encoding: 'utf8' })))
   .then((datas) => {
     const layout = 'note'
