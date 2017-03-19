@@ -6,3 +6,4 @@ __public
 vendor
 node_modules
 .jekyll-metadata
+_config.yml

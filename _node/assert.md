@@ -89,7 +89,7 @@ assert.throws(
 ## assert.doesNotThrow(block[, error][, message])
 
 - `block`: `Function`
-- `error`: `RegExp` | `Function`
+- `error`: `RegExp` \| `Function`
 - `message`:  `any`
 
 block 被马上执行，如果block抛出的错误是 error 的实例／error为undefined，assert.doesNotThrow 会抛出错误（类型为 AssertionError，错误信息为 message）。如果，block抛出的错误不是error的实例，抛出的错误会assert.doesNotThrow 继续抛出。
