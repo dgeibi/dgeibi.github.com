@@ -1,8 +1,8 @@
 source: .
-destination:  ./__public
+destination:  __public
+data_dir:     __data
 plugins_dir:  __theme/_plugins
 layouts_dir:  __theme/_layouts
-data_dir:     __theme/_data
 includes_dir: __theme/_includes
 title: dgeibi's notebook
 email: png.inside@gmail.com
