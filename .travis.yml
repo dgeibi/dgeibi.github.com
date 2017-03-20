@@ -6,7 +6,6 @@ before_install:
 - chmod 600 ~/.ssh/tra
 - cp __travis/ssh.config ~/.ssh/config
 - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`) && source ~/.nvm/nvm.sh && nvm install 6
-- node -v
 - npm install
 - rm -rf __public && git clone --depth=1 --branch=coding-pages --single-branch git@git.coding.net:dgeibi/note.git __public
 
@@ -14,11 +13,9 @@ rvm:
 - 2.2
 
 cache:
-  apt: true
   bundler: true
   directories:
     - node_modules
-    - $HOME/.nvm
 
 addons:
   ssh_known_hosts: git.coding.net
@@ -31,6 +28,7 @@ after_script:
   - git config user.name "Deployment Bot"
   - git config user.email "deploy@travis-ci.org"
   - git add .
+  - TZ=CST
   - git commit -m "update at `date`"
   - git push --force origin coding-pages
 
