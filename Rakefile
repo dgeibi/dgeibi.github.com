@@ -18,7 +18,6 @@ end
 desc "Push to github"
 task :push do
   puts   "Pushing to `master' branch:"
-  system "bundle exec rake getconfig"
   system "bundle exec rake commit"
   system "git push origin master"
   puts   "`master' branch updated."
