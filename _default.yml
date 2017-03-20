@@ -15,7 +15,7 @@ timezone: Asia/Shanghai
 highlighter: rouge
 markdown: kramdown
 kramdown: {input: GFM, auto_ids: false}
-exclude: [vendor, Gemfile, Gemfile.lock, Rakefile, yarn.lock, package.json, node_modules, README.md]
+exclude: [vendor, Gemfile, Gemfile.lock, Rakefile, yarn.lock, package.json, node_modules, README.md, tra, tra.enc]
 sass:
     sass_dir: assets/_styles
     style: compressed
