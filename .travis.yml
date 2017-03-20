@@ -8,8 +8,6 @@ before_install:
 - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`) && source ~/.nvm/nvm.sh && nvm install 6
 - node -v
 - npm install
-
-install:
 - rm -rf __public && git clone --depth=1 --branch=coding-pages --single-branch git@git.coding.net:dgeibi/note.git __public
 
 rvm:
@@ -30,8 +28,8 @@ script:
 
 after_script:
   - cd __public
-  - git config user.name "travis-ci"
-  - git config user.email "support@travis-ci.com"
+  - git config user.name "Deployment Bot"
+  - git config user.email "deploy@travis-ci.org"
   - git add .
   - git commit -m "update at `date`"
   - git push --force origin coding-pages
