@@ -2,13 +2,18 @@ language: ruby
 sudo: false
 
 before_install:
-- openssl aes-256-cbc -K $encrypted_4e2dc614325b_key -iv $encrypted_4e2dc614325b_iv -in tra.enc -out tra -d
+- openssl aes-256-cbc -K $encrypted_4e2dc614325b_key -iv $encrypted_4e2dc614325b_iv -in __travis/tra.enc -out __travis/tra -d
 - chmod 600 tra
+- mv __travis/tra ~/.ssh
+- mv __travis/ssh.config ~/.ssh/config
 - node -v
 - npm install
 
 rvm:
 - 2.2
+
+node_js:
+- "7"
 
 cache:
   bundler: true
@@ -28,8 +33,6 @@ after_script:
   - git config user.email "support@travis-ci.com"
   - git add .
   - git commit -m "update at `date`"
-  - eval `ssh-agent -s`
-  - ssh-add tra
   - git push --force "https://git.coding.net/dgeibi/note.git" master:coding-pages
 
 branches:
