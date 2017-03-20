@@ -6,7 +6,7 @@ before_install:
 - chmod 600 ~/.ssh/tra
 - cp __travis/ssh.config ~/.ssh/config
 - pwd
-- if ! [ -d ~/.nvm ]
+- if ! [ -d ~/.nvm ];
   then git clone https://github.com/creationix/nvm.git ~/.nvm;
   else cd ~/.nvm && git fetch origin;
   fi
