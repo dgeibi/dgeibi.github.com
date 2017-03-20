@@ -5,9 +5,11 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_4e2dc614325b_key -iv $encrypted_4e2dc614325b_iv -in __travis/tra.enc -out ~/.ssh/tra -d
 - chmod 600 ~/.ssh/tra
 - cp __travis/ssh.config ~/.ssh/config
-- rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install 6
+- [ ! -d ~/.nvm ] && git clone https://github.com/creationix/nvm.git ~/.nvm || (cd ~/.nvm && git fetch origin)
+- (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" origin`) && source ~/.nvm/nvm.sh && nvm install 6
 - node -v
 - npm install
+- git clone --depth=1 --branch=coding-pages --single-branch git@git.coding.net:dgeibi/note.git __public
 
 rvm:
 - 2.2
@@ -17,6 +19,7 @@ cache:
   bundler: true
   directories:
     - node_modules
+    - $HOME/.nvm
 
 addons:
   ssh_known_hosts: git.coding.net
@@ -26,12 +29,11 @@ script:
 
 after_script:
   - cd __public
-  - git init
   - git config user.name "travis-ci"
   - git config user.email "support@travis-ci.com"
   - git add .
   - git commit -m "update at `date`"
-  - git push --force "git@git.coding.net:dgeibi/note.git" master:coding-pages
+  - git push --force origin coding-pages
 
 branches:
   only:
